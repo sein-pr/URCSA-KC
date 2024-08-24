@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style/main.css">
+    <title>URCSA | Katutural Congression</title>
+</head>
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="location">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>124 Soweto St, Unknown, Windhoek, Namibia</span>
+            </div>
+            <div class="socials">
+                <ul>
+                    <li><a href="#login"><i class="fa-solid fa-circle-user"></i></a></li>
+                    <li><a href="#facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#whatsapp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#x"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+        <nav class="bottom-nav">
+            <div class="logo">
+                <a href="#home" class="home-logo">
+                    <img src="assets/img/logo.png" alt="church logo">
+                    <span>Katutura Congression</span>
+                </a>
+            </div>
+            <nav class="right-nav">
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#ministries">Ministries</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contacts">Contact</a></li>
+                    <li><button><i class="fa-solid fa-hand-holding-dollar"></i> Donate</button></li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="carousel">
+                <div class="carousel-img">
+                    <img src="assets/img/istockphoto-1447145756-612x612.jpg" alt="sherpard with sheeps">
+                    <img src="assets/img/istockphoto-1319293510-612x612.jpg" alt="people praying">
+                    <img src="assets/img/istockphoto-1329518087-612x612.jpg" alt="kid holding the cross">
+                </div>
+                <div class="carousel-controls">
+                    <button class="prev" onclick="showPrevImage()">&#10094;</button>
+                    <button class="next" onclick="showNextImage()">&#10095;</button>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="indicator" onclick="setCurrentImage(0)"></span>
+                    <span class="indicator" onclick="setCurrentImage(1)"></span>
+                    <span class="indicator" onclick="setCurrentImage(2)"></span>
+                </div>
+            </div>
+            <div class="hero-text">
+                <h1>URCSA</h1>
+                <h2>Katutura Congression</h2>
+                <p>A Committed and United Church in service of unity, reconciliation and
+                    justice to all people through Christ</p>
+            </div>
+
+            <div class="anouncements">
+                <div class="slider">
+                    <div class="slide">
+                        <div class="marker"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="event-details">
+                            <div class="when">
+                                <span class="date">Sep 14</span>
+                                <span class="time">7:00 AM</span>
+                            </div>
+                           
+                            <div class="what">
+                                <h3>Event: Sharing our Faith <br>Growing Together</h3>
+                                <a href="#event" class="event-link">Event details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="marker"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="event-details">
+                            <div class="when">
+                                <span class="date">Sep 14</span>
+                                <span class="time">7:00</span>
+                            </div>
+                            <div class="what">
+                                <h3>Event: Sharing our Faith <br>Growing Together</h3>
+                                <a href="#event" class="event-link">Event Link</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="marker"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="event-details">
+                            <div class="when">
+                                <span class="date">Sep 14</span>
+                                <span class="time">7:00</span>
+                            </div>
+
+                            <div class="what">
+                                <h3>Event: Sharing our Faith <br>Growing Together</h3>
+                                <a href="#event" class="event-link">Event Link</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;URCSA
+            Katutura Congression 2024, all rights reserved
+        </p>
+        <p class="coders">built by <span>Group 12 or 13 forgot😂</span></p>
+
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
