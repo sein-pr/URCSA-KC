@@ -223,7 +223,7 @@ header {
 
 .slide {
     flex: 0 0 auto; 
-    width: 300px; 
+    width: 316px; 
     margin: 10px; 
     background-color: #007BFF; 
     border-radius: 8px; 
@@ -285,7 +285,6 @@ header {
     display: block; 
     margin-top: 38px;
     font-size: 16px; 
-    background-color: aqua;
 }
 
 .event-link {
