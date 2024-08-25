@@ -122,7 +122,7 @@ header {
     z-index: 10; 
 }
 
-/* about us styling */
+/* service styling */
 .page{
     background-color: #007BFF;
     height: 150px;
@@ -142,8 +142,8 @@ header {
 }
 
 .centered-logo {
-    position: relative; /* Allows absolute positioning of the child elements */
-    top: -30px; /* Adjust this value to move the logo higher or lower */
+    position: relative; 
+    top: -30px; 
     text-align: center;
     
 }
