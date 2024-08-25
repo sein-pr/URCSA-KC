@@ -1,20 +1,20 @@
 # Use an official Node.js runtime as a parent image
-FROM node:18-slim
+FROM node:14
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
-# Copy the necessary files to the container
-COPY ./index.html /usr/src/app/index.html
-COPY ./style/main.css /usr/src/app/style/main.css
-COPY ./scripts/main.js /usr/src/app/scripts/main.js
-COPY ./assets/img /usr/src/app/assets/img
+# Copy package.json and package-lock.json (if available)
+COPY package*.json ./
 
-# Install `serve` to serve the static files
-RUN npm install -g serve
+# Install app dependencies
+RUN npm install
 
-# Expose port 80 to the outside world
-EXPOSE 80
+# Copy the rest of the application code
+COPY . .
 
-# Serve the application
-CMD ["serve", "-s", "/usr/src/app"]
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Command to run the app
+CMD ["npm", "start"]
