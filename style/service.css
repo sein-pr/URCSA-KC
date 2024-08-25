@@ -205,3 +205,8 @@ header {
     font-size: 16px;
     margin-right: 10px;
 }
+
+.details button:hover{
+    background-color: #007BFF;
+    color: white;
+}
