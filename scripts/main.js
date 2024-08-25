@@ -29,5 +29,5 @@ function updateCarousel() {
 }
 
 // Auto slide
-setInterval(showNextImage, 5000); // Change image every 3 seconds
+setInterval(showNextImage, 5000); // Change image every 5 seconds
 

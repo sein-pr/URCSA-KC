@@ -210,11 +210,12 @@ header {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory; 
+   
 }
 
 .slide {
     flex: 0 0 auto; 
-    width: 300px; /* Adjusted width */
+    width: 300px; 
     margin: 10px; 
     background-color: #007BFF; 
     border-radius: 8px; 
@@ -222,7 +223,8 @@ header {
     padding: 20px; 
     scroll-snap-align: start;
     position: relative; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    
 }
 
 .marker {
@@ -233,7 +235,7 @@ header {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #0056b3; /* Marker color */
+    background-color: #0056b3; 
     border: 2px solid #007BFF;
     display: flex;
     align-items: center;
@@ -241,8 +243,8 @@ header {
 }
 
 .marker i {
-    color: white; /* Marker icon color */
-    font-size: 16px; /* Adjusted icon size */
+    color: white; 
+    font-size: 16px
 }
 
 .event-details {
@@ -252,7 +254,7 @@ header {
 
 .event-details .when {
     margin-top: 20px;
-    margin-right: 15px; /* Adjusted spacing */
+    margin-right: 15px; 
     width: 50%;
 }
 
@@ -263,18 +265,18 @@ header {
 .event-details .what h3 {
     font-weight: 400;
     font-size: small;
-    margin: 0; /* Remove default margin */
+    margin: 0; 
 }
 
 .date {
     font-weight: bold; 
-    font-size: 18px; /* Adjusted font size */
+    font-size: 18px; 
 }
 
 .time {
     display: block; 
-    margin-top: 38px; /* Adjusted spacing */
-    font-size: 16px; /* Adjusted font size */
+    margin-top: 38px;
+    font-size: 16px; 
     background-color: aqua;
 }
 
@@ -295,11 +297,20 @@ header {
 
 
 footer p{
-    text-align: center;
+    text-align: left;
 }
 
 footer .coders{
     text-align: end;
     color: #004494;
     font-weight: 500;
+}
+
+footer .socials i{
+    color: #004494;
+
+}
+
+footer .socials{
+    float: right;
 }
