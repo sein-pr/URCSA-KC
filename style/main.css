@@ -105,6 +105,14 @@ ul {
     background-color: #0056b3; 
 }
 
+.right-nav a:hover{
+    color: aqua;
+}
+
+.active{
+    color: aqua;
+}
+
 header {
     position: absolute;
     top: 10;
