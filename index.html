@@ -4,170 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>URCSA| Katutura Cong</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="/style/main.css">
-    <title>URCSA | Katutural Congression</title>
 </head>
 
 <body>
     <header>
-        <nav class="top-nav">
-            <div class="location">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Hendrick Isaak Street, Soweto, Windhoek, Namibia</span>
-            </div>
-            <div class="socials">
-                <ul>
-                    <li><a href="#login" title="Please wain in development🙏"><i class="fa-solid fa-circle-user"></i></a></li>
-                    <li><a href="#facebook" title="Please wain in development🙏"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#whatsapp" title="Please wain in development🙏"><i class="fa-brands fa-whatsapp"></i></a></li>
-                    <li><a href="#x" title="Please wain in development🙏"><i class="fa-brands fa-x-twitter"></i></a></li>
-                </ul>
-            </div>
+        <a href="/index.html" class="logo">
+            <img src="/assets/img/logo.png" alt="logo image">
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Services</a>
+            <a href="#">Ministries</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
         </nav>
-        <hr>
-        <nav class="bottom-nav">
-            <div class="logo">
-                <a href="index.html" class="home-logo">
-                    <img src="assets/img/logo.png" alt="church logo">
-                    <span>Katutura Congression</span>
-                </a>
-            </div>
-            <nav class="right-nav">
-                <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="#ministries" title="Please wain in development🙏">Ministries</a></li>
-                    <li><a href="#news" title="Please wain in development🙏">News</a></li>
-                    <li><a href="#contacts" title="Please wain in development🙏">Contact</a></li>
-                    <li><button title="Please wain in development🙏"><i class="fa-solid fa-hand-holding-dollar"></i> Donate</button></li>
-                </ul>
-            </nav>
-        </nav>
+        <div class="btn">
+            <button>Log in</button>
+            <button><i class="uil uil-gift"></i> Donate</button>
+        </div>
     </header>
     <main>
         <section class="hero">
-            <div class="carousel">
-                <div class="carousel-img">
-                    <img src="assets/img/istockphoto-1447145756-612x612.jpg" alt="sherpard with sheeps">
-                    <img src="assets/img/istockphoto-1319293510-612x612.jpg" alt="people praying">
-                    <img src="assets/img/istockphoto-1329518087-612x612.jpg" alt="kid holding the cross">
-                </div>
-                <div class="carousel-controls">
-                    <button class="prev" onclick="showPrevImage()">&#10094;</button>
-                    <button class="next" onclick="showNextImage()">&#10095;</button>
-                </div>
-                <div class="carousel-indicators">
-                    <span class="indicator" onclick="setCurrentImage(0)"></span>
-                    <span class="indicator" onclick="setCurrentImage(1)"></span>
-                    <span class="indicator" onclick="setCurrentImage(2)"></span>
-                </div>
-            </div>
-            <div class="hero-text">
-                <h1>URCSA</h1>
-                <h2>Katutura Congression</h2>
-                <p>A Committed and United Church in service of unity, reconciliation and
-                    justice to all people through Christ</p>
-            </div>
-
-            <div class="anouncements">
-                <div class="slider">
-                    <div class="slide">
-                        <div class="marker"><i class="fa-solid fa-location-dot"></i></div>
-                        <div class="event-details">
-                            <div class="when">
-                                <span class="date">Sep 14</span>
-                                <span class="time">7:00 AM</span>
-                            </div>
-
-                            <div class="what">
-                                <h3>Event: Sharing our Faith <br>Growing Together</h3>
-                                <a href="#event" class="event-link" title="Please wain in development🙏">Event details</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <div class="marker"><i class="fa-solid fa-location-dot"></i></div>
-                        <div class="event-details">
-                            <div class="when">
-                                <span class="date">Sep 14</span>
-                                <span class="time">7:00</span>
-                            </div>
-                            <div class="what">
-                                <h3>Event: Sharing our Faith <br>Growing Together</h3>
-                                <a href="#event" title="Please wain in development🙏" class="event-link">Event Link</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="marker"><i class="fa-solid fa-location-dot"></i></div>
-                        <div class="event-details">
-                            <div class="when">
-                                <span class="date">Sep 14</span>
-                                <span class="time">7:00</span>
-                            </div>
-                            <div class="what">
-                                <h3>Event: Sharing our Faith <br>Growing Together</h3>
-                                <a href="#event" title="Please wain in development🙏" class="event-link">Event Link</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="marker"><i class="fa-solid fa-location-dot"></i></div>
-                        <div class="event-details">
-                            <div class="when">
-                                <span class="date">Sep 14</span>
-                                <span class="time">7:00</span>
-                            </div>
-                            <div class="what">
-                                <h3>Event: Sharing our Faith <br>Growing Together</h3>
-                                <a href="#event" title="Please wain in development🙏" class="event-link">Event Link</a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="marker"><i class="fa-solid fa-location-dot"></i></div>
-                        <div class="event-details">
-                            <div class="when">
-                                <span class="date">Sep 14</span>
-                                <span class="time">7:00</span>
-                            </div>
-
-                            <div class="what">
-                                <h3>Event: Sharing our Faith <br>Growing Together</h3>
-                                <a href="#event"title="Please wain in development🙏" class="event-link">Event Link</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </section>
     </main>
-    <footer>
-        <p>&copy;URCSA
-            Katutura Congression 2024, all rights reserved
-        </p>
-        <p class="coders">built by <span>Group 12 or 13 forgot😂</span></p>
-        <div class="socials">
-            <ul>
-                <li><a href="#login"><i class="fa-solid fa-circle-user"></i></a></li>
-                <li><a href="#facebook"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="#whatsapp"><i class="fa-brands fa-whatsapp"></i></a></li>
-                <li><a href="#x"><i class="fa-brands fa-x-twitter"></i></a></li>
-            </ul>
-        </div>
 
-    </footer>
-
-    <script src="scripts/main.js"></script>
+    <script src="/scripts/main.js"></script>
 </body>
 
 </html>
