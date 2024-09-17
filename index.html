@@ -6,34 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URCSA| Katutura Cong</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/style/main.css">
 </head>
 
 <body>
     <header>
         <a href="/index.html" class="logo">
-            <img src="/assets/img/logo.png" alt="logo image">
+            <img src="/assets/img/logo2.png" alt="logo image">
+            <span><span class="highlight">Katutura</span> Congregation</span>
         </a>
         <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
-            <a href="#">Services</a>
+            <div class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Sermons</a></li>
+                    <li><a href="#">Apply</a></li>
+                    <li><a href="#">Confirmation</a></li>
+                    <li><a href="#">Baptism</a></li>
+                    <li><a href="#">Marriage</a></li>
+                    <li><a href="#">Repentance</a></li>
+                </ul>
+            </div>
             <a href="#">Ministries</a>
             <a href="#">News</a>
             <a href="#">Contact</a>
         </nav>
+    
         <div class="btn">
             <button>Log in</button>
             <button><i class="uil uil-gift"></i> Donate</button>
         </div>
     </header>
+    
     <main>
         <section class="hero">
-            
+            <h1>Welcome to URCSA Katutura Congregation</h1>
+            <div class="hero-others">
+                <img src="/assets/img/Church-removebg-preview.png" alt="church">
+                <div class="hero-text">
+                    <span>Serving the community through faith, unity, and service.</span>
+                    <p>Rooted in history, guided by Scripture, united in service for all members and the community.</p>
+                    <button>View Schedule <i class="uil uil-schedule"></i></button>
+
+                </div>
+            </div>
         </section>
     </main>
 
+    <div class="schedule-modal">
+        <div class="calendar" id="calendar">
+            <label for="calendar">Select a Date:</label>
+        <input type="date" id="calendar" name="calendar">
+        </div>
+
+        <div class="schedule-item">
+            <h3>Schedule</h3>
+            <div class="view-option">
+                <select name="months" id="months">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <div class="btn">
+                    <button>Day</button>
+                    <button>Week</button>
+                    <button>Month</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
     <script src="/scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
 </body>
 
 </html>
