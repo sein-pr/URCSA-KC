@@ -427,3 +427,156 @@ header .btn button:nth-child(2){
     background-color: #201658;
     color: #fff;
 }
+
+/* upcominf event css done */
+
+/* footer css starts */
+footer {
+    box-shadow: -1px -4px 5px 0px rgba(122, 122, 122, 0.75);
+    -webkit-box-shadow: -1px -4px 5px 0px rgba(122, 122, 122, 0.75);
+    -moz-box-shadow: -1px -4px 5px 0px rgba(122, 122, 122, 0.75);
+    padding: 16px;
+}
+
+footer .footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a{  
+    text-decoration: none;
+}
+
+.footer-top .left-side{
+    display: block;
+}
+
+.left-side img{
+    height: 5em;
+}
+
+.left-side h5{
+    font-size: 1.5em;
+}
+
+.left-side h5 span{
+    color: #433bff;
+}
+
+.left-side .info{
+    display: flex;
+    gap: 2em;
+    margin: 16px 0;
+}
+
+.info .email, .number{
+    display:flex;
+    flex-direction: column;
+}
+
+.info .email span, .number span{
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #201658;
+}
+
+.info .email a , .number a{
+    margin: 5px 0;
+    color: #433bff;
+}
+
+
+.info .email a:hover , .number a:hover{
+    color: #201658;
+}
+
+.left-side .accountable{
+    display: flex;
+    gap: 1.5em;
+}
+
+.accountable a{
+    color: #4c4c4c;
+    font-weight: 500;
+}
+
+.footer-top .right-side p{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-top .right-side .footer-btn{
+    margin: 2em auto;
+    display: flex;
+    gap: 1em;
+}
+
+.right-side .footer-btn button{
+    padding: 1em 1.1em;
+    border-radius: 5px;
+    border: none;
+    color: #333;
+    font-weight: 500;
+    border: 2px solid #201658;
+}
+
+.footer-btn button:hover{
+    background-color: #201658;
+    color: #fff;
+}
+
+.footer-btn button:nth-child(1){
+    background-color: #201658;
+    color: #fff;
+}
+
+.footer-btn button:nth-child(1):hover{
+    color: #201658;
+    background-color: #fff;
+}
+
+footer hr{
+    margin: 10px 0;
+}
+footer .bottom{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .bottom .socials{
+    display: flex;
+    gap: 16px;
+}
+
+footer .bottom .socials div{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid #201658;
+    font-size: 1em;
+}
+
+footer .bottom .socials div:hover{
+    background-color: #201658;
+    border: none;
+}
+
+footer .bottom .socials a{
+    color: #201658;
+}
+
+footer .bottom .socials a:hover{
+    color: #fff;
+}
+
+footer .bottom span{
+    color: #41653b;
+}
+
+footer .color{
+    background-color: #201658;
+    height: 1em;
+}
+
