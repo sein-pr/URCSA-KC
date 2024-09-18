@@ -247,3 +247,183 @@ header .btn button:nth-child(2){
 
 /* hero section done */
 
+/* upcoming starts here */
+.upcoming{
+    margin: 25px 16px;
+}
+
+.upcoming h3{
+    margin: 16px 0;
+    font-size: 2em;
+    color: #201658;
+    text-decoration: underline 0.2em;
+}
+
+.upcoming-events{
+    display: flex;
+    gap: 1em;
+}
+
+.upcoming-events .event{
+    padding: 1em;
+    width: 100%;
+}
+
+.upcoming-events .event h3, .prayer h3{
+    font-size: 1.5em;
+    text-decoration: none;
+    text-align: center;
+}
+
+.event .event-item{
+    display: flex;
+    gap: 1em;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.event .event-item img{
+    height: 10em;
+    border-radius: 5px;
+}
+
+.event-item .event-info h4{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #201658;
+    margin: 10px 0;
+}
+
+.event-item .event-info{
+    width: 100%;
+}
+.event-item .event-info >div{
+    background-color: #201658;
+    width: fit-content;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 12px 0;
+}
+
+.event-item .event-info p, .event-info p{
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #4c4c4c;
+}
+
+.event button{
+    margin-top: 0.5em;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #201658;
+    color: #fff;
+}
+
+.event button:hover{
+    color: #201658;
+    border: 2px solid #201658;
+    background-color: #fff;
+}
+
+.event button i{
+    margin-right: 5px;
+
+}
+
+.prayer{
+    margin: 16px;
+    width: 50%;
+}
+.prayer-item {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 5px 16px;
+    margin: 10px 0;
+}
+.prayer-item i {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.audio-control{
+    display: flex;
+    gap: 1em;
+}
+
+.audio-player{
+    margin: 10px 0;
+}
+
+.play-pause-btn {
+    color: #201658;
+}
+
+.playing {
+    color: #433bff;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.audio-timeline {
+    width: 20em;
+    height: 6px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.audio-timeline::-webkit-slider-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #201658;
+    cursor: pointer;
+}
+
+.audio-timeline::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #201658;
+    cursor: pointer;
+}
+
+.prayer-item h4{
+    color: #201658;
+}
+
+.prayer-item span{
+    color: #2e2e2e;
+    font-weight: 600;
+}
+
+.prayer-item .date{
+    background-color: #201658;
+    width: fit-content;
+    padding: 0 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.prayer button{
+    margin-top: 0.5em;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #2e2e2e;
+}
+
+.prayer button:hover{
+    background-color: #201658;
+    color: #fff;
+}
