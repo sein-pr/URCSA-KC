@@ -1,33 +1,34 @@
-let currentIndex = 0;
-const images = document.querySelectorAll('.carousel-img img');
-const totalImages = images.length;
-const indicators = document.querySelectorAll('.indicator');
+document.addEventListener('DOMContentLoaded', function() {
+    const playPauseButton = document.querySelector('.play-pause-btn');
+    const audioPlayer = document.querySelector('.audio-player audio');
+    const audioTimeline = document.querySelector('.audio-timeline');
 
-function showNextImage() {
-    currentIndex = (currentIndex + 1) % totalImages;
-    updateCarousel();
-}
-
-function showPrevImage() {
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-    updateCarousel();
-}
-
-function setCurrentImage(index) {
-    currentIndex = index;
-    updateCarousel();
-}
-
-function updateCarousel() {
-    const offset = -currentIndex * 100; // Move by 100% of the width of one image
-    document.querySelector('.carousel-img').style.transform = `translateX(${offset}%)`;
-    
-    // Update indicators
-    indicators.forEach((indicator, index) => {
-        indicator.classList.toggle('active', index === currentIndex);
+    // Play/pause functionality
+    playPauseButton.addEventListener('click', function() {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playPauseButton.classList.replace('uil-volume', 'uil-pause');
+        } else {
+            audioPlayer.pause();
+            playPauseButton.classList.replace('uil-pause', 'uil-volume');
+        }
     });
-}
 
-// Auto slide
-setInterval(showNextImage, 5000); // Change image every 5 seconds
+    // Update the timeline as the audio plays
+    audioPlayer.addEventListener('timeupdate', function() {
+        const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        audioTimeline.value = progress;
+    });
 
+    // Seek the audio when the timeline is adjusted
+    audioTimeline.addEventListener('input', function() {
+        const newTime = (audioTimeline.value / 100) * audioPlayer.duration;
+        audioPlayer.currentTime = newTime;
+    });
+
+    // Reset the audio and icon when the audio finishes
+    audioPlayer.addEventListener('ended', function() {
+        playPauseButton.classList.replace('uil-pause', 'uil-volume');
+        audioTimeline.value = 0;
+    });
+});

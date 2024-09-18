@@ -3,321 +3,580 @@
 * {
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
-    box-sizing: border-box; /**Gusy this is to make sure we can control the layout*/
-}
-
-body {
-    /* margin: px; */
-    /* background-color: white; */
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-li {
-    margin-right: 30px;
-    text-decoration: none;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0; 
-    padding: 0; 
-}
-
-.top-nav {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-    align-items: center; 
-}
-
-.socials > ul {
-    display: flex;
-    align-items: center;
-}
-
-.location {
-    margin-left: 16px;
-    display: flex;
-    color: white;
-    align-items: center;
-}
-
-.location >span{
-    margin-left: 10px;
-}
-
-.logo img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px; 
-}
-
-.bottom-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0 16px; 
-}
-.home-logo{
-    display: flex;
-}
-
-.home-logo > span{
-    margin-top: 10px;
-    color: black;
-}
-
-.right-nav {
-    margin-left: auto;
-    display: flex;
-}
-
-.right-nav ul {
-    display: flex;
-    align-items: center; 
-}
-
-.right-nav li {
-    margin-right: 10px; 
-}
-
-.right-nav button {
-    margin-left: 5px;
-    padding: 8px 12px;
-    background-color: #007BFF;
-    color: white;
-    width: 110px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-.right-nav button i{
-    margin-right: 10px;
-}
-
-.right-nav button:hover {
-    background-color: #0056b3; 
-}
-
-.right-nav a:hover{
-    color: aqua;
-}
-
-.active{
-    color: aqua;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 header {
-    position: absolute;
-    top: 10;
-    width: 100%;
-    background-color: rgba(246, 246, 246, 0.4); 
-    z-index: 10; 
-}
-
-/* Main styling */
-.hero{
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-}
-
-.carousel {
-    position: relative;
-    width: 100%;
-    height: 600px;
-    overflow: hidden;
-}
-.carousel-img {
-    display: flex;
-    transition: transform 1s ease;
-    height: 100%;
-}
-
-.carousel-img img {
-    min-width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.carousel-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
+    box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: space-between;
-    transform: translateY(-50%);
+    padding: 12px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration:none;
 }
 
 
-.prev, .next {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
+header .logo img {
+    height: 3.5em;
+}
+
+.logo span {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.highlight {
+    color: #433bff;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline 2px #201658;
+    color: #433bff;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    padding: 10px 15px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    width: 150px;
+}
+
+.dropdown-menu li {
     padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f4f4f4;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+header .btn button {
+    margin-left: 10px;
+    padding: 8px 20px;
+    border: none;
     cursor: pointer;
-    border: 1px solid blue;
-    border-radius: 50px;
-
+    border-radius: 5px;
+    font-size: 1em;
 }
 
+header .btn button:hover{
+    background-color: #201658;
+    color: #fff;
+}
 
-.carousel-indicators {
-    position: absolute;
-    bottom: 20px;
-    left: 90%;
-    transform: translateX(-50%);
+header .btn button:nth-child(2){
+    background-color: #201658;
+    color: #fff;
+}
+
+.btn button:nth-child(2) i{
+    font-size: 1.2em;
+}
+
+.btn button:nth-child(2) i:hover{
+    color: #201658;
+}
+
+.btn button:nth-child(2):hover{
+    color: #201658;
+    background-color: #fff;
+    border: 2px solid #201658;
+}
+
+/* header section done */
+
+/* hero section starts */
+.hero{
     display: flex;
-}
-
-.indicator {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.indicator.active {
-    background-color: #004494;
-}
-
-.hero-text{
-    position: absolute;
-    top: 50%;
-    left: 35%; 
-    transform: translate(-50%, -50%);
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero-text h2{
-    font-size: 18px;
-}
-
-.hero-text h1{
-    font-size: 48px;
-    margin: 20px 0;
-}
-
-.hero-text p {
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-
-
-/* anouncements starts here */
-.slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory; 
-   
-}
-
-.slide {
-    flex: 0 0 auto; 
-    width: 316px; 
-    margin: 10px; 
-    background-color: #007BFF; 
-    border-radius: 8px; 
-    color: white; 
-    padding: 20px; 
-    scroll-snap-align: start;
-    position: relative; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    flex-direction:column;
+    background-image: url(/assets/img/Church.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
     
 }
 
-.marker {
-    position: absolute;
-    top: -10px; 
-    left: 15%; 
-    transform: translateX(-50%); 
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #0056b3; 
-    border: 2px solid #007BFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-content{
+    margin: 5em auto;
+    text-align: center;
 }
 
-.marker i {
-    color: white; 
-    font-size: 16px
+.hero-content h1{
+    font-size: 2em;
+    color: #333;
 }
 
-.event-details {
-   display: flex;
-   padding: 0;
+.hero-content span{
+    font-size: 3em;
+    font-weight: 500;
+    color: #433bff;
 }
 
-.event-details .when {
-    margin-top: 20px;
-    margin-right: 15px; 
-    width: 50%;
-}
-
-.event-details .what {
-    width: 50%;
-}
-
-.event-details .what h3 {
-    font-weight: 400;
-    font-size: small;
-    margin: 0; 
-}
-
-.date {
-    font-weight: bold; 
-    font-size: 18px; 
-}
-
-.time {
-    display: block; 
-    margin-top: 38px;
-    font-size: 16px; 
-}
-
-.event-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px; 
-    background-color: #0056b3;
-    color: white; 
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 14px; 
-}
-
-.event-link:hover {
-    background-color: #004494;
-}
-
-
-footer p{
-    text-align: left;
-}
-
-footer .coders{
-    text-align: end;
-    color: #004494;
+.hero-content p{
+    color: #fff;
+    font-size: 1em;
     font-weight: 500;
 }
 
-footer .socials i{
-    color: #004494;
+.hero-content .btn{
+    margin: 20px auto;
+}
+
+.hero-content .btn button{
+    margin-left: 10px;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.hero-content .btn button:nth-child(1){
+    background-color: #201658;
+    color: #fff;
+}
+
+.hero-content .btn button:nth-child(2) i{
+    color: #201658;
+}
+
+.hero-content .btn button:nth-child(1):hover{
+    color: #201658;
+    border: 2px solid;
+    background-color: #fff;
+}
+
+.hero .socials{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 2em;
+    left: 1em;
+    top: 10em;
+    padding: 10px 2px;
+    background-color: rgba(51, 51, 51,0.4);
+    border: 2px solid #201658;
+    border-radius: 5px;
+}
+
+.hero .socials a{
+    text-decoration: none;
+}
+
+.hero .socials i{
+    color: #fff;
+    font-size: 1.3em;
+    padding: 2px 5px;
+}
+
+.hero .socials i:hover{
+    color: #201658;
+    border: 1px solid #433bff;
+    border-radius: 3px;
+}
+
+.hero .times{
+    display: flex;
+    margin: 0 auto;
+    background-color: rgba(221, 221, 221,0.7);
+    gap: 1em;
+    border-radius: 5px;
+    padding: 1em 2em;
+    border: 1px solid #201658;
+}
+
+.times .service{
+    display: flex;
+    gap: 0.5em;
+}
+
+.times .service i{
+    font-size: 1.5em;
+    color: #201658;
+}
+
+.times .service h2{
+    color: #201658;
+}
+
+/* hero section done */
+
+/* upcoming starts here */
+.upcoming{
+    margin: 25px 16px;
+}
+
+.upcoming h3{
+    margin: 16px 0;
+    font-size: 2em;
+    color: #201658;
+    text-decoration: underline 0.2em;
+}
+
+.upcoming-events{
+    display: flex;
+    gap: 1em;
+}
+
+.upcoming-events .event{
+    padding: 1em;
+    width: 100%;
+}
+
+.upcoming-events .event h3, .prayer h3{
+    font-size: 1.5em;
+    text-decoration: none;
+    text-align: center;
+}
+
+.event .event-item{
+    display: flex;
+    gap: 1em;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.event .event-item img{
+    height: 10em;
+    border-radius: 5px;
+}
+
+.event-item .event-info h4{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #201658;
+    margin: 10px 0;
+}
+
+.event-item .event-info{
+    width: 100%;
+}
+.event-item .event-info >div{
+    background-color: #201658;
+    width: fit-content;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 12px 0;
+}
+
+.event-item .event-info p, .event-info p{
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #4c4c4c;
+}
+
+.event button{
+    margin-top: 0.5em;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #201658;
+    color: #fff;
+}
+
+.event button:hover{
+    color: #201658;
+    border: 2px solid #201658;
+    background-color: #fff;
+}
+
+.event button i{
+    margin-right: 5px;
 
 }
 
-footer .socials{
-    float: right;
+.prayer{
+    margin: 16px;
+    width: 50%;
 }
+.prayer-item {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 5px 16px;
+    margin: 10px 0;
+}
+.prayer-item i {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.audio-control{
+    display: flex;
+    gap: 1em;
+}
+
+.audio-player{
+    margin: 10px 0;
+}
+
+.play-pause-btn {
+    color: #201658;
+}
+
+.playing {
+    color: #433bff;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.audio-timeline {
+    width: 20em;
+    height: 6px;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.audio-timeline::-webkit-slider-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #201658;
+    cursor: pointer;
+}
+
+.audio-timeline::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #201658;
+    cursor: pointer;
+}
+
+.prayer-item h4{
+    color: #201658;
+}
+
+.prayer-item span{
+    color: #2e2e2e;
+    font-weight: 600;
+}
+
+.prayer-item .date{
+    background-color: #201658;
+    width: fit-content;
+    padding: 0 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.prayer button{
+    margin-top: 0.5em;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #2e2e2e;
+}
+
+.prayer button:hover{
+    background-color: #201658;
+    color: #fff;
+}
+
+/* upcominf event css done */
+
+/* footer css starts */
+footer {
+    box-shadow: -1px -4px 5px 0px rgba(122, 122, 122, 0.75);
+    -webkit-box-shadow: -1px -4px 5px 0px rgba(122, 122, 122, 0.75);
+    -moz-box-shadow: -1px -4px 5px 0px rgba(122, 122, 122, 0.75);
+    padding: 16px;
+}
+
+footer .footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a{  
+    text-decoration: none;
+}
+
+.footer-top .left-side{
+    display: block;
+}
+
+.left-side img{
+    height: 5em;
+}
+
+.left-side h5{
+    font-size: 1.5em;
+}
+
+.left-side h5 span{
+    color: #433bff;
+}
+
+.left-side .info{
+    display: flex;
+    gap: 2em;
+    margin: 16px 0;
+}
+
+.info .email, .number{
+    display:flex;
+    flex-direction: column;
+}
+
+.info .email span, .number span{
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #201658;
+}
+
+.info .email a , .number a{
+    margin: 5px 0;
+    color: #433bff;
+}
+
+
+.info .email a:hover , .number a:hover{
+    color: #201658;
+}
+
+.left-side .accountable{
+    display: flex;
+    gap: 1.5em;
+}
+
+.accountable a{
+    color: #4c4c4c;
+    font-weight: 500;
+}
+
+.footer-top .right-side p{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-top .right-side .footer-btn{
+    margin: 2em auto;
+    display: flex;
+    gap: 1em;
+}
+
+.right-side .footer-btn button{
+    padding: 1em 1.1em;
+    border-radius: 5px;
+    border: none;
+    color: #333;
+    font-weight: 500;
+    border: 2px solid #201658;
+}
+
+.footer-btn button:hover{
+    background-color: #201658;
+    color: #fff;
+}
+
+.footer-btn button:nth-child(1){
+    background-color: #201658;
+    color: #fff;
+}
+
+.footer-btn button:nth-child(1):hover{
+    color: #201658;
+    background-color: #fff;
+}
+
+footer hr{
+    margin: 10px 0;
+}
+footer .bottom{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .bottom .socials{
+    display: flex;
+    gap: 16px;
+}
+
+footer .bottom .socials div{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    border: 2px solid #201658;
+    font-size: 1em;
+}
+
+footer .bottom .socials div:hover{
+    background-color: #201658;
+    border: none;
+}
+
+footer .bottom .socials a{
+    color: #201658;
+}
+
+footer .bottom .socials a:hover{
+    color: #fff;
+}
+
+footer .bottom span{
+    color: #41653b;
+}
+
+footer .color{
+    background-color: #201658;
+    height: 1em;
+}
+
