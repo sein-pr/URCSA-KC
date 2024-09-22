@@ -5,7 +5,12 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     margin: 0;
+    
 }
+
+body, html {
+    scroll-behavior: smooth;
+  }
 
 header {
     box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
@@ -135,6 +140,13 @@ header .btn button:nth-child(2){
 /* header section done */
 
 /* hero section starts */
+main{
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+section{
+    scroll-snap-align: start;
+}
 .hero{
     display: flex;
     flex-direction:column;
