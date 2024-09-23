@@ -31,4 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
         playPauseButton.classList.replace('uil-pause', 'uil-volume');
         audioTimeline.value = 0;
     });
+<<<<<<< Updated upstream
 });
+=======
+    calendar.render();
+});
+>>>>>>> Stashed changes
