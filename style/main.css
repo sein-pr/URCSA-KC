@@ -596,3 +596,159 @@ footer .color{
     height: 1em;
 }
 
+
+/* sermon page starts here */
+.subpage-hero{
+    margin: 1em 0;
+    background-image: url(/assets/img/Church.png);
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    height: 7em;
+}
+.subpage-hero a{
+    color: #fff;
+    text-decoration:none;
+    font-weight: 500;
+}
+
+.subpage-hero .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px;
+}
+
+
+.subpage-hero .pagination{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.subpage-hero img{
+    height: 5em;
+    position: absolute;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.sermon-item{
+    display: flex;
+    margin: 4em 16px;
+    gap:  1.5em;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+                0 6px 6px rgba(0, 0, 0, 0.15); 
+    height: fit-content;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.sermons .img{
+    position: relative;
+
+}
+
+.img img{
+    height: 15em;
+    width: 25em;
+    border-radius: 5px;
+    border-top: 3px solid #201658;
+    border-left: 3px solid #201658;
+    border-bottom: 3px solid #201658;
+}
+
+.content-btn{
+    position: absolute;
+    top:78%;
+    left: 1%;
+}
+
+.content-btn button{
+    padding: 6px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #201658;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content-btn button:hover{
+    background-color: #f4f4f4;
+    color: #201658;
+}
+
+.content-btn button i{
+    font-size: 20px;
+}
+
+.sermon-info{
+    padding: 16px;
+}
+
+.sermon-info .by{
+    display: flex;
+    gap: 10px;
+}
+
+.sermon-info h1{
+    color: #201658;
+}
+
+.sermon-info p{
+    color: rgba(51, 51, 51,0.5);
+    margin: 0.5em 0;
+}
+
+.sermon-info em{
+    color:#433bff;
+}
+
+.sermon-info button{
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    margin: 0.5em 0;
+}
+
+.sermon-info button:hover{
+    background-color: #201658;
+    color: #fff;
+}
+.pagination-number{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1em;
+    color: #201658;
+}
+
+.pagination-number span{
+    padding: 3px 15px;
+    border: 2px solid #201658;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.pagination-number span:hover{ 
+    background-color: #201658;
+    color: #fff;
+}
+.pagination-number span:first-child{
+    background-color: #201658;
+    border: none;
+    color: #fff;
+}
+
+.pagination-number button{
+    padding: 3px 15px;
+    background-color: #201658;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
+}
