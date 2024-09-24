@@ -1106,6 +1106,11 @@ em{
     gap: 16px;
 }
 
+.listen audio{
+    width: 75em;
+    color: #201658;
+}
+
 .questions{
     margin: 10px 0;
 }

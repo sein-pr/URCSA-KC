@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+
+header {
+    box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration:none;
+}
+
+
+header .logo img {
+    height: 3.5em;
+}
+
+.logo span {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.highlight {
+    color: #433bff;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline 2px #201658;
+    color: #433bff;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    padding: 10px 15px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(32, 22, 88,0.5);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    width: fit-content;
+    z-index: 1000;
+}
+
+
+
+.dropdown-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f4f4f4;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+
+header .btn button {
+    margin-left: 10px;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+header .btn button:hover{
+    background-color: #201658;
+    color: #fff;
+}
+
+header .btn button:nth-child(2){
+    background-color: #201658;
+    color: #fff;
+}
+
+.btn button:nth-child(2) i{
+    font-size: 1.2em;
+}
+
+.btn button:nth-child(2) i:hover{
+    color: #201658;
+}
+
+.btn button:nth-child(2):hover{
+    color: #201658;
+    background-color: #fff;
+    border: 2px solid #201658;
+}
+
+/* header section done */
+.subpage-hero{
+    margin: 1em 0;
+    background-image: url(/assets/img/Church.png);
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    height: 7em;
+}
+
+.subpage-hero a{
+    color: #fff;
+    text-decoration:none;
+    font-weight: 500;
+}
+
+.subpage-hero .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px;
+}
+
+.subpage-hero .top form{
+    display: flex;
+    border: 1px solid #201658;
+    border-radius: 5px;
+}
+
+.subpage-hero .top form input{
+    border-radius: 5px 0 0 5px;
+    padding: 6px 15px;
+    background-color: rgba(255, 255, 255,0.5);
+    outline: none;
+    color: #fff;
+    border: none;
+}
+
+.subpage-hero .top form button{
+    padding: 6px 15px;
+    background-color: #201658;
+    cursor: pointer;
+}
+
+.subpage-hero .top form button i{
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.subpage-hero .pagination{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.subpage-hero img{
+    height: 5em;
+    position: absolute;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    top: 1em;
+}
+
+/* donation page styling */
+.donate{
+    margin: 12em 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    color: #333;
+}
+
+.donate p:nth-child(1){
+    padding: 10em;
+    font-weight: 600;
+}
+
+.donate-form{
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    width: 75%;
+}
+
+.donate-form h2{
+    color: #201658;
+    margin: 0.5em 0;
+}
+
+.donate-form p{
+    color: #3b3b3b;
+    margin: 0.5em 0;
+}
+
+.subscribe{
+    display: flex;
+}
+
+.subscribe input{
+    border: none;
+    padding: 5px 6em;
+    font-weight: 500;
+    margin: 1em 0;
+}
+
+.subscribe input:hover{
+    background-color: #201658;
+    color: #fff;
+}
+
+.subscribe input:nth-child(1){
+    border-left: 2px solid #433bff;
+    border-top:  2px solid #433bff;
+    border-bottom:  2px solid #433bff;
+}
+
+.subscribe input:nth-child(2){
+    border-right: 2px solid #433bff;
+    border-top:  2px solid #433bff;
+    border-bottom:  2px solid #433bff;
+    background-color: #201658;
+    color: #fff;
+}
+
+.how-much{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 2em);
+    gap: 10px;
+}
+
+.how-much input{
+    font-weight: 500;
+    cursor: pointer;
+    color: #201658;
+}
+.how-much input:hover{
+    color: #fff;
+    background-color: #201658;
+}
+.how-much input:nth-child(4){
+    background-color: #201658;
+    color: #fff;
+}
+
+.input-amount{
+    grid-column: span 3;
+    width: fit-content;
+    display: flex;
+}
+
+.input-amount button{
+    border-right: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.input-amount button i{
+    font-size: 1.2em;
+    color: #201658;
+    font-weight: 500;
+}
+
+.input-amount input{
+    outline: none;
+    border-left: none;
+    width: 32.5em;
+    
+}
+
+.donate-donate-submit input{
+    margin: 12px;
+    background-color: #201658;
+}
+
+.image{
+    grid-column: span 2;
+}
+
+.image img{
+    border-radius: 0;
+    height:30em;
+    width: 75em;
+    margin: 0 auto;
+    display: block;
+}
+
+.helped{
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
