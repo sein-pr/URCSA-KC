@@ -3,77 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title> URCSA| Katutura Congregation | About Us</title>
+    <title>URCSA| Katutura Cong</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style/main.css">
 </head>
 <body>
     
 <body>
     <header>
-        <hr>
-        <nav class="bottom-nav">
-            <div class="logo">
-                <a href="index.html" class="home-logo">
-                    <img src="assets/img/logo.png" alt="church logo">
-                </a>
-            </div>
-            <nav class="right-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#about" class="active">About</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="#ministries">Ministries</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#contacts">Contact</a></li>
-                    <li><button><i class="fa-solid fa-hand-holding-dollar"></i> Donate</button></li>
-                </ul>
+            <a href="/index.html" class="logo">
+                <img src="/assets/img/logo2.png" alt="logo image">
+                <span><span class="highlight">Katutura</span> Congregation</span>
+            </a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <div class="dropdown">
+                    <a href="#">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sermon.html">Sermons</a></li>
+                        <li><a href="#">Apply</a></li>
+                        <li><a href="#">Confirmation</a></li>
+                        <li><a href="#">Baptism</a></li>
+                        <li><a href="#">Marriage</a></li>
+                        <li><a href="#">Repentance</a></li>
+                    </ul>
+                </div>
+                <a href="#">Ministries</a>
+                <a href="news.html">News</a>
+                <a href="contact.html">Contact</a>
             </nav>
-        </nav>
+    
+            <div class="btn">
+                <button>Log in</button>
+                <button><i class="uil uil-gift"></i> Donate</button>
+            </div>
     </header>
     <main>
-            <div class="info">
-                <h2 id="TheChurch">The Church</h2>
-                <h1 id="Heading1">The Church of Jesus Christ is the community of believers who are called together by the Word of
-                    God and by His Holy Spirit.</h1> 
-                    <hr id="Horizontal-line">
-                    <div class="AboutUsContainer">
-                        <img src="/assets/img/about-us-img-1-1.png" alt="AboutUsImage" class="AboutUsImage">
-                        <p class="text">Those who have been called and who have been called and who form
-                            Uniting Reformed Church in Southern Africa are part of this Church of Christ. Together with all
-                            the other churches who confess Christ, this church has been set apart as a nation; as the people
-                            of God who belong to him and who have to proclaim the saving deeds of Him who called them
-                            from darkness unto light; as a new creation who lives in the light as He is the light.<br><br>
-                            <strong>URCSA</strong> is a Christian Church that  believes in the Triune God - Father, Son and Holy Spirit - who
-                            revealed Himself in Jesus Christ. This church believes that the Bible is the Word of God and is the
-                            full and trustworthy.
-                        </p>
-                        <div class="AboutUsContainer2">
-                            <p class="text2">
-                                <strong>About Our Church</strong>
-                                <br>The edification and extension of the church, Promotion and extension of Church unity, Effective ecumenical and partnership relations, Program for civil and social responsibility, Effective communication, Resourcing
-                            </p>
-                        </div>
-            </div>
-        </div>
-        <br><br>
-        <div class="motive">
-            <div class="vision">
-                <i class="fa-solid fa-users"></i>
-                <span>Vision</span>
-                <p>Dynamic in unity, reconciliation and justice</p>
-            </div>
-            <div class="mission">
-                <i class="fa-solid fa-book-bible"></i>
-                <span>Mission</span>
-                <p>
-                    To affect the renewal of creation through the proclamation and witness of the
-                    Kingdom of God as co-workers and followers of Christ
-                </p>
+        <div class="history-container">
+            <h1 class="history-title">History and Leadership of the Church</h1>
+            
+            <h2 class="section-title">History of the Church</h2>
+            <p class="intro-paragraph">In the second century, the church was already divided into the Eastern and Western Church. Since then, there have always been people in the church unhappy about certain developments.</p>
+            <p class="movement-description">Our church originates from a movement called "Protestant," as great scholars protested against the Roman Empire's system and practices. Key figures like Martin Luther and John Calvin significantly impacted the birth of our church.</p>
+            
+            <h2 class="figure-title">Martin Luther</h2>
+            <p class="figure-description">Luther opposed the indulgence system and questioned how a person could be certain of God’s grace. He famously nailed his 95 theses to the church door in Wittenberg. He also helped publish a Greek translation of the Bible and wrote many books to explain its meaning.</p>
+            
+            <h2 class="figure-title">John Calvin</h2>
+            <p class="figure-description">Calvin protested in Switzerland and France, advocating for a Reformed church system based on Christian education from the Bible. He wanted more lay participation and encouraged personal Bible reading.</p>
+            
+            <p class="historical-context">Over time, figures like Zwingli and Beza contributed to the split of the Roman Catholic Church and the establishment of various Protestant churches in Europe.</p>
+            
+            <p class="missionary-arrival">In the 1490s, missionaries began arriving in Africa, and by the 1730s, Protestant churches like the Lutheran and Reformed churches reached South Africa. Our church, the Uniting Reformed in Southern Africa, originated there.</p>
+            
+            <p class="name-change">Initially named the Evangelical Reformed Church in Africa (EGKA), it changed its name post-independence from apartheid to the current name, reflecting its inclusive mission.</p>
+    
+            <h2 class="section-title">Leadership</h2>
+            <h3 class="leadership-title">The Church's Hierarchy Structure</h3>
+            <p>The hierarchy is structured as follows:</p>
+            <ol class="hierarchy-list">
+                <li>One General Synod Commission (S.A)</li>
+                <li>Seven Regional Synod Commissions (6 in S.A, 1 in Namibia)</li>
+                <li>Presbyteries Commissions (various in S.A; 5 in Namibia)</li>
+                <li>Congregations (about 24 in Namibia)</li>
+                <li>Church Council (governing body of each Congregation)</li>
+                <li>Church members (the core of the Church’s existence)</li>
+            </ol>
+            
+            <p class="note">Note: Congregations can establish Wards that may become independent if self-sustaining.</p>
+    
+            <h3 class="leadership-title">Church Order</h3>
+            <p>Our church operates with a Church Order, a document guiding regulations based on Biblical teachings.</p>
+            <p>Official ministries include:</p>
+            <ul class="ministries-list">
+                <li>CMM - Christian Men Ministry</li>
+                <li>CWM - Christian Women Ministry</li>
+                <li>CYM - Christian Youth Ministry</li>
+                <li>Sunday School Ministry</li>
+            </ul>
+    
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery">
+                <img src="/assets/img/image1.jpg" alt="Image Description 1" class="gallery-image">
+                <img src="/assets/img/image2.jpg" alt="Image Description 2" class="gallery-image">
+                <img src="/assets/img/image3.jpg" alt="Image Description 3" class="gallery-image">
+                <img src="/assets/img/image4.jpg" alt="Image Description 4" class="gallery-image">
+                <img src="/assets/img/image5.jpg" alt="Image Description 5" class="gallery-image">
+                <img src="/assets/img/image6.jpg" alt="Image Description 6" class="gallery-image">
+                <img src="/assets/img/image7.jpg" alt="Image Description 6" class="gallery-image">
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer-top">
+            <div class="left-side">
+                <img src="/assets/img/logo2.png" alt="logo">
+                <h5>URCSA- <span>Katutura Congregation</span></h5>
+                <div class="info">
+                    <div class="email">
+                        <span>Email</span>
+                        <a href="urcsakatuturaa@gmail.com ">urcsakatuturaa@gmail.com</a>
+                    </div>
+                    <div class="number">
+                        <span>Number</span>
+                        <a href="#number">+264 61 255587 | 081 344 1611</a>
+                    </div>
+                </div>
+                <div class="accountable">
+                    <a href="about.html">About us</a>
+                    <a href="#">Career</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <p>Committed to spreading God's word, nurturing faith</p>
+                <p>Fostering unity within our congregation and beyond.</p>
+                <div class="footer-btn">
+                    <button>Support us</button>
+                    <button>Get involved</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="bottom">
+            <div class="socials">
+                <div>
+                    <a href="#facebook"><i class="uil uil-facebook-f"></i></a>
+                </div>
+                <div>
+                    <a href="#instagram"><i class="uil uil-instagram"></i></a>
+                </div>
+                <div>
+                    <a href="#x-twitter"><i class="uil uil-twitter-alt"></i></a>
+                </div>
+                <div>
+                    <a href="#linkedIn"><i class="uil uil-linkedin-alt"></i></a>
+                </div>
+
+            </div>
+            <p>&copy;2024 URCSA-Katutura Congregation - All rights reserved</p>
+            <p>Developed by SEIN <span>INDUSTRIES</span>, Alzira Dongua & Raphael </p>
+        </div>
+        <div class="color"></div>
+    </footer>
 </body>
 </html>

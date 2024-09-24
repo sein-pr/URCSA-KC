@@ -752,3 +752,159 @@ footer .color{
     font-weight: 500;
     border-radius: 5px;
 }
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 2.5em;
+}
+
+.contact-info {
+    color: #7f8c8d;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #1abc9c;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.history-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.history-title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: #333;
+    margin-top: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.intro-paragraph, 
+.movement-description, 
+.historical-context, 
+.missionary-arrival, 
+.name-change {
+    line-height: 1.6;
+    color: #444;
+    margin: 15px 0;
+}
+
+.figure-title {
+    color: #555;
+    margin-top: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.figure-description {
+    line-height: 1.6;
+    color: #444;
+    margin: 10px 0;
+}
+
+.hierarchy-list {
+    margin: 15px 0;
+    padding-left: 20px;
+    color: #444;
+}
+
+.missions-list {
+    margin: 15px 0;
+    padding-left: 20px;
+    color: #444;
+}
+
+.note {
+    font-style: italic;
+    color: #666;
+    margin: 10px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.news-section {
+    padding: 20px;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item h2 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.news-item .date {
+    font-size: 14px;
+    color: #999;
+}
+
+.news-item p {
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
