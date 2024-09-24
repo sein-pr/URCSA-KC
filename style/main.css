@@ -8,9 +8,6 @@
     
 }
 
-body, html {
-    scroll-behavior: smooth;
-  }
 
 header {
     box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
@@ -140,13 +137,7 @@ header .btn button:nth-child(2){
 /* header section done */
 
 /* hero section starts */
-main{
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-}
-section{
-    scroll-snap-align: start;
-}
+
 .hero{
     display: flex;
     flex-direction:column;
@@ -607,6 +598,7 @@ footer .color{
     position: relative;
     height: 7em;
 }
+
 .subpage-hero a{
     color: #fff;
     text-decoration:none;
@@ -620,6 +612,31 @@ footer .color{
     margin: 0 16px;
 }
 
+.subpage-hero .top form{
+    display: flex;
+    border: 1px solid #201658;
+    border-radius: 5px;
+}
+
+.subpage-hero .top form input{
+    border-radius: 5px 0 0 5px;
+    padding: 6px 15px;
+    background-color: rgba(255, 255, 255,0.5);
+    outline: none;
+    color: #fff;
+    border: none;
+}
+
+.subpage-hero .top form button{
+    padding: 6px 15px;
+    background-color: #201658;
+    cursor: pointer;
+}
+
+.subpage-hero .top form button i{
+    font-size: 1.1em;
+    color: #fff;
+}
 
 .subpage-hero .pagination{
     display: flex;
@@ -662,7 +679,7 @@ footer .color{
 
 .content-btn{
     position: absolute;
-    top:78%;
+    top:74%;
     left: 1%;
 }
 
@@ -688,7 +705,7 @@ footer .color{
     padding: 16px;
 }
 
-.sermon-info .by{
+.by{
     display: flex;
     gap: 10px;
 }
@@ -702,7 +719,7 @@ footer .color{
     margin: 0.5em 0;
 }
 
-.sermon-info em{
+em{
     color:#433bff;
 }
 
@@ -751,4 +768,132 @@ footer .color{
     color: #fff;
     font-weight: 500;
     border-radius: 5px;
+}
+
+/* sermon item styling */
+
+.sermon-content{
+    margin: 7em 5em;
+}
+
+.sermon-content .sermon-img{
+    position: relative;
+    width: fit-content;
+    
+}  
+
+.sermon-img img{
+    height: 35em;
+    width: 70em;
+    border-radius: 10px;
+    margin: 0 auto;
+
+}
+
+.sermon-btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sermon-btn button{
+    padding: 8px 20px;
+    border: 2px solid #201658;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #201658;
+}
+
+.sermon-btn button:hover{
+    background-color: #201658;
+    color: #fff;
+}
+
+.sermon-content .by{
+    margin: 10px 0;
+}
+
+.reads{
+    margin: 10px 0;
+}
+
+.sermon-content h3{
+    color: #333;
+    text-decoration: 0.2em underline #201658;
+    margin: 10px 0;
+}
+
+
+.sermon-content li{
+    list-style-type: none;
+    color: #2e2e2e;
+    font-weight: 500;
+}
+
+.related-images{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.related-images img{
+    height: 26em;
+    border-radius: 10px;
+}
+
+.sermon-desc{
+    margin: 16px 0;
+}
+
+.full-text {
+    display: none;
+    margin-top: 10px;
+}
+.read-more {
+    cursor: pointer;
+    color: #201658;
+    text-decoration: underline;
+}
+
+.thinks-item{
+    margin: 10px 0;
+}
+
+.thinks-item li{
+    list-style-type:decimal;
+    color: #2e2e2e;
+    font-weight: 500;
+}
+
+.thinks-item ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.questions{
+    margin: 10px 0;
+}
+
+.questions li{
+    list-style-type: none;
+    color: #2e2e2e;
+
+}
+
+.prayers .dropdown {
+    display: none;
+    margin-left: 20px;
+}
+
+.prayers ol{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 28px;
+
+}
+.prayers .toggle {
+    cursor: pointer;
+    color: #201658;
+    padding: 8px 20px;
+    border: 2px solid #201658;
 }
