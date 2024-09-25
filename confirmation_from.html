@@ -4,94 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmation Class Application</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-        }
-
-        form {
-            width: 80%;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-        }
-
-        fieldset {
-            margin-bottom: 20px;
-            border: 2px solid #005b99;
-            border-radius: 8px;
-            padding: 15px;
-        }
-
-        legend {
-            font-weight: bold;
-            color: #005b99;
-        }
-
-        label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-
-        input[type="text"], input[type="number"], input[type="date"], textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        button {
-            background-color: #005b99;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #004080;
-        }
-        h1{
-            text-align: center;
-        }
-        .note{
-            text-align: justify;
-            margin-left: 5%;
-            margin-right: 5%;
-            margin-bottom: 2%;
-            font-size: 1.1rem;
-            font-style: italic;
-        }
-        .top{
-            display: flex;
-            align-items: center;
-            gap: 10%;
-        }
-        #logo{
-            width: 10%;
-        }
-    </style>
+    <link rel="stylesheet" href="/style/main.css">
 </head>
 <body>
+    <header>
+        <a href="/index.html" class="logo">
+            <img src="/assets/img/logo2.png" alt="logo image">
+            <span><span class="highlight">Katutura</span> Congregation</span>
+        </a>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a href="#">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="service.html">Sermons</a></li>
+                    <li><a href="#">Apply</a></li>
+                    <li><a href="#">Confirmation</a></li>
+                    <li><a href="#">Baptism</a></li>
+                    <li><a href="#">Marriage</a></li>
+                    <li><a href="#">Repentance</a></li>
+                </ul>
+            </div>
+            <a href="ministries.html">Ministries</a>
+            <a href="news.html">News</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="btn">
+            <button>Log in</button>
+            <a href="donation.html" class="donate-button">
+                <button><i class="uil uil-gift"></i> Donate</button>
+            </a>
+        </div>
+    </header>
     <div class="top">
-        <img id="logo" src="assets\img\logo2.png" alt="church logo">
         <h1>Application to Attend Confirmation Classes</h1>
     </div>
     <p class="note">Only those who have completed the catechesis course, or an equivalent approved Bible course, and have reached a specific age as prescribed by the church, will be allowed to confess their faith and be confirmed. The catechism classes extend over two years. Your application is to be submitted at the beginning of the first year.</p>
-
+    
     <form action=" " method="post">
         <!-- Personal Details -->
         <fieldset>
@@ -102,41 +53,41 @@
             
             <label for="names">Name(s)</label>
             <input type="text" id="names" name="names" placeholder="Enter your name(s)">
-
+    
             <label for="dob">Date of Birth</label>
             <input type="date" id="dob" name="dob">
-
+    
             <label for="id-number">Identity Number</label>
             <input type="text" id="id-number" name="id-number" placeholder="Enter your identity number">
-
+    
             <label for="place-of-birth">Place of Birth</label>
             <input type="text" id="place-of-birth" name="place-of-birth" placeholder="Enter your place of birth">
-
+    
             <label for="father-name">Father's Name</label>
             <input type="text" id="father-name" name="father-name" placeholder="Enter your father's name">
-
+    
             <label for="mother-name">Mother's Name</label>
             <input type="text" id="mother-name" name="mother-name" placeholder="Enter your mother's name">
-
+    
             <label for="marital-status">Single or Married</label>
             <input type="text" id="marital-status" name="marital-status" placeholder="Single or Married?">
-
+    
             <label for="spouse-name">Spouse's Name (if married)</label>
             <input type="text" id="spouse-name" name="spouse-name" placeholder="Enter your spouse's name (if applicable)">
-
+    
             <label for="address">Present Residential Address</label>
             <textarea id="address" name="address" placeholder="Enter your residential address"></textarea>
-
+    
             <label for="phone">Telephone/Cell Phone Number</label>
             <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
-
+    
             <label for="school-grade">Grade at School</label>
             <input type="text" id="school-grade" name="school-grade" placeholder="Enter your current grade or status">
-
+    
             <label for="current-activity">What are you doing if you've left?</label>
             <textarea id="current-activity" name="current-activity" placeholder="If applicable, what are you doing now?"></textarea>
         </fieldset>
-
+    
         <!-- Church Details -->
         <fieldset>
             <legend>B. Church Details</legend>
@@ -146,66 +97,67 @@
             
             <label for="denomination">In which denomination and congregation?</label>
             <input type="text" id="denomination" name="denomination" placeholder="Enter denomination and congregation">
-
+    
             <label for="baptism-date">Date of Baptism (estimate)</label>
             <input type="date" id="baptism-date" name="baptism-date">
-
+    
             <label for="minister-name">Name of Minister Who Baptised You</label>
             <input type="text" id="minister-name" name="minister-name" placeholder="Enter minister's name">
-
+    
             <label for="witness-names">Names of Witnesses (if any)</label>
             <input type="text" id="witness-names" name="witness-names" placeholder="Enter witness names (if applicable)">
             
-            <label for="witness-names">Did you complete the entire course of the junior catechesis (Sunday school)? </label>
-            <input type="text" id="completed_sunday school" name="completed_sunday school" placeholder="Yes or No (Those who were baptised in the local congregation should also fill in this section.)">
+            <label for="completed-sunday-school">Did you complete the entire course of the junior catechesis (Sunday school)?</label>
+            <input type="text" id="completed-sunday-school" name="completed-sunday-school" placeholder="Yes or No">
         </fieldset>
-
+    
         <!-- Background Information -->
         <fieldset>
             <legend>C. Background Information</legend>
-
+    
             <label for="activities">Cultural Activities (e.g., Clubs/Organizations)</label>
             <textarea id="activities" name="activities" placeholder="List any cultural activities or clubs"></textarea>
-
+    
             <label for="sport">Do you participate in any sport?</label>
             <input type="text" id="sport" name="sport" placeholder="Enter the type of sport">
-
+    
             <label for="reading">Do you enjoy reading? If so, what type?</label>
             <textarea id="reading" name="reading" placeholder="Describe your reading interests and favorite author"></textarea>
-
+    
             <label for="films">Do you like going to the cinema? Favorite type of films?</label>
             <textarea id="films" name="films" placeholder="Describe your favorite types of films"></textarea>
-
+    
             <label for="travels">Have you traveled outside your region/country?</label>
             <textarea id="travels" name="travels" placeholder="Describe any travels and places you'd like to visit"></textarea>
-
-            <label for="people">If you could meet anone who would it be?</label>
+    
+            <label for="people">If you could meet anyone, who would it be?</label>
             <textarea id="people" name="people" placeholder="Describe the person you would like to meet"></textarea>
-
+    
             <label for="music">What kind of music do you listen to? Favorite musician?</label>
             <textarea id="music" name="music" placeholder="Describe your music preferences"></textarea>
-
+    
             <label for="hobbies">Do you have any hobbies?</label>
             <textarea id="hobbies" name="hobbies" placeholder="Describe your hobbies"></textarea>
-
+    
             <label for="enjoyment">What do you enjoy most?</label>
             <textarea id="enjoyment" name="enjoyment" placeholder="Describe what you enjoy most"></textarea>
-
+    
             <label for="worries">Are there things that worry you? At home or in your environment?</label>
             <textarea id="worries" name="worries" placeholder="Describe any worries"></textarea>
-
+    
             <label for="youth-problems">What problems should we pay attention to regarding young people?</label>
             <textarea id="youth-problems" name="youth-problems" placeholder="List youth problems of concern"></textarea>
         </fieldset>
-
+    
         <!-- Personal Resolution -->
         <fieldset>
             <legend>D. Personal Resolution</legend>
-
+    
             <label for="resolution">State in your own words why you want to confess your faith:</label>
             <textarea id="resolution" name="resolution" placeholder="Describe your personal resolution"></textarea>
         </fieldset>
-         <fieldset>
+    
+        <fieldset>
             <legend>E. Please Note the following</legend>
             <h4>Church Details</h4>
             <p>a) If you have not been baptised yet, it will take place at your confirmation.</p>
@@ -214,7 +166,7 @@
             
             <h4>Personal resolution</h4>
             <div class="responsibilities">
-                <h5>In the period of catechesis, the following will be expected of you: </h5>
+                <h5>In the period of catechesis, the following will be expected of you:</h5>
                 <p>a) To attend catechism lessons regularly.</p>
                 <p>b) To attend the church services regularly.</p>
                 <p>c) To belong to or participate in at least one of the organizations or activities of the congregation (e.g.: Youth movement/CYM, Women's movement/CWM, Congregation Choir, Men movement/CMM, etc...).</p>
@@ -229,10 +181,9 @@
                     I confirm that the information provided in this application is correct.
                 </label>
             </div>
-         </fieldset>
-
+        </fieldset>
+    
         <button type="submit">Submit Application</button>
     </form>
-
 </body>
 </html>
