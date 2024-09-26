@@ -8,7 +8,9 @@
     
 }
 
-
+.active-tab{
+    color: #3498db;
+}
 header {
     box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
     display: flex;
@@ -1215,7 +1217,7 @@ em{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f0f4f8; /* Light background for contrast */
+    background-color: #f0f4f8;
 }
 
 .sell-text {
@@ -1355,36 +1357,36 @@ em{
 }
 
 /* Form Styles */
-form {
+.donate-form form {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: #ffffff; /* White background for contrast */
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-fieldset {
+.confirm-form fieldset {
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 20px;
 }
 
-legend {
+.confirm-form legend {
     font-weight: bold;
     color: #2c3e50;
 }
 
-label {
+.confirm-form label {
     display: block;
     margin: 10px 0 5px;
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="date"],
-textarea {
+.confirm-form input[type="text"],
+.confirm-form input[type="date"],
+.confirm-form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -1393,15 +1395,15 @@ textarea {
     font-size: 1em;
 }
 
-input[type="checkbox"] {
+.confirm-form input[type="checkbox"] {
     margin-right: 10px;
 }
 
-textarea {
-    resize: vertical; /* Allow vertical resizing only */
+.confirm-form textarea {
+    resize: vertical;
 }
 
-button[type="submit"] {
+.confirm-form button[type="submit"] {
     padding: 10px 15px;
     color: #fff;
     background-color: #3498db;
@@ -1411,7 +1413,7 @@ button[type="submit"] {
     transition: background 0.3s ease;
 }
 
-button[type="submit"]:hover {
+.confirm-form button[type="submit"]:hover {
     background-color: #1abc9c;
 }
 
