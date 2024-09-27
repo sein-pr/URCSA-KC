@@ -148,7 +148,29 @@ header .btn button:nth-child(2){
     background-repeat: no-repeat;
     height: 100vh;
     position: relative;
-    
+    animation:slide 20s infinite;   
+}
+/* this is for the the background animation on the hero section */
+@keyframes slide{
+0% {
+    background-image: url(/assets/img/Church.png);
+}
+
+25%{
+    background-image: url(/assets/img/bible.png);
+}
+
+50%{
+    background-image: url(/assets/img/obey4.png);
+}
+
+75%{
+    background-image: url(/assets/img/obey2.png);
+}
+
+100%{
+    background-image: url(/assets/img/Church.png);
+}
 }
 
 .hero-content{
