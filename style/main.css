@@ -5,12 +5,13 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     margin: 0;
-    
+
 }
 
-.active-tab{
+.active-tab {
     color: #3498db;
 }
+
 header {
     box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
     display: flex;
@@ -25,7 +26,7 @@ header .logo {
     display: flex;
     align-items: center;
     gap: 10px;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 
@@ -71,7 +72,7 @@ header .logo img {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: rgba(32, 22, 88,0.5);
+    background-color: rgba(32, 22, 88, 0.5);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
     list-style: none;
@@ -100,7 +101,7 @@ header .logo img {
 
 .dropdown:hover .dropdown-menu {
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: repeat(2, auto);
 }
 
 header .btn button {
@@ -112,25 +113,25 @@ header .btn button {
     font-size: 1em;
 }
 
-header .btn button:hover{
+header .btn button:hover {
     background-color: #201658;
     color: #fff;
 }
 
-header .btn button:nth-child(2){
+header .btn button:nth-child(2) {
     background-color: #201658;
     color: #fff;
 }
 
-.btn button:nth-child(2) i{
+.btn button:nth-child(2) i {
     font-size: 1.2em;
 }
 
-.btn button:nth-child(2) i:hover{
+.btn button:nth-child(2) i:hover {
     color: #201658;
 }
 
-.btn button:nth-child(2):hover{
+.btn button:nth-child(2):hover {
     color: #201658;
     background-color: #fff;
     border: 2px solid #201658;
@@ -140,66 +141,67 @@ header .btn button:nth-child(2){
 
 /* hero section starts */
 
-.hero{
+.hero {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     background-image: url(/assets/img/Church.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     position: relative;
-    animation:slide 20s infinite;   
+    animation: slide 20s infinite;
 }
+
 /* this is for the the background animation on the hero section */
-@keyframes slide{
-0% {
-    background-image: url(/assets/img/Church.png);
+@keyframes slide {
+    0% {
+        background-image: url(/assets/img/Church.png);
+    }
+
+    25% {
+        background-image: url(/assets/img/bible.png);
+    }
+
+    50% {
+        background-image: url(/assets/img/obey4.png);
+    }
+
+    75% {
+        background-image: url(/assets/img/obey2.png);
+    }
+
+    100% {
+        background-image: url(/assets/img/Church.png);
+    }
 }
 
-25%{
-    background-image: url(/assets/img/bible.png);
-}
-
-50%{
-    background-image: url(/assets/img/obey4.png);
-}
-
-75%{
-    background-image: url(/assets/img/obey2.png);
-}
-
-100%{
-    background-image: url(/assets/img/Church.png);
-}
-}
-
-.hero-content{
+.hero-content {
     margin: 5em auto;
     text-align: center;
 }
 
-.hero-content h1{
+.hero-content h1 {
     font-size: 2em;
     color: #333;
 }
 
-.hero-content span{
+.hero-content span {
     font-size: 3em;
     font-weight: 500;
     color: #433bff;
 }
 
-.hero-content p{
+.hero-content p {
     color: #fff;
     font-size: 1em;
     font-weight: 500;
 }
 
-.hero-content .btn{
+.hero-content .btn {
     margin: 20px auto;
 }
 
-.hero-content .btn button{
+.hero-content .btn button {
     margin-left: 10px;
     padding: 8px 20px;
     border: none;
@@ -208,22 +210,22 @@ header .btn button:nth-child(2){
     font-size: 1em;
 }
 
-.hero-content .btn button:nth-child(1){
+.hero-content .btn button:nth-child(1) {
     background-color: #201658;
     color: #fff;
 }
 
-.hero-content .btn button:nth-child(2) i{
+.hero-content .btn button:nth-child(2) i {
     color: #201658;
 }
 
-.hero-content .btn button:nth-child(1):hover{
+.hero-content .btn button:nth-child(1):hover {
     color: #201658;
     border: 2px solid;
     background-color: #fff;
 }
 
-.hero .socials{
+.hero .socials {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -231,82 +233,83 @@ header .btn button:nth-child(2){
     left: 1em;
     top: 10em;
     padding: 10px 2px;
-    background-color: rgba(51, 51, 51,0.4);
+    background-color: rgba(51, 51, 51, 0.4);
     border: 2px solid #201658;
     border-radius: 5px;
 }
 
-.hero .socials a{
+.hero .socials a {
     text-decoration: none;
 }
 
-.hero .socials i{
+.hero .socials i {
     color: #fff;
     font-size: 1.3em;
     padding: 2px 5px;
 }
 
-.hero .socials i:hover{
+.hero .socials i:hover {
     color: #201658;
     border: 1px solid #433bff;
     border-radius: 3px;
 }
 
-.hero .times{
+.hero .times {
     display: flex;
     margin: 0 auto;
-    background-color: rgba(221, 221, 221,0.7);
+    background-color: rgba(221, 221, 221, 0.7);
     gap: 1em;
     border-radius: 5px;
     padding: 1em 2em;
     border: 1px solid #201658;
 }
 
-.times .service{
+.times .service {
     display: flex;
     gap: 0.5em;
 }
 
-.times .service i{
+.times .service i {
     font-size: 1.5em;
     color: #201658;
 }
 
-.times .service h2{
+.times .service h2 {
     color: #201658;
 }
 
 /* hero section done */
 
 /* upcoming starts here */
-.upcoming{
+.upcoming {
     margin: 25px 16px;
 }
 
-.upcoming h3{
+.upcoming h3 {
     margin: 16px 0;
     font-size: 2em;
     color: #201658;
     text-decoration: underline 0.2em;
 }
 
-.upcoming-events{
+.upcoming-events {
     display: flex;
     gap: 1em;
 }
 
-.upcoming-events .event{
+.upcoming-events .event {
     padding: 1em;
     width: 100%;
 }
 
-.upcoming-events .event h3, .prayer h3{
+.upcoming-events .event h3,
+.prayer h3 {
     font-size: 1.5em;
     text-decoration: none;
     text-align: center;
 }
 
-.event .event-item{
+.event .event-item {
     display: flex;
     gap: 1em;
     background-color: #f4f4f4;
@@ -314,22 +317,23 @@ header .btn button:nth-child(2){
     margin: 10px 0;
 }
 
-.event .event-item img{
+.event .event-item img {
     height: 10em;
     border-radius: 5px;
 }
 
-.event-item .event-info h4{
+.event-item .event-info h4 {
     font-size: 1.5em;
     font-weight: 500;
     color: #201658;
     margin: 10px 0;
 }
 
-.event-item .event-info{
+.event-item .event-info {
     width: 100%;
 }
-.event-item .event-info >div{
+
+.event-item .event-info>div {
     background-color: #201658;
     width: fit-content;
     padding: 0 5px;
@@ -338,13 +342,14 @@ header .btn button:nth-child(2){
     margin: 12px 0;
 }
 
-.event-item .event-info p, .event-info p{
+.event-item .event-info p,
+.event-info p {
     font-weight: 500;
     font-size: 1.1em;
     color: #4c4c4c;
 }
 
-.event button{
+.event button {
     margin-top: 0.5em;
     padding: 8px 20px;
     border: none;
@@ -355,38 +360,40 @@ header .btn button:nth-child(2){
     color: #fff;
 }
 
-.event button:hover{
+.event button:hover {
     color: #201658;
     border: 2px solid #201658;
     background-color: #fff;
 }
 
-.event button i{
+.event button i {
     margin-right: 5px;
 
 }
 
-.prayer{
+.prayer {
     margin: 16px;
     width: 50%;
 }
+
 .prayer-item {
     background-color: #f4f4f4;
     border-radius: 5px;
     padding: 5px 16px;
     margin: 10px 0;
 }
+
 .prayer-item i {
     font-size: 2em;
     cursor: pointer;
 }
 
-.audio-control{
+.audio-control {
     display: flex;
     gap: 1em;
 }
 
-.audio-player{
+.audio-player {
     margin: 10px 0;
 }
 
@@ -427,16 +434,16 @@ header .btn button:nth-child(2){
     cursor: pointer;
 }
 
-.prayer-item h4{
+.prayer-item h4 {
     color: #201658;
 }
 
-.prayer-item span{
+.prayer-item span {
     color: #2e2e2e;
     font-weight: 600;
 }
 
-.prayer-item .date{
+.prayer-item .date {
     background-color: #201658;
     width: fit-content;
     padding: 0 10px;
@@ -444,7 +451,7 @@ header .btn button:nth-child(2){
     border-radius: 5px;
 }
 
-.prayer button{
+.prayer button {
     margin-top: 0.5em;
     padding: 8px 20px;
     border: none;
@@ -454,7 +461,7 @@ header .btn button:nth-child(2){
     color: #2e2e2e;
 }
 
-.prayer button:hover{
+.prayer button:hover {
     background-color: #201658;
     color: #fff;
 }
@@ -469,80 +476,84 @@ footer {
     padding: 16px;
 }
 
-footer .footer-top{
+footer .footer-top {
     display: flex;
     justify-content: space-between;
 }
 
-footer a{  
+footer a {
     text-decoration: none;
 }
 
-.footer-top .left-side{
+.footer-top .left-side {
     display: block;
 }
 
-.left-side img{
+.left-side img {
     height: 5em;
 }
 
-.left-side h5{
+.left-side h5 {
     font-size: 1.5em;
 }
 
-.left-side h5 span{
+.left-side h5 span {
     color: #433bff;
 }
 
-.left-side .info{
+.left-side .info {
     display: flex;
     gap: 2em;
     margin: 16px 0;
 }
 
-.info .email, .number{
-    display:flex;
+.info .email,
+.number {
+    display: flex;
     flex-direction: column;
 }
 
-.info .email span, .number span{
+.info .email span,
+.number span {
     font-weight: 600;
     font-size: 1.2em;
     color: #201658;
 }
 
-.info .email a , .number a{
+.info .email a,
+.number a {
     margin: 5px 0;
     color: #433bff;
 }
 
 
-.info .email a:hover , .number a:hover{
+.info .email a:hover,
+.number a:hover {
     color: #201658;
 }
 
-.left-side .accountable{
+.left-side .accountable {
     display: flex;
     gap: 1.5em;
 }
 
-.accountable a{
+.accountable a {
     color: #4c4c4c;
     font-weight: 500;
 }
 
-.footer-top .right-side p{
+.footer-top .right-side p {
     font-size: 1.3em;
     font-weight: 600;
 }
 
-.footer-top .right-side .footer-btn{
+.footer-top .right-side .footer-btn {
     margin: 2em auto;
     display: flex;
     gap: 1em;
 }
 
-.right-side .footer-btn button{
+.right-side .footer-btn button {
     padding: 1em 1.1em;
     border-radius: 5px;
     border: none;
@@ -551,36 +562,37 @@ footer a{
     border: 2px solid #201658;
 }
 
-.footer-btn button:hover{
+.footer-btn button:hover {
     background-color: #201658;
     color: #fff;
 }
 
-.footer-btn button:nth-child(1){
+.footer-btn button:nth-child(1) {
     background-color: #201658;
     color: #fff;
 }
 
-.footer-btn button:nth-child(1):hover{
+.footer-btn button:nth-child(1):hover {
     color: #201658;
     background-color: #fff;
 }
 
-footer hr{
+footer hr {
     margin: 10px 0;
 }
-footer .bottom{
+
+footer .bottom {
     margin: 10px 0;
     display: flex;
     justify-content: space-between;
 }
 
-footer .bottom .socials{
+footer .bottom .socials {
     display: flex;
     gap: 16px;
 }
 
-footer .bottom .socials div{
+footer .bottom .socials div {
     width: 2em;
     height: 2em;
     border-radius: 50%;
@@ -589,31 +601,31 @@ footer .bottom .socials div{
     font-size: 1em;
 }
 
-footer .bottom .socials div:hover{
+footer .bottom .socials div:hover {
     background-color: #201658;
     border: none;
 }
 
-footer .bottom .socials a{
+footer .bottom .socials a {
     color: #201658;
 }
 
-footer .bottom .socials a:hover{
+footer .bottom .socials a:hover {
     color: #fff;
 }
 
-footer .bottom span{
+footer .bottom span {
     color: #41653b;
 }
 
-footer .color{
+footer .color {
     background-color: #201658;
     height: 1em;
 }
 
 
 /* sermon page starts here */
-.subpage-hero{
+.subpage-hero {
     margin: 1em 0;
     background-image: url(/assets/img/Church.png);
     background-size: cover;
@@ -623,76 +635,76 @@ footer .color{
     height: 7em;
 }
 
-.subpage-hero a{
+.subpage-hero a {
     color: #fff;
-    text-decoration:none;
+    text-decoration: none;
     font-weight: 500;
 }
 
-.subpage-hero .top{
+.subpage-hero .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 16px;
 }
 
-.subpage-hero .top form{
+.subpage-hero .top form {
     display: flex;
     border: 1px solid #201658;
     border-radius: 5px;
 }
 
-.subpage-hero .top form input{
+.subpage-hero .top form input {
     border-radius: 5px 0 0 5px;
     padding: 6px 15px;
-    background-color: rgba(255, 255, 255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     outline: none;
     color: #fff;
     border: none;
 }
 
-.subpage-hero .top form button{
+.subpage-hero .top form button {
     padding: 6px 15px;
     background-color: #201658;
     cursor: pointer;
 }
 
-.subpage-hero .top form button i{
+.subpage-hero .top form button i {
     font-size: 1.1em;
     color: #fff;
 }
 
-.subpage-hero .pagination{
+.subpage-hero .pagination {
     display: flex;
     gap: 5px;
     justify-content: center;
 }
 
-.subpage-hero img{
+.subpage-hero img {
     height: 5em;
     position: absolute;
     border: 3px solid #fff;
     border-radius: 50%;
 }
 
-.sermon-item{
+.sermon-item {
     display: flex;
     margin: 4em 16px;
-    gap:  1.5em;
+    gap: 1.5em;
     background-color: #fff;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
-                0 6px 6px rgba(0, 0, 0, 0.15); 
+        0 6px 6px rgba(0, 0, 0, 0.15);
     height: fit-content;
     border-radius: 5px;
     padding: 5px;
 }
 
-.sermons .img{
+.sermons .img {
     position: relative;
 
 }
 
-.img img{
+.img img {
     height: 15em;
     width: 25em;
     border-radius: 5px;
@@ -701,13 +713,13 @@ footer .color{
     border-bottom: 3px solid #201658;
 }
 
-.content-btn{
+.content-btn {
     position: absolute;
-    top:74%;
+    top: 74%;
     left: 1%;
 }
 
-.content-btn button{
+.content-btn button {
     padding: 6px 20px;
     border-radius: 5px;
     border: none;
@@ -716,38 +728,38 @@ footer .color{
     cursor: pointer;
 }
 
-.content-btn button:hover{
+.content-btn button:hover {
     background-color: #f4f4f4;
     color: #201658;
 }
 
-.content-btn button i{
+.content-btn button i {
     font-size: 20px;
 }
 
-.sermon-info{
+.sermon-info {
     padding: 16px;
 }
 
-.by{
+.by {
     display: flex;
     gap: 10px;
 }
 
-.sermon-info h1{
+.sermon-info h1 {
     color: #201658;
 }
 
-.sermon-info p{
-    color: rgba(51, 51, 51,0.5);
+.sermon-info p {
+    color: rgba(51, 51, 51, 0.5);
     margin: 0.5em 0;
 }
 
-em{
-    color:#433bff;
+em {
+    color: #433bff;
 }
 
-.sermon-info button{
+.sermon-info button {
     padding: 8px 20px;
     border-radius: 5px;
     border: none;
@@ -755,11 +767,12 @@ em{
     margin: 0.5em 0;
 }
 
-.sermon-info button:hover{
+.sermon-info button:hover {
     background-color: #201658;
     color: #fff;
 }
-.pagination-number{
+
+.pagination-number {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -767,7 +780,7 @@ em{
     color: #201658;
 }
 
-.pagination-number span{
+.pagination-number span {
     padding: 3px 15px;
     border: 2px solid #201658;
     border-radius: 5px;
@@ -775,17 +788,18 @@ em{
     cursor: pointer;
 }
 
-.pagination-number span:hover{ 
+.pagination-number span:hover {
     background-color: #201658;
     color: #fff;
 }
-.pagination-number span:first-child{
+
+.pagination-number span:first-child {
     background-color: #201658;
     border: none;
     color: #fff;
 }
 
-.pagination-number button{
+.pagination-number button {
     padding: 3px 15px;
     background-color: #201658;
     border: none;
@@ -800,7 +814,8 @@ em{
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background-color: #f8f9fa; /* Light background for contrast */
+    background-color: #f8f9fa;
+    /* Light background for contrast */
 }
 
 .contact-section {
@@ -812,14 +827,17 @@ em{
 }
 
 .contact-section h1 {
-    color: #2980b9; /* Accent color */
+    color: #2980b9;
+    /* Accent color */
     margin-bottom: 25px;
     font-size: 2.5em;
-    font-weight: 600; /* Slightly bolder */
+    font-weight: 600;
+    /* Slightly bolder */
 }
 
 .contact-info {
-    color: #34495e; /* Darker text color for better readability */
+    color: #34495e;
+    /* Darker text color for better readability */
 }
 
 .contact-info p {
@@ -843,11 +861,13 @@ em{
 @media (max-width: 600px) {
     .contact-section {
         padding: 20px;
-        max-width: 90%; /* Full width on smaller screens */
+        max-width: 90%;
+        /* Full width on smaller screens */
     }
-    
+
     .contact-section h1 {
-        font-size: 2em; /* Slightly smaller on mobile */
+        font-size: 2em;
+        /* Slightly smaller on mobile */
     }
 }
 
@@ -994,17 +1014,17 @@ em{
 
 /* sermon item styling */
 
-.sermon-content{
+.sermon-content {
     margin: 7em 5em;
 }
 
-.sermon-content .sermon-img{
+.sermon-content .sermon-img {
     position: relative;
     width: fit-content;
-    
-}  
 
-.sermon-img img{
+}
+
+.sermon-img img {
     height: 35em;
     width: 70em;
     border-radius: 10px;
@@ -1012,12 +1032,12 @@ em{
 
 }
 
-.sermon-btn{
+.sermon-btn {
     display: flex;
     justify-content: space-between;
 }
 
-.sermon-btn button{
+.sermon-btn button {
     padding: 8px 20px;
     border: 2px solid #201658;
     border-radius: 5px;
@@ -1025,44 +1045,44 @@ em{
     color: #201658;
 }
 
-.sermon-btn button:hover{
+.sermon-btn button:hover {
     background-color: #201658;
     color: #fff;
 }
 
-.sermon-content .by{
+.sermon-content .by {
     margin: 10px 0;
 }
 
-.reads{
+.reads {
     margin: 10px 0;
 }
 
-.sermon-content h3{
+.sermon-content h3 {
     color: #333;
     text-decoration: 0.2em underline #201658;
     margin: 10px 0;
 }
 
 
-.sermon-content li{
+.sermon-content li {
     list-style-type: none;
     color: #2e2e2e;
     font-weight: 500;
 }
 
-.related-images{
+.related-images {
     display: flex;
     justify-content: center;
     gap: 16px;
 }
 
-.related-images img{
+.related-images img {
     height: 26em;
     border-radius: 10px;
 }
 
-.sermon-desc{
+.sermon-desc {
     margin: 16px 0;
 }
 
@@ -1070,38 +1090,39 @@ em{
     display: none;
     margin-top: 10px;
 }
+
 .read-more {
     cursor: pointer;
     color: #201658;
     text-decoration: underline;
 }
 
-.thinks-item{
+.thinks-item {
     margin: 10px 0;
 }
 
-.thinks-item li{
-    list-style-type:decimal;
+.thinks-item li {
+    list-style-type: decimal;
     color: #2e2e2e;
     font-weight: 500;
 }
 
-.thinks-item ul{
+.thinks-item ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
 }
 
-.listen audio{
+.listen audio {
     width: 75em;
     color: #201658;
 }
 
-.questions{
+.questions {
     margin: 10px 0;
 }
 
-.questions li{
+.questions li {
     list-style-type: none;
     color: #2e2e2e;
 
@@ -1112,15 +1133,247 @@ em{
     margin-left: 20px;
 }
 
-.prayers ol{
+.prayers ol {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 28px;
 
 }
+
 .prayers .toggle {
     cursor: pointer;
     color: #201658;
     padding: 8px 20px;
     border: 2px solid #201658;
 }
+
+
+/* styling all min ministry page */
+.ministries {
+    margin: 5em 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* 3 columns with min 250px width */
+    gap: 20px;
+}
+
+.ministry-item {
+    display: block;
+    border-radius: 10px;
+    border-left: 2px solid #201658;
+    border-right: 2px solid #201658;
+    border-top: 2px solid #2980b9;
+    border-bottom: 2px solid #2980b9;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1),
+        0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ministry-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2),
+                0 10px 10px rgba(0, 0, 0, 0.15);
+  }
+
+.ministry-item .image {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 200px;
+    overflow: hidden;
+}
+
+.ministry-item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ministry-info {
+    margin-top: 12px;
+    padding: 0 16px;
+}
+
+.ministry-info h2 {
+    color: #201658;
+}
+
+.ministry-item button {
+    padding: 8px 16px;
+    color: #201658;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    padding: 8px 20px;
+    margin: 16px;
+    border: 2px solid #201658;
+    border-radius: 5px;
+}
+
+.ministry-item button:hover {
+    background-color: #201658;
+    color: white;
+}
+
+/* misnistry item styling */
+
+.cwm{
+    margin: 5em 16px;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+.cwm .members{
+    padding: 10px;
+    border: 2px solid #201658;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.cwm .members .btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.members .btn button{
+    padding: 8px 15px;
+}
+.members .btn button:nth-child(2){
+    background-color: #201658;
+    color: white;
+}
+
+.members .table {
+    margin: 20px 0;
+}
+
+.members table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.members thead {
+    background-color: #201658;
+    color: white;
+}
+
+.members th, .members td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.members tr:hover {
+    background-color: #f1f1f1;
+}
+
+.members tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.members tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.cwm-info{
+    width: 47.5em;
+    padding: 10px;
+}
+
+.cwm-info h3{
+    color: #201658;
+    margin: 10px 0;
+}
+
+.cwm-info p{
+    color: #4c4c4c;
+}
+
+.cwm-info .slider{
+    margin: 2em 0;
+}
+
+.cwm-info .slider .slider-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cwm-info .slider .slider-items img{
+    height: 12em;
+}
+
+.cwm-info img{
+    height: 35em;
+    border-radius: 5px;
+    border-bottom: 5px solid #2980b9;
+}
+
+.cwm .posts{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.posts .upcomings{
+    border: 2px solid #201658;
+    border-radius: 10px;
+}
+
+.posts .upcomings .event{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.cwm .posts h3{
+    padding: 0 10px;
+    color: #201658;
+}
+
+.posts h4{
+    color: #535353;
+}
+
+.posts .event .item span i{
+    color: #201658;
+    font-size: 1.3em;
+}
+
+.posts .event .item{
+    display: flex;
+    gap: 5px;
+}
+
+
+.posts .event .item-info{
+    padding: 5px;
+}
+
+.event .item img{
+    height: 5em;
+    border-radius: 10px;
+    border-left: 5px solid #2980b9;
+}
+
+.ministry-news{
+    margin: 10em 0;
+    border-radius: 10px;
+    border: 2px solid #201658;
+    padding: 10px;
+}
+
+.ministry-news .event{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+
+.ministry-news .item .item-info .btn button{
+    padding: 5px 10px;
+}
+
