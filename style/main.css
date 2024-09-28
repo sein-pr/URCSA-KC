@@ -5,7 +5,6 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     margin: 0;
-
 }
 
 .active-tab {
@@ -1237,6 +1236,10 @@ em {
 
 .members .btn button{
     padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
 }
 .members .btn button:nth-child(2){
     background-color: #201658;
@@ -1245,7 +1248,15 @@ em {
 
 .members .table {
     margin: 20px 0;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
+
+#member-list.active {
+    display: block;
+    opacity: 1;
+  }
 
 .members table {
     width: 100%;
@@ -1265,11 +1276,12 @@ em {
 }
 
 .members tr:hover {
-    background-color: #f1f1f1;
+    background-color: #1abc9c;
 }
 
 .members tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: rgba(26, 188, 156,0.2);
+    color: black;
 }
 
 .members tbody tr:nth-child(odd) {
@@ -1290,17 +1302,17 @@ em {
     color: #4c4c4c;
 }
 
-.cwm-info .slider{
+.cwm-info .ministry-image{
     margin: 2em 10px;
 }
 
-.cwm-info .slider .slider-items{
+.cwm-info .ministry-image .ministry-image-item{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
-.cwm-info .slider .slider-items img{
+.cwm-info .ministry-image .ministry-image-item img{
     height: 11.5em;
 }
 
