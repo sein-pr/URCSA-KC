@@ -1222,6 +1222,18 @@ em {
     justify-content: space-between;
 }
 
+.cwm:first-child {
+    flex: 1; 
+}
+
+.cwm.box:nth-child(2) {
+    flex: 2;
+}
+
+.cwm:last-child {
+    flex: 1;
+  }
+  
 .cwm .members{
     padding: 10px;
     border: 2px solid #201658;
@@ -1231,7 +1243,7 @@ em {
 
 .cwm .members .btn{
     display: flex;
-    justify-content: space-between;
+    gap: 1em;
 }
 
 .members .btn button{
@@ -1240,10 +1252,21 @@ em {
     border-radius: 5px;
     font-weight: 500;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 .members .btn button:nth-child(2){
     background-color: #201658;
     color: white;
+}
+
+.members .btn button:nth-child(2):hover{
+    color: #201658;
+    background-color: #fff;
+}
+
+.members .btn button:first-child:hover{
+    color: #201658;
+    border: 2px solid #201658;
 }
 
 .members .table {
@@ -1289,8 +1312,8 @@ em {
 }
 
 .cwm-info{
-    width: 47.5em;
-    padding: 10px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .cwm-info h3{
@@ -1307,19 +1330,32 @@ em {
 }
 
 .cwm-info .ministry-image .ministry-image-item{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    display: flex;
+    gap: 1em;
+}
+
+.cwm-info .ministry-image .ministry-image-item .min-img{
+    height: 12em;
+    overflow: hidden;
 }
 
 .cwm-info .ministry-image .ministry-image-item img{
-    height: 11.5em;
+    object-fit: fill;
+    width: 100%;
+    border-bottom: 5px solid #201658;
+    border-radius: 5px;
 }
 
-.cwm-info img{
-    height: 35em;
-    border-radius: 5px;
-    border-bottom: 5px solid #2980b9;
+.cwm-info .img-cwm{
+    /* border: 2px solid #201658; */
+    height: fit-content;
+}
+
+.cwm-info .img-cwm img{
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 10px solid #201658;
+    border-radius: 10px;
 }
 
 .cwm .posts{
