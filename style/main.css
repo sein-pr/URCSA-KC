@@ -992,20 +992,198 @@ em {
 
 .newest img{
     object-fit: cover;
-    height: 17em;
+    height: 25em;
+    width: 130em;
     border-radius: 10px;
+    border-bottom: 5px solid #201658;
+}
+
+.newest h1{
+    color: #201658;
+    margin: 1em 0;
+}
+
+.newest .news-cont{
+    color: #444;
 }
 
 .who{
     display: flex;
-    gap: 12px;
+    gap: 1em;
 }
 
 .who img{
-    width: 3em;
-    height: 3em;
+    width: 2.5em;
+    height: 2.5em;
     border-radius: 100%;
 }
+
+.dot{
+    width: 5px;
+    height: 5px;
+    margin: 1em 0;
+    border-radius: 100%;
+    background-color: #201658;
+}
+
+.cate{
+    display: flex;
+    gap: 1em;
+    margin: 1.0em 0;
+}
+
+.cate span:first-child,.cate span:last-child{
+    color: #2980b9;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.time-posted {
+    color: #444;
+    margin: 5px 0;
+}
+
+.all-news{
+    margin: 2.5em 2em;
+}
+
+.all-news .label{
+    display: flex;
+    justify-content: space-between;
+}
+
+.all-news .label h2{
+    color: #333;
+}
+
+.all-news .label span{
+    padding: 8px 15px;
+    color: #201658;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.all-news .label span i{
+    color: #201658;
+    font-weight: 600;
+}
+
+.news-con{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+}
+
+.news-item .n-img {
+    width: fit-content;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+
+.news-item .n-img img{
+    height: 14em;
+    border-radius: 10px;
+    border-bottom: 5px solid #201658;
+    object-fit: cover;
+}
+
+.news-item .n-img button {
+    padding: 10px 25px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px solid #201658;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.news-item .n-img button:hover{
+    background-color: #201658;
+    color: #fff;
+    border: none;
+}
+
+
+/* Show button when hovring over the .n-img */
+.news-item .n-img:hover button {
+    opacity: 1;
+    visibility: visible;
+    cursor: pointer;
+}
+
+/* Hover effct on the image */
+.news-item .n-img:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.news-item h4{
+    margin: 0.2em 0;
+    font-size: 1.3em;
+    color: #444;
+}
+
+.news-item p{
+    color: #444;
+    object-fit: cover;
+}
+
+
+.news-ministry{
+    margin: 2em;
+    border: 2px solid #201658;
+    width: 90%;
+}
+.news-from-ministry{
+    display: flex;
+}
+
+.news-from-ministry span{
+    margin: auto;
+}
+
+.news-from-ministry .from-ministry{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    
+}
+
+.news-from-ministry .from-ministry img{
+    height: 5em;
+    width: 5em;
+    object-fit: cover;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.news-from-ministry .from-ministry:nth-child(1) img{
+    border: 3px solid #433bff;
+}
+
+
+.news-from-ministry .from-ministry img:hover{
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.news-from-ministry .from-ministry p{
+    color: #201658;
+    font-weight: 600;
+}
+
 
 /* sermon item styling */
 
