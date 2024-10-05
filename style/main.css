@@ -959,9 +959,40 @@ em {
     margin: 2em;
     border-radius: 10px;
     /* background-color:#e2e1e1; */
-    background-color: #201658;
+    background-color: rgba(32, 22, 88,0.4);
     padding: 2em 16px;
     text-align: center;
+}
+
+.new-top form{
+    display: flex;
+    margin: 1em auto;
+    border: 1px solid #201658;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.new-top form input{
+    width: 20rem;
+    padding: 10px 5px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    outline: 1px solid #201658;
+    color: #333;
+}
+
+.new-top form button{
+    border: none;
+    border-radius: 0 10px 10px 0;
+    padding: 0 20px;
+    background-color: #201658;
+    color: #fff;
+    font-weight: 500;
+}
+
+.new-top form button:hover{
+    background-color: #fff;
+    color: #201658;
 }
 
 .new-top p{
@@ -990,17 +1021,32 @@ em {
     gap: 1em;
 }
 
-.newest img{
+.newest > img{
     object-fit: cover;
     height: 25em;
     width: 130em;
     border-radius: 10px;
     border-bottom: 5px solid #201658;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    
 }
+
+.newest > img:hover{
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
 
 .newest h1{
     color: #201658;
     margin: 1em 0;
+    cursor: pointer;
+}
+
+.newest h1:hover{
+    text-decoration: underline;
 }
 
 .newest .news-cont{
@@ -1016,6 +1062,12 @@ em {
     width: 2.5em;
     height: 2.5em;
     border-radius: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.who img:hover{
+    border: 2px solid #201658;
 }
 
 .dot{
@@ -1053,14 +1105,22 @@ em {
 }
 
 .all-news .label h2{
-    color: #333;
+    color: #201658;
+    margin: 1em 0;
 }
+
 
 .all-news .label span{
     padding: 8px 15px;
     color: #201658;
     font-weight: 600;
     cursor: pointer;
+    margin: auto 0;
+    font-size: 1.5em;
+}
+
+.all-news .label span:hover{
+    text-decoration: underline;
 }
 
 .all-news .label span i{
@@ -1086,6 +1146,7 @@ em {
     border-radius: 10px;
     border-bottom: 5px solid #201658;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .news-item .n-img button {
@@ -1128,7 +1189,11 @@ em {
 .news-item h4{
     margin: 0.2em 0;
     font-size: 1.3em;
-    color: #444;
+    color: #201658;
+}
+
+.news-item h4:hover{
+    text-decoration: underline;
 }
 
 .news-item p{
@@ -1136,29 +1201,38 @@ em {
     object-fit: cover;
 }
 
-
 .news-ministry{
-    margin: 2em;
-    border: 2px solid #201658;
+    margin: 2em auto;
+    /* border: 2px solid #201658; */
     width: 90%;
 }
-.news-from-ministry{
-    display: flex;
+
+.news-ministry h2{
+    color: #201658;
 }
 
-.news-from-ministry span{
-    margin: auto;
+.news-from-ministry{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.news-from-ministry .from-ministry p{
+    color: #201658;
+    font-weight: 600;
+}
+
+.news-from-ministry .from-ministry img:hover{
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .news-from-ministry .from-ministry{
-    width: fit-content;
-    height: fit-content;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     text-align: center;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    
 }
 
 .news-from-ministry .from-ministry img{
@@ -1170,19 +1244,23 @@ em {
 }
 
 .news-from-ministry .from-ministry:nth-child(1) img{
-    border: 3px solid #433bff;
+    border: 4px solid #433bff;
 }
 
 
-.news-from-ministry .from-ministry img:hover{
-    transform: translate(-10px, -10px);
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+.news-ministry span{
+    margin: auto;
 }
 
-.news-from-ministry .from-ministry p{
-    color: #201658;
-    font-weight: 600;
-}
+
+
+
+
+
+
+
+
+
 
 
 /* sermon item styling */
