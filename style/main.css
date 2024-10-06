@@ -821,67 +821,73 @@ em {
 }
 
 /* Contact Container Styles */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    background-color: #f8f9fa;
-    /* Light background for contrast */
+.contact{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 1.5em;
+    border: 2px solid #201658;
+    margin: 3em 2em;
 }
 
-.contact-section {
-    padding: 40px;
-    max-width: 400px;
+.contact .location{
+    border: 2px solid #201658;
+    padding: 1em;
+    border-radius: 10px;
+    height: 15em;
+    color: #fff;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #201658;
+    margin: 0 auto;
 }
 
-.contact-section h1 {
-    color: #2980b9;
-    /* Accent color */
-    margin-bottom: 25px;
-    font-size: 2.5em;
-    font-weight: 600;
-    /* Slightly bolder */
+.contact .location i{
+    font-size: 1.9em;
 }
 
-.contact-info {
-    color: #34495e;
-    /* Darker text color for better readability */
+.contact .phone{
+    border: 2px solid #201658;
+    padding: 1em;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(32, 22, 88,0.5);
+    height: 15em;
 }
 
-.contact-info p {
-    margin: 10px 0;
-    font-size: 1.1em;
+
+.contact .phone i{
+    font-size: 1.9em;
 }
 
-.contact-info a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+.contact .email{
+    border: 2px solid #201658;
+    padding: 1em;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(32, 22, 88,0.5);
+    height: 15em;
 }
 
-.contact-info a:hover {
-    color: #1abc9c;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+
+.form-filing{
+    grid-column: span 2/ span 2;
+    grid-row-start: 2;
 }
 
-/* Responsive Styles */
-@media (max-width: 600px) {
-    .contact-section {
-        padding: 20px;
-        max-width: 90%;
-        /* Full width on smaller screens */
-    }
-
-    .contact-section h1 {
-        font-size: 2em;
-        /* Slightly smaller on mobile */
-    }
+.map{
+    grid-column: span 2 / span 2;
+    grid-row-start:3;
 }
+
+
+
+
+
+
+
 
 /* History Container Styles */
 .history-container {
