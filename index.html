@@ -57,7 +57,7 @@
                 <span>Katutura Congregation</span>
                 <p>Serving the community through faith, unity, and service.</p>
                 <div class="btn">
-                    <button><i class="uil uil-schedule"></i> View Schedule</button>
+                    <button class="scheduleBtn"><i class="uil uil-schedule"></i> View Schedule</button>
                     <button>Request Prayer <i class="fa-solid fa-hands-praying"></i></button>
                 </div>
             </div>
@@ -118,7 +118,7 @@
                             <p><i class="uil uil-map-marker"></i> Church building</p>
                         </div>
                     </div>
-                    <button><i class="uil uil-schedule"></i>View Calendar</button>
+                    <button class="scheduleBtn"><i class="uil uil-schedule"></i>View Calendar</button>
                 </div>
                 <div class="prayer">
                     <h3>Prayers</h3>
@@ -174,7 +174,57 @@
                 </div>
             </div>
         </section>
+
+        <div class="schedule-modal">
+            <div class="schedule-container">
+                <div class="schedule-left">
+                    <div class="calendar">
+                        <div class="month">
+                            <i class="uil uil-angle-left-b prev"></i>
+                            <div class="date">October 2024</div>
+                            <i class="uil uil-angle-right-b next"></i>
+                        </div>
+                        <div class="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="days"></div>
+                        <div class="goto-today">
+                            <div class="goto">
+                                <input type="text" placeholder="mm/yyyy" class="date-input">
+                                <button class="goto">Go</button>
+                            </div>
+                            <button class="toda">Today</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="schedule-right">
+                    <div class="today-date">
+                        <div class="event-day">Sun</div>
+                        <div class="event-date">06th October 2024</div>
+                    </div>
+                    <div class="events">
+                        <div class="title">
+                            <i class="uil uil-circle"></i>
+                            <h3 class="event-title">Church day</h3>
+                        </div>
+                        <div class="event-time">
+                            <span class="event-time">10:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </main>
+
+    
     <footer>
         <div class="footer-top">
             <div class="left-side">

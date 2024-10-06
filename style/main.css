@@ -7,6 +7,10 @@
     margin: 0;
 }
 
+body{
+    position: relative;
+}
+
 .active-tab {
     color: #3498db;
 }
@@ -279,6 +283,7 @@ header .btn button:nth-child(2) {
 
 /* hero section done */
 
+
 /* upcoming starts here */
 .upcoming {
     margin: 25px 16px;
@@ -465,7 +470,393 @@ header .btn button:nth-child(2) {
     color: #fff;
 }
 
+main{
+    position: relative;
+}
 /* upcominf event css done */
+
+/* schedule-modal STYLING */
+.schedule-modal {
+    border: 1px solid #201658;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    display: none;
+}
+
+.schedule-modal.active {
+    display: flex;
+}
+  
+
+.schedule-container {
+    position: relative;
+    width: 1200px;
+    min-height: 550px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #fff;
+    display: flex;
+    gap: 1em;
+    border-radius: 10px;
+    background-color: #373c4f;
+}
+
+.schedule-left {
+    width: 60%;
+    padding: 20px;
+}
+
+.calendar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #878895;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.calendar::before,
+.calendar::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 12px;
+    height: 97%;
+    border-radius: 0 5px 5px 0;
+    background-color: #d3d4d6d7;
+    transform: translateY(-50%);
+}
+
+.calendar::before {
+    height: 94%;
+    left: calc(100% + 12px);
+    background-color: rgb(153, 153, 153);
+}
+
+.calendar .month {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.calendar .month .prev,
+.calendar .month .next {
+    cursor: pointer;
+}
+
+.calendar .month .prev,
+.calendar .month .next {
+    cursor: pointer;
+}
+
+.calendar .month .prev:hover,
+.calendar .month .next:hover {
+    color: #201658;
+}
+
+.calendar .weekdays {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weekdays div {
+    width: 14.28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar .days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.calendar .days .day {
+    width: 14.28%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #201658;
+    border: 1px solid #f5f5f5;
+}
+
+.calendar .days .day:nth-child(7n + 1) {
+    border-left: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:nth-child(7n) {
+    border-right: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:nth-child(-n + 7) {
+    border-top: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:nth-child(n + 29) {
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.calendar .days .day:not(.prev-date, .next-date):hover {
+    color: #fff;
+    background-color: #201658;
+}
+
+.calendar .days .prev-date,
+.calendar .days .next-date {
+    color: #b3b3b3;
+}
+
+.calendar .days .active {
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #201658;
+}
+
+.calendar .days .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 2px #201658;
+}
+
+.calendar .days .today {
+    font-size: 2rem;
+}
+
+.calendar .days .event {
+    position: relative;
+}
+
+.calendar .days .event::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 75%;
+    height: 6px;
+    border-radius: 30px;
+    transform: translateX(-50%);
+    background-color: #201658;
+}
+
+.calendar .days .day:hover.event::after {
+    background-color: #fff;
+}
+
+.calendar .days .active.event::after {
+    background-color: #fff;
+    bottom: 20%;
+}
+
+.calendar .days .active.event {
+    padding-bottom: 10px;
+}
+
+.calendar .goto-today {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    color: #201658;
+}
+
+.calendar .goto-today .goto {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #201658;
+}
+
+.calendar .goto-today .goto input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    color: #201658;
+    border-radius: 5px;
+}
+
+.calendar .goto-today button {
+    padding: 5px 10px;
+    border: 1px solid #201658;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: #201658;
+}
+
+.calendar .goto-today button:hover {
+    color: #fff;
+    background-color: #201658;
+}
+
+.calendar .goto-today .goto button {
+    border: none;
+    border-left: 1px solid #201658;
+    border-radius: 0;
+}
+
+.schedule-container .schedule-right {
+    position: relative;
+    width: 40%;
+    min-height: 100%;
+    padding: 20px 0;
+}
+
+.schedule-right .today-date {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    padding-left: 70px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.schedule-right .today-date .event-day {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.schedule-right .today-date .event-date {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #878895;
+}
+
+.schedule-right .events {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4px;
+}
+
+.schedule-right .events .event {
+    position: relative;
+    width: 95%;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 20px;
+    padding-left: 50px;
+    color: #fff;
+    background: linear-gradient(90deg, #3f4458, transparent);
+    cursor: pointer;
+}
+
+/* even event */
+.schedule-right .events .event:nth-child(even) {
+    background: transparent;
+}
+
+.schedule-right .events .event:hover {
+    background: linear-gradient(90deg, #201658, transparent);
+}
+
+.schedule-right .events .event .title {
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.events .event .title .event-title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+.schedule-right .events .event i {
+    color: #201658;
+    font-size: 0.5rem;
+}
+
+.schedule-right .events .event:hover i {
+    color: #fff;
+}
+
+.schedule-right .events .event .event-time {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #878895;
+    margin-left: 15px;
+    pointer-events: none;
+}
+.schedule-right .events .event:hover .event-time {
+    color: #fff;
+}
+
+/* add tick in event after */
+.events .event::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 3rem;
+    line-height: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    color: var(--primary-clr);
+    transform: translateY(-50%);
+}
+
+.events .event:hover::after {
+    display: flex;
+}
 
 /* footer css starts */
 footer {
@@ -627,12 +1018,12 @@ footer .color {
 .subpage-hero {
     /* margin: 1em 0; */
     background-image: url(/assets/img/Church.png);
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
     position: relative;
     height: 7em;
-    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .subpage-hero a {
@@ -650,7 +1041,7 @@ footer .color {
     margin: 0 16px;
 }
 
-.subpage-hero h1{
+.subpage-hero h1 {
     margin: 0 auto;
     letter-spacing: 0.5em;
     font-weight: 600;
@@ -679,13 +1070,13 @@ footer .color {
     border: none;
 }
 
-.subpage-hero span{
+.subpage-hero span {
     color: #201658;
     font-weight: 500;
     font-size: 1.3em;
 }
 
-.subpage-hero .top form button:hover{
+.subpage-hero .top form button:hover {
     color: #201658;
     background-color: #fff;
     border: 2px solid #201658;
@@ -697,7 +1088,7 @@ footer .color {
     color: #fff;
 }
 
-.subpage-hero .top form button i:hover{
+.subpage-hero .top form button i:hover {
     color: #201658;
 }
 
@@ -839,40 +1230,40 @@ em {
 }
 
 /* Contact Container Styles */
-.contact{
+.contact {
     display: flex;
     justify-content: center;
     gap: 3em;
     margin: 4em 0;
 }
 
-.contact .item-top{
+.contact .item-top {
     background-color: #ddd;
     border-radius: 10px;
     padding: 2.5em;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75);
     border: 1px solid #201658;
 }
 
-.contact .item-top i{
+.contact .item-top i {
     color: #201658;
     text-align: center;
     font-size: 2em;
 }
 
-.contact .item-top h2{
+.contact .item-top h2 {
     color: #201658;
     text-align: center;
     margin: 0.5em 0;
 }
 
-.contact .item-top span{
+.contact .item-top span {
     color: #333;
 }
 
-.contact .item-top button{
+.contact .item-top button {
     margin-top: 1em;
     padding: 10px 20px;
     border-radius: 5px;
@@ -881,13 +1272,13 @@ em {
     font-weight: 500;
 }
 
-.contact .item-top button:hover{
+.contact .item-top button:hover {
     background-color: #201658;
     color: #fff;
 }
 
-.form-filing{
-    margin:0.5em 4em;
+.form-filing {
+    margin: 0.5em 4em;
     display: flex;
     /* justify-content: space-between; */
     border: 1px solid #201658;
@@ -895,18 +1286,19 @@ em {
     height: fit-content;
 }
 
-.form-filing .form-left{
+.form-filing .form-left {
     padding: 3em 2em;
     border-radius: 10px 0 0 10px;
 }
 
-.form-left form{
+.form-left form {
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
 
-.form-left form input, .form-left textarea{
+.form-left form input,
+.form-left textarea {
     padding: 10px;
     border: 2px solid #201658;
     border-radius: 5px;
@@ -914,13 +1306,13 @@ em {
     max-width: 40em;
 }
 
-.form-left textarea{
+.form-left textarea {
     height: 10em;
     background-color: #f0f0f0;
     resize: none;
 }
 
-.form-left button{
+.form-left button {
     margin: 1em 0;
     padding: 8px 3em;
     border: 2px solid #201658;
@@ -929,56 +1321,57 @@ em {
     font-weight: 600;
 }
 
-.form-left button i{
+.form-left button i {
     font-size: 1.2em;
 }
 
-.form-left button:hover{
+.form-left button:hover {
     color: #fff;
     background-color: #201658;
 }
 
-.form-right{
+.form-right {
     position: relative;
     border-radius: 0 10px 10px 0;
     overflow: hidden;
 }
-.form-right img{
+
+.form-right img {
     object-fit: cover;
     height: 100%;
     width: 100%;
     border-radius: 0 10px 10px 0;
 }
 
-.form-right button{
+.form-right button {
     position: absolute;
     top: 50%;
     left: 45%;
     padding: 10px 25px;
     border-radius: 5px;
-    border: 2px solid rgba(32, 22, 88,0.5);
-    background-color: rgba(46, 46, 46,0.3);
+    border: 2px solid rgba(32, 22, 88, 0.5);
+    background-color: rgba(46, 46, 46, 0.3);
     color: #fff;
     font-size: 1em;
     font-weight: 500;
 }
 
-.form-right button i{
+.form-right button i {
     font-size: 1.2em;
 }
 
-.form-right button:hover{
+.form-right button:hover {
     background-color: #201658;
 }
 
-.map{
-    margin:0.5em 4em;
+.map {
+    margin: 0.5em 4em;
     border-radius: 10px;
     border: 1px solid #201658;
     overflow: hidden;
 }
 
-.map iframe{
+.map iframe {
     object-fit: cover;
     width: 100%;
     height: 25em;
@@ -1057,16 +1450,16 @@ em {
 }
 
 /* News Section Styles */
-.new-top{
+.new-top {
     margin: 2em;
     border-radius: 10px;
     /* background-color:#e2e1e1; */
-    background-color: rgba(32, 22, 88,0.4);
+    background-color: rgba(32, 22, 88, 0.4);
     padding: 2em 16px;
     text-align: center;
 }
 
-.new-top form{
+.new-top form {
     display: flex;
     margin: 1em auto;
     border: 1px solid #201658;
@@ -1074,7 +1467,7 @@ em {
     border-radius: 10px;
 }
 
-.new-top form input{
+.new-top form input {
     width: 20rem;
     padding: 10px 5px;
     border-radius: 10px 0 0 10px;
@@ -1083,7 +1476,7 @@ em {
     color: #333;
 }
 
-.new-top form button{
+.new-top form button {
     border: none;
     border-radius: 0 10px 10px 0;
     padding: 0 20px;
@@ -1092,38 +1485,38 @@ em {
     font-weight: 500;
 }
 
-.new-top form button:hover{
+.new-top form button:hover {
     background-color: #fff;
     color: #201658;
 }
 
-.new-top p{
+.new-top p {
     color: #fff;
     font-weight: 600;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 
-.new-top span{
+.new-top span {
     color: #433bff;
     font-size: 1.5em;
 }
 
-.new-top p em{
+.new-top p em {
     color: rgb(235, 102, 102);
 }
 
-.new-top h3{
+.new-top h3 {
     color: #fff;
 
 }
 
-.newest{
+.newest {
     margin: 2em;
     display: flex;
     gap: 1em;
 }
 
-.newest > img{
+.newest>img {
     object-fit: cover;
     height: 25em;
     width: 130em;
@@ -1131,36 +1524,36 @@ em {
     border-bottom: 5px solid #201658;
     cursor: pointer;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
-    
+
 }
 
-.newest > img:hover{
+.newest>img:hover {
     transform: translate(-10px, -10px);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 
 
-.newest h1{
+.newest h1 {
     color: #201658;
     margin: 1em 0;
     cursor: pointer;
 }
 
-.newest h1:hover{
+.newest h1:hover {
     text-decoration: underline;
 }
 
-.newest .news-cont{
+.newest .news-cont {
     color: #444;
 }
 
-.who{
+.who {
     display: flex;
     gap: 1em;
 }
 
-.who img{
+.who img {
     width: 2.5em;
     height: 2.5em;
     border-radius: 100%;
@@ -1168,11 +1561,11 @@ em {
     cursor: pointer;
 }
 
-.who img:hover{
+.who img:hover {
     border: 2px solid #201658;
 }
 
-.dot{
+.dot {
     width: 5px;
     height: 5px;
     margin: 1em 0;
@@ -1180,13 +1573,14 @@ em {
     background-color: #201658;
 }
 
-.cate{
+.cate {
     display: flex;
     gap: 1em;
     margin: 1.0em 0;
 }
 
-.cate span:first-child,.cate span:last-child{
+.cate span:first-child,
+.cate span:last-child {
     color: #2980b9;
     font-weight: 600;
     margin: 5px 0;
@@ -1197,22 +1591,22 @@ em {
     margin: 5px 0;
 }
 
-.all-news{
+.all-news {
     margin: 2.5em 2em;
 }
 
-.all-news .label{
+.all-news .label {
     display: flex;
     justify-content: space-between;
 }
 
-.all-news .label h2{
+.all-news .label h2 {
     color: #201658;
     margin: 1em 0;
 }
 
 
-.all-news .label span{
+.all-news .label span {
     padding: 8px 15px;
     color: #201658;
     font-weight: 600;
@@ -1221,16 +1615,16 @@ em {
     font-size: 1.3em;
 }
 
-.all-news .label span:hover{
+.all-news .label span:hover {
     text-decoration: underline;
 }
 
-.all-news .label span i{
+.all-news .label span i {
     color: #201658;
     font-weight: 600;
 }
 
-.news-con{
+.news-con {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1em;
@@ -1243,7 +1637,7 @@ em {
     position: relative;
 }
 
-.news-item .n-img img{
+.news-item .n-img img {
     height: 14em;
     border-radius: 10px;
     border-bottom: 5px solid #201658;
@@ -1268,7 +1662,7 @@ em {
     opacity: 0;
 }
 
-.news-item .n-img button:hover{
+.news-item .n-img button:hover {
     background-color: #201658;
     color: #fff;
     border: none;
@@ -1288,24 +1682,24 @@ em {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.news-item h4{
+.news-item h4 {
     margin: 0.2em 0;
     font-size: 1.3em;
     color: #201658;
-    
+
     cursor: pointer;
 }
 
-.news-item h4:hover{
+.news-item h4:hover {
     text-decoration: underline;
 }
 
-.news-item p{
+.news-item p {
     color: #444;
     object-fit: cover;
 }
 
-.news-ministry{
+.news-ministry {
     margin: 2em auto;
     /* border: 2px solid #201658; */
     width: 90%;
@@ -1313,35 +1707,35 @@ em {
 }
 
 
-.news-ministry h2{
+.news-ministry h2 {
     color: #201658;
 }
 
-.news-from-ministry{
+.news-from-ministry {
     display: flex;
     justify-content: space-between;
     gap: 1em;
     margin: 1em 0;
 }
 
-.news-from-ministry .from-ministry p{
+.news-from-ministry .from-ministry p {
     color: #201658;
     font-weight: 600;
 }
 
-.news-from-ministry .from-ministry img:hover{
+.news-from-ministry .from-ministry img:hover {
     transform: translate(-10px, -10px);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.news-from-ministry .from-ministry{
+.news-from-ministry .from-ministry {
     display: flex;
     flex-direction: column;
     text-align: center;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.news-from-ministry .from-ministry img{
+.news-from-ministry .from-ministry img {
     height: 5em;
     width: 5em;
     object-fit: cover;
@@ -1349,12 +1743,12 @@ em {
     cursor: pointer;
 }
 
-.news-from-ministry .from-ministry:nth-child(1) img{
+.news-from-ministry .from-ministry:nth-child(1) img {
     border: 4px solid #433bff;
 }
 
 
-.news-ministry span{
+.news-ministry span {
     margin: auto;
 }
 
@@ -1366,7 +1760,8 @@ em {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1em;
     width: 300px;
-    z-index: 1000; /* Make sure the modal is on top */
+    z-index: 1000;
+    /* Make sure the modal is on top */
 }
 
 .news-modal .news-item img {
@@ -1553,14 +1948,14 @@ em {
     border-bottom: 2px solid #2980b9;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1),
         0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ministry-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2),
-                0 10px 10px rgba(0, 0, 0, 0.15);
-  }
+        0 10px 10px rgba(0, 0, 0, 0.15);
+}
 
 .ministry-item .image {
     width: 100%;
@@ -1603,7 +1998,7 @@ em {
 
 /* misnistry item styling */
 
-.cwm{
+.cwm {
     margin: 5em 16px;
     display: flex;
     gap: 1em;
@@ -1611,7 +2006,7 @@ em {
 }
 
 .cwm:first-child {
-    flex: 1; 
+    flex: 1;
 }
 
 .cwm.box:nth-child(2) {
@@ -1620,21 +2015,21 @@ em {
 
 .cwm:last-child {
     flex: 1;
-  }
-  
-.cwm .members{
+}
+
+.cwm .members {
     padding: 10px;
     border: 2px solid #201658;
     border-radius: 10px;
     height: fit-content;
 }
 
-.cwm .members .btn{
+.cwm .members .btn {
     display: flex;
     gap: 1em;
 }
 
-.members .btn button{
+.members .btn button {
     padding: 8px 15px;
     border: none;
     border-radius: 5px;
@@ -1642,17 +2037,18 @@ em {
     transition: background-color 0.3s ease;
     cursor: pointer;
 }
-.members .btn button:nth-child(2){
+
+.members .btn button:nth-child(2) {
     background-color: #201658;
     color: white;
 }
 
-.members .btn button:nth-child(2):hover{
+.members .btn button:nth-child(2):hover {
     color: #201658;
     background-color: #fff;
 }
 
-.members .btn button:first-child:hover{
+.members .btn button:first-child:hover {
     color: #201658;
     border: 2px solid #201658;
 }
@@ -1667,7 +2063,7 @@ em {
 #member-list.active {
     display: block;
     opacity: 1;
-  }
+}
 
 .members table {
     width: 100%;
@@ -1680,7 +2076,8 @@ em {
     color: white;
 }
 
-.members th, .members td {
+.members th,
+.members td {
     padding: 12px 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -1691,7 +2088,7 @@ em {
 }
 
 .members tbody tr:nth-child(even) {
-    background-color: rgba(26, 188, 156,0.2);
+    background-color: rgba(26, 188, 156, 0.2);
     color: black;
 }
 
@@ -1699,109 +2096,109 @@ em {
     background-color: #ffffff;
 }
 
-.cwm-info{
+.cwm-info {
     width: 100%;
     overflow: hidden;
 }
 
-.cwm-info h3{
+.cwm-info h3 {
     color: #201658;
     margin: 10px 0;
 }
 
-.cwm-info p{
+.cwm-info p {
     color: #4c4c4c;
 }
 
-.cwm-info .ministry-image{
+.cwm-info .ministry-image {
     margin: 2em 10px;
 }
 
-.cwm-info .ministry-image .ministry-image-item{
+.cwm-info .ministry-image .ministry-image-item {
     display: flex;
     gap: 1em;
 }
 
-.cwm-info .ministry-image .ministry-image-item .min-img{
+.cwm-info .ministry-image .ministry-image-item .min-img {
     height: 12em;
     overflow: hidden;
 }
 
-.cwm-info .ministry-image .ministry-image-item img{
+.cwm-info .ministry-image .ministry-image-item img {
     object-fit: fill;
     width: 100%;
     border-bottom: 5px solid #201658;
     border-radius: 5px;
 }
 
-.cwm-info .img-cwm{
+.cwm-info .img-cwm {
     /* border: 2px solid #201658; */
     height: fit-content;
 }
 
-.cwm-info .img-cwm img{
+.cwm-info .img-cwm img {
     width: 100%;
     object-fit: cover;
     border-bottom: 10px solid #201658;
     border-radius: 10px;
 }
 
-.cwm .posts{
+.cwm .posts {
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
 
-.posts .upcomings{
+.posts .upcomings {
     border: 2px solid #201658;
     border-radius: 10px;
 }
 
-.posts .upcomings .event{
+.posts .upcomings .event {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
 }
 
-.cwm .posts h3{
+.cwm .posts h3 {
     padding: 0 10px;
     color: #201658;
 }
 
-.posts h4{
+.posts h4 {
     color: #535353;
 }
 
-.posts .event .item span i{
+.posts .event .item span i {
     color: #201658;
     font-size: 1.3em;
 }
 
-.posts .event .item{
+.posts .event .item {
     display: flex;
     gap: 5px;
 }
 
 
-.posts .event .item-info{
+.posts .event .item-info {
     padding: 5px;
 }
 
-.event .item img{
+.event .item img {
     height: 5em;
     border-radius: 10px;
     border-left: 5px solid #2980b9;
 }
 
-.ministry-news{
+.ministry-news {
     margin: 10em 0;
     border-radius: 10px;
     border: 2px solid #201658;
     padding: 10px;
 }
 
-.ministry-news .event{
+.ministry-news .event {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -1809,7 +2206,6 @@ em {
 
 
 
-.ministry-news .item .item-info .btn button{
+.ministry-news .item .item-info .btn button {
     padding: 5px 10px;
 }
-
