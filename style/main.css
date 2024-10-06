@@ -625,27 +625,36 @@ footer .color {
 
 /* sermon page starts here */
 .subpage-hero {
-    margin: 1em 0;
+    /* margin: 1em 0; */
     background-image: url(/assets/img/Church.png);
     background-size:cover;
     background-repeat: no-repeat;
-    text-align: center;
     color: #fff;
     position: relative;
     height: 7em;
+    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .subpage-hero a {
-    color: #fff;
+    color: #201658;
     text-decoration: none;
     font-weight: 500;
+    font-size: 1.2em;
 }
+
+
 
 .subpage-hero .top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin: 0 16px;
+}
+
+.subpage-hero h1{
+    margin: 0 auto;
+    letter-spacing: 0.5em;
+    font-weight: 600;
+    font-size: 2em;
 }
 
 .subpage-hero .top form {
@@ -670,6 +679,12 @@ footer .color {
     border: none;
 }
 
+.subpage-hero span{
+    color: #201658;
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
 .subpage-hero .top form button:hover{
     color: #201658;
     background-color: #fff;
@@ -690,6 +705,7 @@ footer .color {
     display: flex;
     gap: 5px;
     justify-content: center;
+
 }
 
 .subpage-hero img {
@@ -697,6 +713,8 @@ footer .color {
     position: absolute;
     border: 3px solid #fff;
     border-radius: 50%;
+    /* top: 50%; */
+    left: 47%;
 }
 
 .sermon-item {
@@ -822,71 +840,149 @@ em {
 
 /* Contact Container Styles */
 .contact{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(5,1fr);
-    gap: 1.5em;
-    border: 2px solid #201658;
-    margin: 3em 2em;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin: 4em 0;
 }
 
-.contact .location{
-    border: 2px solid #201658;
-    padding: 1em;
+.contact .item-top{
+    background-color: #ddd;
     border-radius: 10px;
-    height: 15em;
-    color: #fff;
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 6px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid #201658;
+}
+
+.contact .item-top i{
+    color: #201658;
     text-align: center;
+    font-size: 2em;
+}
+
+.contact .item-top h2{
+    color: #201658;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.contact .item-top span{
+    color: #333;
+}
+
+.contact .item-top button{
+    margin-top: 1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #201658;
+    color: #201658;
+    font-weight: 500;
+}
+
+.contact .item-top button:hover{
     background-color: #201658;
-    margin: 0 auto;
-}
-
-.contact .location i{
-    font-size: 1.9em;
-}
-
-.contact .phone{
-    border: 2px solid #201658;
-    padding: 1em;
-    border-radius: 10px;
     color: #fff;
-    text-align: center;
-    background-color: rgba(32, 22, 88,0.5);
-    height: 15em;
 }
-
-
-.contact .phone i{
-    font-size: 1.9em;
-}
-
-.contact .email{
-    border: 2px solid #201658;
-    padding: 1em;
-    border-radius: 10px;
-    color: #fff;
-    text-align: center;
-    background-color: rgba(32, 22, 88,0.5);
-    height: 15em;
-}
-
-
 
 .form-filing{
-    grid-column: span 2/ span 2;
-    grid-row-start: 2;
+    margin:0.5em 4em;
+    display: flex;
+    /* justify-content: space-between; */
+    border: 1px solid #201658;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.form-filing .form-left{
+    padding: 3em 2em;
+    border-radius: 10px 0 0 10px;
+}
+
+.form-left form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-left form input, .form-left textarea{
+    padding: 10px;
+    border: 2px solid #201658;
+    border-radius: 5px;
+    width: 40em;
+    max-width: 40em;
+}
+
+.form-left textarea{
+    height: 10em;
+    background-color: #f0f0f0;
+    resize: none;
+}
+
+.form-left button{
+    margin: 1em 0;
+    padding: 8px 3em;
+    border: 2px solid #201658;
+    border-radius: 5px;
+    color: #201658;
+    font-weight: 600;
+}
+
+.form-left button i{
+    font-size: 1.2em;
+}
+
+.form-left button:hover{
+    color: #fff;
+    background-color: #201658;
+}
+
+.form-right{
+    position: relative;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+}
+.form-right img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+}
+
+.form-right button{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 2px solid rgba(32, 22, 88,0.5);
+    background-color: rgba(46, 46, 46,0.3);
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.form-right button i{
+    font-size: 1.2em;
+}
+
+.form-right button:hover{
+    background-color: #201658;
 }
 
 .map{
-    grid-column: span 2 / span 2;
-    grid-row-start:3;
+    margin:0.5em 4em;
+    border-radius: 10px;
+    border: 1px solid #201658;
+    overflow: hidden;
 }
 
-
-
-
-
-
+.map iframe{
+    object-fit: cover;
+    width: 100%;
+    height: 25em;
+}
 
 
 /* History Container Styles */
