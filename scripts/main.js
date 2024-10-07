@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const currentPage = window.location.pathname;
+  const navLinks = document.querySelectorAll('.navbar a');
+
+  navLinks.forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+          navLinks.forEach(link => link.classList.remove('active-tab'));
+          link.classList.add('active-tab');
+      }
+  });
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const playPauseButton = document.querySelector(".play-pause-btn");
   const audioPlayer = document.querySelector(".audio-player audio");

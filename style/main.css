@@ -11,9 +11,6 @@ body{
     position: relative;
 }
 
-.active-tab {
-    color: #3498db;
-}
 
 header {
     box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
@@ -64,6 +61,11 @@ header .logo img {
 .navbar a:hover {
     text-decoration: underline 2px #201658;
     color: #433bff;
+}
+
+.navbar a.active-tab {
+    color: #1abc9c;
+    text-decoration: underline 2px #201658;
 }
 
 /* Dropdown styling */
@@ -185,7 +187,7 @@ header .btn button:nth-child(2) {
 
 .hero-content h1 {
     font-size: 2em;
-    color: #333;
+    color: #fff;
 }
 
 .hero-content span {
@@ -1126,7 +1128,7 @@ footer .color {
 
 .sermons .img {
     position: relative;
-
+    
 }
 
 .img img {
@@ -1136,12 +1138,14 @@ footer .color {
     border-top: 3px solid #201658;
     border-left: 3px solid #201658;
     border-bottom: 3px solid #201658;
+    object-fit: cover;
 }
 
 .content-btn {
     position: absolute;
     top: 74%;
     left: 1%;
+    bottom: 1em;
 }
 
 .content-btn button {
@@ -1197,6 +1201,13 @@ em {
     color: #fff;
 }
 
+.pagination-number span.active-page {
+    background-color: #201658;
+    color: #fff;
+    border: none;
+}
+
+
 .pagination-number {
     display: flex;
     justify-content: center;
@@ -1218,11 +1229,6 @@ em {
     color: #fff;
 }
 
-.pagination-number span:first-child {
-    background-color: #201658;
-    border: none;
-    color: #fff;
-}
 
 .pagination-number button {
     padding: 3px 15px;
@@ -1231,6 +1237,17 @@ em {
     color: #fff;
     font-weight: 500;
     border-radius: 5px;
+}
+
+.pagination-number button:hover{
+    border: 2px solid #201658;
+    color: #201658;
+    background-color: #fff;
+}
+
+.pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 /* Contact Container Styles */
