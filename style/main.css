@@ -145,8 +145,7 @@ header .btn button:nth-child(2) {
 /* header section done */
 
 /* hero section starts */
-
-.hero {
+.hero-top {
     display: flex;
     flex-direction: column;
     background-image: url(/assets/img/Church.png);
@@ -155,6 +154,16 @@ header .btn button:nth-child(2) {
     height: 100vh;
     position: relative;
     animation: slide 20s infinite;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    /* height: 100vh; */
+    position: relative;
+    /* animation: slide 20s infinite; */
 }
 
 /* this is for the the background animation on the hero section */
@@ -168,11 +177,11 @@ header .btn button:nth-child(2) {
     }
 
     50% {
-        background-image: url(/assets/img/obey4.png);
+        background-image: url(/assets/img/worship1.png);
     }
 
     75% {
-        background-image: url(/assets/img/obey2.png);
+        background-image: url(/assets/img/church_bw.png);
     }
 
     100% {
