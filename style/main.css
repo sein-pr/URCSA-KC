@@ -239,6 +239,33 @@ header .btn button:nth-child(2) {
     background-color: #fff;
 }
 
+
+.schedule-table {
+    /* margin-top: 5%; */
+    margin-bottom:5% ;
+    margin-right: 10%;
+    margin-right: 10%;
+    padding-right:  10%;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .schedule-table th, .schedule-table td {
+    border: 1px solid #201658;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .schedule-table th {
+    background-color: #201658;
+    color: white;
+  }
+  
+  .schedule-table td {
+    background-color: #d7d6f0;
+    /* color: white; */
+  }
+
 .hero .socials {
     display: flex;
     flex-direction: column;
