@@ -238,7 +238,10 @@ header .btn button:nth-child(2) {
     border: 2px solid;
     background-color: #fff;
 }
-
+#stone{
+    display: block;
+    margin: auto;
+}
 
 .schedule-table {
     /* margin-top: 5%; */
