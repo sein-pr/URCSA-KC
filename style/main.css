@@ -2550,3 +2550,78 @@ em {
     color: #fff;
     background-color: #201658;
 }
+
+
+
+.confirmation form {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation fieldset {
+    margin-bottom: 20px;
+    border: 2px solid #005b99;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.confirmation legend {
+    font-weight: bold;
+    color: #005b99;
+}
+
+.confirmation label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.confirmation input[type="text"],.confirmation input[type="number"],.confirmation input[type="date"],.confirmation textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.confirmation textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.confirmation button {
+    background-color: #005b99;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.confirmation button:hover {
+    background-color: #004080;
+}
+.confirmation h1{
+    text-align: center;
+}
+.confirmation .note{
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+.confirmation .top{
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+.confirmation #logo{
+    width: 10%;
+}
