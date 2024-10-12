@@ -21,6 +21,17 @@ document.getElementById('showTableBtn').addEventListener('click', function() {
   }
 });
 
+document.getElementById("prayer-bullets").addEventListener("click", function() {
+  var prayerList = document.getElementById("prayerList");
+  if (prayerList.style.display === "none") {
+      prayerList.style.display = "block";
+      this.textContent = "Hide Prayer Bullets"; // Change button text
+  } else {
+      prayerList.style.display = "none";
+      this.textContent = "Show Prayer Bullets"; // Change button text
+  }
+});
+
 const apiUrl = 'https://bible-api.com/?random=verse';
 const slidesContainer = document.getElementById('slides');
 const indicatorsContainer = document.getElementById('indicators');

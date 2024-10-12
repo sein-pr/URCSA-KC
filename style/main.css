@@ -243,6 +243,11 @@ header .btn button:nth-child(2) {
     margin: auto;
 }
 
+#prayerList{
+    display: none;
+    text-align: left; /* Align the list text to the left */
+    margin: 0 auto;
+}
 .schedule-table {
     /* margin-top: 5%; */
     margin-bottom:5% ;
