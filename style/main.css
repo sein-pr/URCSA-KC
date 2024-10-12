@@ -1160,7 +1160,7 @@ footer .color {
     background-repeat: no-repeat;
     color: #fff;
     position: relative;
-    height: 7em;
+    height: 11em;
     box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -1180,16 +1180,17 @@ footer .color {
 }
 
 .subpage-hero h1 {
-    margin: 0 auto;
     letter-spacing: 0.5em;
     font-weight: 600;
     font-size: 2em;
+    margin: 1em 0;
 }
 
 .subpage-hero .top form {
     display: flex;
     border: 1px solid #201658;
     border-radius: 5px;
+    height: fit-content;
 }
 
 .subpage-hero .top form input {
@@ -2374,7 +2375,6 @@ em {
 .donate-container .why-donate{
     display: flex;
     justify-content: center;
-    border: 2px solid #201658;
     width: 100%;
     align-items: center;
 }
@@ -2410,9 +2410,7 @@ em {
     background-color: #fff;
     height: fit-content;
     padding: 1.5em;
-    border-radius: 5px;
     margin-right: 5%;
-    margin-top: 1%;
     
 }
 
