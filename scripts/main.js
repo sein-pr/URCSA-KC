@@ -10,6 +10,16 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+document.getElementById('showTableBtn').addEventListener('click', function() {
+  var table = document.getElementById('scheduleTable');
+  if (table.style.display === 'none') {
+    table.style.display = 'table';
+    this.textContent = 'Hide Prayer Meeting Schedule';
+  } else {
+    table.style.display = 'none';
+    this.textContent = 'Show Prayer Meeting Schedule';
+  }
+});
 
 const apiUrl = 'https://bible-api.com/?random=verse';
 const slidesContainer = document.getElementById('slides');
