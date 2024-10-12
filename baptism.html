@@ -7,6 +7,37 @@
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
         <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/style/main.css">
+        <style>
+            main {
+            padding: 20px;
+            /* text-align: center; */
+            padding: 20px;
+        }
+        h1{
+            margin: 15px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 400px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input[type="submit"] {
+            background-color: #201658;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #201658;
+        }
+        </style>
     </head>
 <body>
     <header>
@@ -49,6 +80,20 @@
     </header>
 
     <main>
+        <h1>Baptism Preparation Meeting Request</h1>
+        <p>Baptism is a holy and significant event in the life of a Christian. The requirements for baptism are as follows:</p>
+    <ul>
+        <li>If the candidate is a child, the parents must be full members of the church.</li>
+    </ul>
+    <p>If you meet this requirement and would like to schedule a meeting with the church administrator to evaluate readiness for baptism, please fill out the form below.</p>
+    
+    <form action="submit_meeting_request.php" method="post">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="date" name="" id="">
+        <textarea name="message" rows="4" placeholder="Reason for Meeting"></textarea>
+        <input type="submit" value="Request Meeting">
+    </form>
 
     </main>
 

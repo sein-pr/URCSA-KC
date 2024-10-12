@@ -7,6 +7,37 @@
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
         <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/style/main.css">
+    <style>
+        main {
+            padding: 20px;
+            /* text-align: center; */
+            padding: 20px;
+        }
+        h1{
+            margin: 15px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 400px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input[type="submit"] {
+            background-color: #201658;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #201658;
+        }
+    </style>
     </head>
 <body>
     <header>
@@ -49,7 +80,22 @@
     </header>
 
     <main>
-
+        <h1>Marriage Preparation Meeting Request</h1>
+        <p>Welcome to the Marriage page of our church.</p>
+        <p>If you wish to get married, please note the following requirements:</p>
+    <ul>
+        <li>One or both parties must be full members of the church.</li>
+        <li>Neither party should be under church discipline at the time of application.</li>
+    </ul>
+    <p>If you meet these requirements and would like to schedule a meeting with the church administrator to discuss your readiness for marriage, please fill out the form below.</p>
+    
+    <form action="submit_meeting_request.php" method="post">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="date" name="" id="" placeholder="date" required>
+        <textarea name="message" rows="4" placeholder="Discussion points"></textarea>
+        <input type="submit" value="Request Meeting">
+    </form>
     </main>
 
     <footer>
