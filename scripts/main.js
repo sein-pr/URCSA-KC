@@ -11,6 +11,59 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+const apiUrl = 'https://bible-api.com/?random=verse';
+const slidesContainer = document.getElementById('slides');
+const indicatorsContainer = document.getElementById('indicators');
+const numberOfVerses = 3;
+let currentIndex = 0;
+
+async function fetchVerses() {
+    const verses = [];
+    for (let i = 0; i < numberOfVerses; i++) {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        verses.push(data);
+    }
+    return verses;
+}
+
+function displayVerses(verses) {
+    verses.forEach((verse, index) => {
+        const slide = document.createElement('div');
+        slide.classList.add('slide');
+        slide.innerHTML = `
+            <blockquote>${verse.text.trim()}</blockquote>
+            <p id="verse-info">${verse.reference} (${verse.translation_name})</p>
+        `;
+        slidesContainer.appendChild(slide);
+
+        const indicator = document.createElement('div');
+        indicator.classList.add('indicator');
+        indicator.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider();
+        });
+        indicatorsContainer.appendChild(indicator);
+    });
+    updateSlider();
+}
+
+function updateSlider() {
+    slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    const indicators = document.querySelectorAll('.indicator');
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentIndex);
+    });
+}
+
+function autoSlide() {
+    currentIndex = (currentIndex + 1) % numberOfVerses;
+    updateSlider();
+}
+
+fetchVerses().then(displayVerses);
+setInterval(autoSlide, 9000);
+
 document.addEventListener("DOMContentLoaded", function () {
   const playPauseButton = document.querySelector(".play-pause-btn");
   const audioPlayer = document.querySelector(".audio-player audio");

@@ -477,6 +477,102 @@ main{
 }
 /* upcominf event css done */
 
+/* verses in the word styling start */
+.bible-verse {
+    overflow: hidden;
+    position: relative;
+    margin: 25px 30px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.bible-verse h2{
+    color: #201658;
+}
+.bible-verse blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 0;
+    color: #201658;
+    font-weight: 500;
+}
+.bible-verse #verse-info {
+    font-size: 14px;
+    text-align: right;
+    margin-top: 10px;
+    color: #433bff;
+    font-size: 1.1em;
+}
+.bible-verse .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+.bible-verse .slides .slide {
+    min-width: 100%;
+    padding: 20px;
+}
+.indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #201658;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.active {
+    background: #2980b9;
+}
+
+/* call-to-action styling */
+.call-to-action{
+    width: 100%;
+    background-image: url(/assets/img/verse-church-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 25px 30px;
+    margin: 1em 0;
+}
+
+.call-to-action h2{
+    color: #201658;
+    margin: 1em 0;
+}
+
+.call-to-action i{
+    padding: 5px;
+    border: 1px solid #201658;
+    border-radius: 50%;
+    margin: 0 0.5em;
+    background-color: #201658;
+    color: #fff;
+}
+
+.call-to-action p{
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 1em 0;
+}
+
+.call-to-action button{
+    padding: 8px 20px;
+    border: 2px solid #201658;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.call-to-action button:hover{
+    background-color: #201658;
+    color: #fff;
+}
+
 /* schedule-modal STYLING */
 .schedule-modal {
     border: 1px solid #201658;
@@ -2229,4 +2325,194 @@ em {
 
 .ministry-news .item .item-info .btn button {
     padding: 5px 10px;
+}
+
+.donate-container{
+    display: flex;
+    justify-content: space-between;
+    background-image: url(/assets/img/bible.png);
+    background-size: cover;
+    height: 100vh;
+}
+
+.donate-container .why-donate{
+    display: flex;
+    justify-content: center;
+    border: 2px solid #201658;
+    width: 100%;
+    align-items: center;
+}
+
+.donate-container .why-donate i {
+    border: 2px solid #201658;
+    padding: 1em 1.1em;
+    background-color: #201658;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 100%;
+    box-shadow: 0px 0px 18px 7px rgba(41, 128, 185, 1);
+    animation: myAnim 5s ease infinite;
+}
+
+@keyframes myAnim {
+    0%, 50%, 100% {
+        border-color: #201658;
+        box-shadow: 0px 0px 18px 7px rgba(41, 128, 185, 1);
+        opacity: 1;
+    }
+
+    25%, 75% {
+        border-color: transparent;
+        box-shadow: none;
+        opacity: 0;
+    }
+}
+
+
+.donate-container .donate-now{
+    width: 50%;
+    background-color: #fff;
+    height: fit-content;
+    padding: 1.5em;
+    border-radius: 5px;
+    margin-right: 5%;
+    margin-top: 1%;
+    
+}
+
+.donate-container .donate-now p i{
+    padding: 5px;
+    border: 1px solid #201658;
+    border-radius: 50%;
+    background-color: #201658;
+    color: #fff;
+    margin-right: 0.5em;
+}
+
+.donate-container .donate-now p:nth-child(1){
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.donate-container .donate-now h2{
+    margin: 0.5em 0;
+    color: #201658;
+}
+
+.donate-container .donate-now p:nth-child(1){
+    color: #2e2e2e;
+    font-weight: 400;
+}
+
+.donate-container .donate-now form{
+    margin: 1em 0;
+}
+
+.donate-now form .subscribe{
+    display: flex;
+    border: 2px solid #201658;
+    width: fit-content;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.donate-now form .subscribe input{
+    padding: 7px 4rem;
+    /* border-radius: 6px; */
+    border: none;
+}
+
+.donate-now form .subscribe input:hover{
+    background-color: #201658;
+    color: #fff;
+}
+
+.donate-now form .subscribe input:nth-child(1){
+    background-color: #201658;
+    color: #fff;
+}
+
+.donate-now form .assurance{
+    border-left:5px solid #201658 ;
+    margin: 1em 0;
+    padding: 0 0.5em;
+    border-radius: 5px;
+}
+
+.donate-now form .assurance p{
+    font-size: 0.5em;
+}
+.donate-now form .assurance p span{
+    color: #201658;
+    font-weight: 500;
+}
+
+.donate-now form .input-amount{
+    display: flex;
+    border: 2px solid #201658;
+    width: fit-content;
+}
+
+.donate-now form .input-amount input{
+    width: 22.3rem;
+    border: none;
+    outline: none;
+    padding: 0 0.3em;
+    font-size: 1.2em;
+}
+
+.donate-now form .input-amount button{
+    padding: 0.2rem 1rem;
+    border: none;
+    background-color: #201658;
+    color: #fff;
+}
+
+.donate-now form .input-amount button:hover{
+    background-color: #fff;
+    color: #201658;
+    border-right: 1px solid #201658;
+}
+
+.donate-now form .input-amount button i{
+    font-size: 1.2rem;
+}
+
+.donate-now form .how-much{
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+
+.donate-now form .how-much input{
+    padding: 8px;
+    border: 1px solid #201658;
+    border-radius: 2px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2e2e2e;
+    cursor: pointer;
+}
+
+.donate-now form .how-much input:hover{
+    background-color: #201658;
+    color: #fff;
+}
+
+
+.donate-now form input[type='btn']{
+    padding: 8px 15px;
+    text-align: center;
+    color: #201658;
+    font-weight: 500;
+    font-size: 1rem;
+    border: 2px solid #201658;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.donate-now form input[type='btn']:hover{
+    color: #fff;
+    background-color: #201658;
 }
