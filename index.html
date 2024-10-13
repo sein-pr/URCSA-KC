@@ -210,7 +210,7 @@
                             <p><i class="uil uil-map-marker"></i> Church building</p>
                         </div>
                     </div>
-                    <button class="schedule-btn"><i class="uil uil-schedule"></i>View Calendar</button>
+                    <button id="open-calendar"><i class="uil uil-schedule"></i>View Calendar</button>
                 </div>
                 <div class="prayer">
                     <h3>Prayers</h3>
@@ -287,7 +287,7 @@
             <button onclick="location.href='donation.html'">Donate now<i class="fa-solid fa-hand-holding-dollar"></i></button>
         </section>
 
-        <div class="schedule-modal">      
+        <div class="schedule-modal hidden">      
             <div class="schedule-container">
                 <div class="schedule-left">
                     <div class="calendar">
@@ -317,6 +317,7 @@
                 </div>
     
                 <div class="schedule-right">
+                    <button id="close-calendar">Close</button>
                     <div class="today-date">
                         <div class="event-day">Sun</div>
                         <div class="event-date">06th October 2024</div>

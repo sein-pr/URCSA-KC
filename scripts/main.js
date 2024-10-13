@@ -121,25 +121,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Get references to the modal and buttons
+const scheduleModal = document.querySelector('.schedule-modal');
+const openCalendarBtn = document.getElementById('open-calendar');
+const closeCalendarBtn = document.getElementById('close-calendar');
 
-
-const scheduleModal = document.querySelector(".schedule-modal");
-const scheduleBtns = document.querySelectorAll(".schedule-btn"); 
-
-// Open modal when any schedule button is clicked
-scheduleBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        scheduleModal.classList.add("active");
-    });
+// Function to open the modal
+openCalendarBtn.addEventListener('click', () => {
+    scheduleModal.classList.remove('hidden');
 });
 
-// Close the modal when clicking outside the schedule content
-scheduleModal.addEventListener("click", (event) => {
-    // Close if clicking on the modal background
-    if (event.target === scheduleModal) {
-        scheduleModal.classList.remove("active");
-    }
-});;
+// Function to close the modal
+closeCalendarBtn.addEventListener('click', () => {
+    scheduleModal.classList.add('hidden');
+});
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

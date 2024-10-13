@@ -116,16 +116,13 @@ header .btn button {
     cursor: pointer;
     border-radius: 5px;
     font-size: 1em;
+    color: #fff;
+    background-color: #201658;
 }
 
 header .btn button:hover {
     background-color: #201658;
-    color: #fff;
-}
-
-header .btn button:nth-child(2) {
-    background-color: #201658;
-    color: #fff;
+   
 }
 
 .btn button:nth-child(2) i {
@@ -626,11 +623,18 @@ main{
     position: fixed;
     top: 10%;
     left: 20%;
-    display: none;
 }
 
 .schedule-modal.active {
     display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.schedule-modal.hidden {
+    display: none;
 }
   
 
@@ -889,6 +893,20 @@ main{
     width: 40%;
     min-height: 100%;
     padding: 20px 0;
+}
+
+.schedule-right button{
+    position: absolute;
+    right: 0;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #004080;
+    font-weight: 600;
+}
+.schedule-right button:hover{
+    color: #fff;
+    background-color: #1abc9c;
 }
 
 .schedule-right .today-date {
