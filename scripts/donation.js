@@ -24,3 +24,26 @@ buttons.forEach(button => {
 inputAmount.addEventListener('focusout', function () {
     this.classList.remove('highlight'); // Remove highlight when losing focus
 });
+
+
+    // Get references to elements
+const videoModal = document.getElementById('video-modal');
+const openModalBtn = document.getElementById('open-video-modal');
+const closeModalBtn = document.getElementById('close-modal');
+
+// Open modal when button is clicked
+openModalBtn.addEventListener('click', () => {
+    videoModal.classList.toggle('hidden'); // Toggle visibility of the modal
+});
+
+// Close modal when 'X' button is clicked
+closeModalBtn.addEventListener('click', () => {
+    videoModal.classList.toggle('hidden'); // Hide the modal
+});
+
+// Close modal when clicking outside the modal content
+window.addEventListener('click', (event) => {
+    if (event.target === videoModal) {
+        videoModal.classList.toggle('hidden'); // Hide the modal if user clicks outside
+    }
+});

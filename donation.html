@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,33 +40,35 @@
             <button><i class="uil uil-gift"></i> Donate</button>
         </div>
     </header>
-    <main>
+    <main class="donate-page">
 
         <div class="donate-container">
             <div class="why-donate">
-                <i class="fa-solid fa-play"></i>
+                <i id="open-video-modal" class="fa-solid fa-play"></i>
             </div>
             <div class="donate-now">
                 <p><i class="fa-solid fa-hand-holding-dollar"></i>Donate now</p>
                 <h2>Support <span>Our Mission</span></h2>
-                <p>Your generous support enables to continue its mission of spreading God's love and serving our community.</p>
+                <p>Your generous support enables to continue its mission of spreading God's love and serving our
+                    community.</p>
 
                 <form action="#">
                     <div class="subscribe">
                         <input type="button" value="One time">
                         <input type="button" value="Monthly">
                     </div>
-    
+
                     <div class="assurance">
-                        <p><span>Notice:</span> Your generous contribution will be used for the betterment of spreading the word of good to all nations of the world
+                        <label for="reason">Reason For Donating</label>
+                        <textarea name="reason" placeholder="I am donating to the development of the church"></textarea>
                     </div>
-    
+
 
                     <div class="input-amount">
                         <button><i class="uil uil-dollar-sign"></i></button>
                         <input type="number" id="input-amount" placeholder="amount">
                     </div>
-                    
+
                     <div class="how-much">
                         <input type="button" value="$10">
                         <input type="button" value="$25">
@@ -74,67 +77,24 @@
                         <input type="button" value="$200">
                         <input type="button" value="Custom amount" id="custom-amount">
                     </div>
-                    
-    
+
+
 
                     <input type="btn" value="Donate now" class="donate-submit">
                 </form>
             </div>
         </div>
-       
-        <!-- <section class="donate">
-            <div class="sell-text">
-                <p>Your generous contribution helps us continue to serve our community, share God's Word, and spread His love to those in need. By supporting our church, you enable us to offer vital programs, ministries, and outreach efforts. Every donation, big or small, makes a difference.</p>
-            </div>
-            <div class="donate-form">
-                <h2>Help us do more!</h2>
-                <p>We are deeply grateful for your generosity and partnership in spreading the Gospel and showing Christ's love.</p>
-                <form action="#">
-                    <div class="subscribe">
-                        <input type="button" value="One time">
-                        <input type="button" value="Monthly">
-                    </div>
-                    <p>Monthly gifts help us share the gospel all year long</p>
-        
-                    <div class="how-much">
-                        <input type="button" value="$10">
-                        <input type="button" value="$25">
-                        <input type="button" value="$50">
-                        <input type="button" value="$60">
-                        <input type="button" value="$75">
-                        <input type="button" value="$100">
-                        <div class="input-amount">
-                            <button><i class="uil uil-dollar-sign"></i></button>
-                            <input type="number" placeholder="amount">
-                        </div>
-                    </div>
-        
-                    <input type="button" value="Donate now" class="donate-submit">
-                </form>
-            </div>
-            <div class="image">
-                <img src="/assets/img/CYM.jpg" alt="">
-            </div>
-            <div class="helped">
-                <div class="helped-item">
-                    <span>People served</span>
-                    <p>20,00</p>
-                </div>
-                <div class="helped-item">
-                    <span>People served</span>
-                    <p>20,00</p>
-                </div>
-                <div class="helped-item">
-                    <span>People served</span>
-                    <p>20,00</p>
-                </div>
-                <div class="helped-item">
-                    <span>People served</span>
-                    <p>20,00</p>
-                </div>
+        <!-- <div id="video-modal" class="modal hidden">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <!-- Embed the YouTube Video -->
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/drlZE4I7qKo"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             </div> -->
-        <!-- </section> -->
-
+        <!-- </div>
+         --> 
     </main>
 
     <footer>
@@ -196,4 +156,5 @@
     <script src="https://kit.fontawesome.com/b9eb99af91.js" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

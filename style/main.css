@@ -2396,8 +2396,6 @@ em {
     gap: 1em;
 }
 
-
-
 .ministry-news .item .item-info .btn button {
     padding: 5px 10px;
 }
@@ -2407,7 +2405,8 @@ em {
     justify-content: space-between;
     background-image: url(/assets/img/bible.png);
     background-size: cover;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
 }
 
 .donate-container .why-donate{
@@ -2426,6 +2425,7 @@ em {
     border-radius: 100%;
     box-shadow: 0px 0px 18px 7px rgba(41, 128, 185, 1);
     animation: myAnim 5s ease infinite;
+    cursor: pointer;
 }
 
 @keyframes myAnim {
@@ -2441,7 +2441,43 @@ em {
         opacity: 0;
     }
 }
+/* Modal Hidden Class */
+.donate-page .hidden {
+    display: none;
+}
 
+/* Modal Styling */
+.donate-page .modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.donate-page .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+}
+
+/* Close Button */
+.donate-page .close {
+    position: absolute;
+    top: -10px;
+    right: 1px;
+    font-size: 2em;
+    color: #004080;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 .donate-container .donate-now{
     width: 50%;
@@ -2485,6 +2521,7 @@ em {
     border: 2px solid #201658;
     width: fit-content;
     border-radius: 5px;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -2492,6 +2529,7 @@ em {
     padding: 7px 4rem;
     /* border-radius: 6px; */
     border: none;
+    width: 1000%;
 }
 
 .donate-now form .subscribe input:hover{
@@ -2504,29 +2542,35 @@ em {
     color: #fff;
 }
 
-.donate-now form .assurance{
-    border-left:5px solid #201658 ;
+.donate-now form .assurance {
+    border-left: 5px solid #201658;
     margin: 1em 0;
     padding: 0 0.5em;
     border-radius: 5px;
+    display: block;
+    width: 100%;
 }
 
-.donate-now form .assurance p{
-    font-size: 0.5em;
-}
-.donate-now form .assurance p span{
-    color: #201658;
+.donate-now form .assurance label {
+    font-size: 1em;
     font-weight: 500;
 }
+
+.donate-now form .assurance textarea {
+    resize: none;
+    width: 102%;
+    padding: 0.5rem;
+}
+
 
 .donate-now form .input-amount{
     display: flex;
     border: 2px solid #201658;
-    width: fit-content;
+    width: 100%;
 }
 
 .donate-now form .input-amount input{
-    width: 22.3rem;
+    width: 100%;
     border: none;
     outline: none;
     padding: 0 0.3em;
@@ -2558,7 +2602,7 @@ em {
 }
 
 .donate-now form .how-much input{
-    padding: 8px;
+    padding: 8px 0.5em;
     border: 1px solid #201658;
     border-radius: 2px;
     font-size: 1rem;
