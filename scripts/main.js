@@ -383,7 +383,7 @@ function addListner() {
         }, 100);
       } else if (e.target.classList.contains("next-date")) {
         nextMonth();
-        //add active to clicked day afte month is changed
+        //add active to clicked day after month is changed
         setTimeout(() => {
           const days = document.querySelectorAll(".day");
           days.forEach((day) => {
