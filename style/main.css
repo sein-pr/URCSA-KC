@@ -246,7 +246,9 @@ header .btn button:hover {
     border: 1px solid #201658;
     padding: 10px;
     text-align: center;
-  }
+  
+}
+
   
   .schedule-table th {
     background-color: #201658;
