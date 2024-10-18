@@ -121,23 +121,12 @@ header .btn button {
 }
 
 header .btn button:hover {
-    background-color: #201658;
+    background-color: #fff;
+    color: #201658;
+    border: 1px solid #201658;
    
 }
 
-.btn button:nth-child(2) i {
-    font-size: 1.2em;
-}
-
-.btn button:nth-child(2) i:hover {
-    color: #201658;
-}
-
-.btn button:nth-child(2):hover {
-    color: #201658;
-    background-color: #fff;
-    border: 2px solid #201658;
-}
 
 /* header section done */
 
@@ -1191,10 +1180,14 @@ footer .color {
 }
 
 .subpage-hero a {
-    color: #201658;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.2em;
+}
+
+.subpage-hero a:hover{
+    color: #201658;
 }
 
 
@@ -1206,7 +1199,6 @@ footer .color {
 }
 
 .subpage-hero h1 {
-    letter-spacing: 0.5em;
     font-weight: 600;
     font-size: 2em;
     margin: 1em 0;
