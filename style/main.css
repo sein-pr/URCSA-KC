@@ -247,11 +247,9 @@ header .btn button:hover {
 }
 .schedule-table {
     /* margin-top: 5%; */
-    margin-bottom:5% ;
-    margin-right: 10%;
-    margin-right: 10%;
-    padding-right:  10%;
-    width: 100%;
+    margin-bottom: 5%;
+    margin: 25px 30px;
+    width: 95%;
     border-collapse: collapse;
   }
   
