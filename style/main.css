@@ -146,6 +146,7 @@ header .btn button:hover {
     display: flex;
     flex-direction: column;
     background-image: url(/assets/img/Church.png);
+    
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -174,7 +175,7 @@ header .btn button:hover {
     }
 
     50% {
-        background-image: url(/assets/img/worship1.png);
+        background-image: url(/assets/img/people2.png);
     }
 
     75% {
@@ -244,6 +245,10 @@ header .btn button:hover {
     display: none;
     text-align: left; /* Align the list text to the left */
     margin: 0 auto;
+}
+#prayerList h2, #prayerList h3{
+ text-align: center;
+ margin: 10px;
 }
 .schedule-table {
     /* margin-top: 5%; */
