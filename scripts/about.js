@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const image = document.getElementById('stone');
 const modal = document.getElementById('modal');
 const overlay = document.getElementById('overlay');
@@ -80,7 +80,7 @@ galleryOverlay.onclick = function() {
     galleryModal.style.display = 'none';
     galleryOverlay.style.display = 'none';
 };
-=======
+
 document.addEventListener('DOMContentLoaded', function() {
     const introParagraph = document.querySelector('.intro-paragraph');
     const readMoreSpan = document.getElementById('read-more');
@@ -110,4 +110,4 @@ document.addEventListener('DOMContentLoaded', function() {
         introParagraph.innerHTML = fullText;
     }
 });
->>>>>>> 9ae7d5109b587cc49aa375ea08cf3c385a1dacfc
+
