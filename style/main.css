@@ -2017,6 +2017,7 @@ em {
     margin: 2em;
     display: flex;
     gap: 1em;
+    margin-bottom: 120px;
 }
 
 .newest>img {
