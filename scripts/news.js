@@ -22,16 +22,9 @@ const newsArticles = [
     }
 ];
 
-// Function to limit the news content to 50 words
-function truncateText(text, wordLimit) {
-    const words = text.split(' ');
-    if (words.length > wordLimit) {
-        return words.slice(0, wordLimit).join(' ') + '...';
-    }
-    return text;
-}
 
-// Dynamically generate the news articles
+
+/// Dynamically generate the news articles
 function generateNewsArticles(articles) { // Accept articles as an argument
     const newsContainer = document.getElementById("news-container");
     newsContainer.innerHTML = ''; // Clear any existing content
@@ -52,7 +45,7 @@ function generateNewsArticles(articles) { // Accept articles as an argument
                     ${news.title}
                 </h1>
                 <p><strong>${news.author}</strong></p>
-                <p class="news-cont">${truncateText(news.content, 50)}</p> <!-- Truncated to 50 words -->
+                <p class="news-cont">${news.content}</p> <!-- Full content displayed -->
                 <div class="cate">
                     <span>${news.category}</span>
                     <span class="dot"></span>
