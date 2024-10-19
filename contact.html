@@ -90,14 +90,14 @@
         </section>
         <section class="form-filing">
             <div class="form-left">
-                <form action="#">
-                    <input type="text" placeholder="Enter name">
-                    <input type="email" placeholder="Enter email">
-                    <input type="tel" placeholder="Enter phone">
-                    <textarea name="message" id="message"></textarea>
+                <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="text" name="name" placeholder="Enter name" required>
+                    <input type="email" name="email" placeholder="Enter email" required>
+                    <input type="tel" name="phone" placeholder="Enter phone" required>
+                    <textarea name="message" placeholder="Enter your message" required></textarea>
                 </form>
-                <button>Send <i class="uil uil-message"></i></button>
-            </div>
+                <button id="send-button">Send <i class="uil uil-message"></i></button>
+            </div>            
             <div class="form-right">
                 <img src="/assets/img/Church.png" alt="">
                 <button>Schedule <i class="uil uil-schedule"></i></button>
