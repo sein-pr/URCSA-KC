@@ -2758,5 +2758,8 @@ em {
     color: #fff;
     background-color: #201658;
 }
-
+#galleryModalText{
+    margin-top: 20px;
+    font-weight: bold;
+}
 

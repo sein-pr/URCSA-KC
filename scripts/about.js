@@ -59,14 +59,16 @@ const galleryModal = document.getElementById('galleryModal');
 const galleryModalImage = document.getElementById('galleryModalImage');
 const galleryOverlay = document.getElementById('galleryOverlay');
 const closeGalleryModalButton = document.getElementById('closeGalleryModal');
+const galleryModalText = document.getElementById('galleryModalText');
 
 // Event listeners for each gallery image
 galleryImages.forEach(image => {
     image.onclick = function() {
         galleryModalImage.src = image.src; // Set modal image to the clicked image
+        galleryModalText.textContent = image.getAttribute('data-message');
         galleryModal.style.display = 'block';
         galleryOverlay.style.display = 'block';
-    };
+        };
 });
 
 // Close gallery modal when clicking the close button
