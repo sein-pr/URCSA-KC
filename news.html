@@ -47,15 +47,17 @@
 
     <main>
         <div class="new-top">
-            <p><span>Katutura Congregation</span> update <em>Buletin</em></p>
+            <p><span>Katutura Congregation - News</span></p>
             <h3>Stories of faith, upcoming events, and the wonderful works of our ministries</h3>
 
-            <form action="#">
-                <input type="text" placeholder="Search title, author ministry">
-                <button>Search</button>
+            <form id="search-form" action="#">
+                <input id="search-input" type="text" placeholder="Search title, author, ministry, content">
+                <button type="submit">Search</button>
             </form>
         </div>
-        <div class="newest">
+
+        <div id="news-container"></div>
+        <!-- <div class="newest">
             <img src="/assets/img/image8.jpg" alt="" onclick="window.open('https://neweralive.na/christian-youth-ministry-wins-choir-competition', '_blank')">
             <div class="new-info">
                 <div class="who">
@@ -78,7 +80,6 @@
                     <span class="dot"></span>
                     <span>4 min read</span>
                 </div>
-                    <button onclick="location.href='https://neweralive.na/christian-youth-ministry-wins-choir-competition'">Read More</button>
             </div>
         </div>
 
@@ -108,7 +109,9 @@
                     <span>5 min read</span>
                 </div>
             </div>
-        </div>  
+        </div>   -->
+
+
 <!-- 
         <section class="all-news">
             <div class="label">
@@ -228,6 +231,7 @@
         
             </div>
         </section>
+        
 
         <section class="news-ministry">
             <h2>Buletin</h2>
@@ -267,7 +271,7 @@
                 </div>
             </div>
 
-        </section> -->
+        </section> 
     </main>
 
     <!-- modal for the buleting -->

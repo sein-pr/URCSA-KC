@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
             description: "Inspiring our children and Youth to be true followers of Jesus Christ",
             img: "/assets/img/Sunday_school.jpg",
             altText: "sunday school",
-            readMoreLink: "#"
+            readMoreLink: "sunday-school.html"
         },
         {
             title: "Christian Youth Ministries",
-            description: "To act as an ambassador for the URCSA Katutura in spreading the word of God in singing and preaching",
+            description: "To act as an ambassador for the URCSA Katutura",
             img: "/assets/img/CYM.jpg",
             altText: "Christian Youth Ministries",
-            readMoreLink: "#"
+            readMoreLink: "cym.html"
         },
         {
             title: "Christian Women Ministries",
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             description: "Men in service of Christ and His Church",
             img: "/assets/img/Christian_men.jpg",
             altText: "Christian Men Ministries",
-            readMoreLink: "#"
+            readMoreLink: "cmm.html"
         }
     ];
 
@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Search functionality
+    // Search functionality
     const searchInput = document.querySelector(".top form input"); // Update to your search bar selector
     searchInput.addEventListener("input", function() {
         const searchTerm = this.value.toLowerCase();
@@ -64,10 +65,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (searchTerm === "") {
             filteredMinistries = ministries; // Reset to show all if input is cleared
         } else {
-            filteredMinistries = ministries.filter(ministry =>
-                ministry.title.toLowerCase().includes(searchTerm) ||
-                ministry.description.toLowerCase().includes(searchTerm)
-            );
+            filteredMinistries = ministries.filter(ministry => {
+                const combinedText = (ministry.title + ' ' + ministry.description).toLowerCase();
+                return combinedText.includes(searchTerm);
+            });
         }
 
         // Generate filtered ministry items

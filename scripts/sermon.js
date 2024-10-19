@@ -108,22 +108,24 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Search functionality
-    const searchInput = document.querySelector(".top form input");
+    // Search functionality
+    const searchInput = document.querySelector(".top form input"); // Update to your search bar selector
     searchInput.addEventListener("input", function() {
         const searchTerm = this.value.toLowerCase();
+
         if (searchTerm === "") {
-            filteredSermons = sermons; // Show all sermons if input is cleared
+            filteredSermons = sermons; // Reset to show all if input is cleared
         } else {
-            filteredSermons = sermons.filter(sermon =>
-                sermon.title.toLowerCase().includes(searchTerm) ||
-                sermon.sermonBy.toLowerCase().includes(searchTerm) ||
-                sermon.category.toLowerCase().includes(searchTerm)
-            );
+            filteredSermons = sermons.filter(sermon => {
+                const combinedText = (sermon.title + ' ' + sermon.description).toLowerCase();
+                return combinedText.includes(searchTerm);
+            });
         }
-        currentPage = 1; // Reset to the first page after filtering
+
+        // Reset to first page after filtering
+        currentPage = 1;
         showPage(currentPage);
     });
-
     // Update the pagination UI (if needed)
     function updatePagination() {
         const totalPages = Math.ceil(filteredSermons.length / itemsPerPage);
