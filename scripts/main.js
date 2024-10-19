@@ -162,6 +162,7 @@ const calendar = document.querySelector(".calendar"),
   addEventFrom = document.querySelector(".event-time-from"),
   addEventTo = document.querySelector(".event-time-to"),
   addEventSubmit = document.querySelector(".add-event-btn");
+  cal_date=document.querySelector('#cal_date');
 
 let today = new Date();
 let activeDay;
@@ -210,6 +211,13 @@ function initCalendar() {
   const lastDate = lastDay.getDate();
   const day = firstDay.getDay();
   const nextDays = 7 - lastDay.getDay() - 1;
+
+  // prev.addEventListener('click',()=>{
+  //   prevMonth();
+  //   cal_date.innerHTML = months[month] + " " + year;
+  //   console.log(date.innerHTML);
+  //   ;
+  // })
 
   date.innerHTML = months[month] + " " + year;
 
@@ -342,8 +350,15 @@ function nextMonth() {
 }
 
 // Event listener for previous and next buttons
-prev.addEventListener("click", prevMonth);
-next.addEventListener("click", nextMonth);
+prev.addEventListener("click", ()=>{
+  prevMonth();
+  cal_date.innerHTML = months[month] + " " + year;
+}
+ );
+next.addEventListener("click", ()=>{
+  nextMonth();
+  cal_date.innerHTML = months[month] + " " + year;
+});
 
 // Function to update events for a selected day
 function updateEvents(day) {
