@@ -50,6 +50,7 @@ function generateNewsArticles(articles) { // Accept articles as an argument
                     <span>${news.category}</span>
                     <span class="dot"></span>
                     <span>${news.readTime}</span>
+                    <button onclick="location.href='${news.link}'">Read more</button>
                 </div>
             </div>
         `;

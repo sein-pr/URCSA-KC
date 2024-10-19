@@ -1769,6 +1769,23 @@ em {
     display: flex;
     gap: 1em;
     margin: 1.0em 0;
+    justify-content: start;
+    align-items: center;
+}
+
+.cate button{
+    padding: 0.2rem 2rem;
+    background-color: #201658;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.cate button:hover{
+    color: #201658;
+    background-color: #eee;
+    border: 1px solid #201658;
 }
 
 .cate span:first-child,
