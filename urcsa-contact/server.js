@@ -16,10 +16,10 @@ app.use(express.static(path.join(__dirname, '..', 'church_web')));
 
 // Email configuration
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // or your preferred email service
+    service: 'gmail', 
     auth: {
-        user: 'seinprince2@gmail.com', // your email
-        pass: 'hidden',    // your email password
+        user: 'seinprince2@gmail.com',
+        pass: 'hidden', 
     },
 });
 
@@ -29,7 +29,7 @@ app.post('/send-email', (req, res) => {
 
     const mailOptions = {
         from: email,
-        to: 'seinprince2@gmail.com', // your email where you want to receive messages
+        to: 'seinprince2@gmail.com', 
         subject: 'URCSA - Contact form message',
         text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
     };
@@ -44,7 +44,7 @@ app.post('/send-email', (req, res) => {
 
 // Route for the root path
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'index.html'));  // Serve your index.html file from the main folder
+    res.sendFile(path.join(__dirname, '..', 'index.html')); 
 });
 
 // Start the server
