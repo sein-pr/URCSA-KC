@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         date: "Jan 18, 2022",
         reference: "Karlie Liebenberg",
         description: "God's grace is sufficient for you. It's through grace that we are saved, and by grace, we are renewed. Embrace His grace and live in the freedom it brings",
-        img: "/assets/img/Sunday_school.jpg",
+        img: "/assets/img/power_of_grace.jpg",
         pdfLink: "/assets/file/sermon-example.pdf",
         readMoreLink: "./sermon-item4.html"
       },
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         date: "Dec 24, 2022",
         reference: "Karlie Liebenberg",
         description: "God's love is unconditional. He loved us first, and His love endures forever. Let His love flow through you to others, bringing light and warmth to the world.",
-        img: "/assets/img/CWW.jpg",
+        img: "/assets/img/love.jpg",
         pdfLink: "/assets/file/sermon-example.pdf",
         readMoreLink: "./sermon-item5.html"
       },
