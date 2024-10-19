@@ -13,38 +13,29 @@ document.getElementById("send-button").addEventListener("click", function(event)
         alert("Please fill in all fields before submitting.");
         return; // Stop the function if any field is empty
     }
-
-    // You can add more validation for email format, phone format, etc. here if needed
-
-    // If all fields are filled, you can submit the form (optional)
-    document.getElementById("contact-form").submit(); // Submit the form programmatically
+    
+    // Call the sendEmail function if all fields are filled
+    sendEmail(name, email, phone, message);
 });
 
-document.getElementById("send-button").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default submission
-
-    // Get form data
-    const form = document.getElementById("contact-form");
-    const formData = new FormData(form);
-
-    // Send form data to Formspree
-    fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-            Accept: "application/json"
-        }
-    })
-    .then(response => {
-        if (response.ok) {
-            alert("Thank you! Your message has been sent.");
-            form.reset(); // Reset form after successful submission
-        } else {
-            alert("There was a problem submitting your form.");
-        }
-    })
-    .catch(error => {
-        alert("There was a problem submitting your form.");
-        console.error("Error:", error);
+function sendEmail(name, email, phone, message){
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "urcsa-kc@gmail.com",
+        Password: "5C0E5EC75D5DE29F38BF420BC48928D54F58",
+        To: 'seinprince2@gmail.com',
+        From: email,
+        Subject: "URCSA-KC Contact Form Enquiry",
+        Body: `
+            Name: ${name}<br>
+            Email: ${email}<br>
+            Phone: ${phone}<br>
+            Message: ${message}
+        `
+    }).then(
+        emailMessage => alert("Email sent: " + emailMessage)
+    ).catch(error => {
+        console.error("Failed to send email:", error);
+        alert("There was an error sending the email.");
     });
-});
+}
