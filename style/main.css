@@ -2449,17 +2449,19 @@ em {
     border-radius: 5px;
 }
 
-.cwm-info .img-cwm {
-    /* border: 2px solid #201658; */
-    height: fit-content;
+.centered-image {
+    display: inline-block;        
+    margin: 0 190px;              
 }
 
-.cwm-info .img-cwm img {
-    width: 100%;
-    object-fit: cover;
+.centered-image img {
+    width: 200px;                
+    height: 200px;              
+    object-fit: cover;           
     border-bottom: 10px solid #201658;
     border-radius: 10px;
 }
+
 
 .cwm .posts {
     display: flex;
