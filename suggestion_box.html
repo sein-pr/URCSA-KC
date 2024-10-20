@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestion Box</title>
+    <style>
+        .sugestion {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            /* margin: 0; */
+            background-color: white;
+        }
+
+        .form-container {
+          
+            width: 200px;
+            padding: 20px;
+            background-color:  #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid black;
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        }
+
+        .form-container.hidden {
+            transform: translateY(150px);
+            opacity: 0;
+        }
+
+        .form-container h2 {
+            margin-bottom: 15px;
+           
+        }
+        
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 12px;
+            /* padding-right: 10px; */
+            margin-right: 10px;
+           
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background-color: #201658;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #201658;
+        }
+
+        .suggestion-box {
+            margin-top: 50px;
+        }
+
+        .suggestion-box img {
+            width: 25%;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="sugestion">
+
+        <div class="form-container" id="form-container" style="display: none" >
+            <h2>Suggestion Box</h2>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Your Name" ><br>
+                <textarea id="suggestion" name="suggestion" placeholder="Your Suggestion" required></textarea><br>
+                <button type="button" id="suggest-btn">Suggest</button>
+            </form>
+        </div>
+
+        <div class="suggestion-box">
+            <img id="my_box" src="assets/img/suggestion_box.png" alt="Suggestion Box">
+        </div>
+
+    </div>
+    <script>
+        document.getElementById('my_box').addEventListener('click',()=>
+    {
+        var formContainer = document.getElementById('form-container');
+        formContainer.style="display:block"
+    })
+        document.getElementById('suggest-btn').addEventListener('click', function() {
+            var formContainer = document.getElementById('form-container');
+            
+            // Start the animation by adding the 'hidden' class to the form container
+            formContainer.classList.add('hidden');
+
+        });
+    </script>
+
+</body>
+</html>
