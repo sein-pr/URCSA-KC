@@ -3,39 +3,57 @@ document.getElementById("send-button").addEventListener("click", function(event)
     event.preventDefault();
 
     // Get the values of the input fields
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const message = document.getElementById("message").value.trim();
+    const name = document.querySelector("input[name='name']").value.trim();
+    const email = document.querySelector("input[name='email']").value.trim();
+    const phone = document.querySelector("input[name='phone']").value.trim();
+    const message = document.querySelector("textarea[name='message']").value.trim();
 
-    // Check if all fields are filled
+    // Validate that all fields are filled
     if (name === "" || email === "" || phone === "" || message === "") {
         alert("Please fill in all fields before submitting.");
-        return; // Stop the function if any field is empty
+        return; // Stop if validation fails
     }
-    
-    // Call the sendEmail function if all fields are filled
-    sendEmail(name, email, phone, message);
-});
 
-function sendEmail(name, email, phone, message){
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "urcsa-kc@gmail.com",
-        Password: "5C0E5EC75D5DE29F38BF420BC48928D54F58",
-        To: 'seinprince2@gmail.com',
-        From: email,
-        Subject: "URCSA-KC Contact Form Enquiry",
-        Body: `
-            Name: ${name}<br>
-            Email: ${email}<br>
-            Phone: ${phone}<br>
-            Message: ${message}
-        `
-    }).then(
-        emailMessage => alert("Email sent: " + emailMessage)
-    ).catch(error => {
-        console.error("Failed to send email:", error);
-        alert("There was an error sending the email.");
+    // Submit the form data using Formspree
+    const form = document.getElementById("contact-form");
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+            Accept: "application/json"
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Notify the user and send the email using SMTP.js after successful submission
+            alert("Thank you! Your message has been sent.");
+            form.reset(); // Reset the form after submission
+
+            // Send an email using SMTP.js
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "seinprince2@gmail.com",
+                Password: "------------",
+                To: 'seinprince2@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "Katutura Congression Contact Form",
+                Body: `
+                    Name: ${name}<br>
+                    Email: ${email}<br>
+                    Phone: ${phone}<br>
+                    Message: ${message}
+                `
+            }).then(
+                emailMessage => alert("Email sent: " + emailMessage)
+            );
+        } else {
+            alert("There was a problem submitting your form.");
+        }
+    })
+    .catch(error => {
+        alert("There was a problem submitting your form.");
+        console.error("Error:", error);
     });
-}
+});
