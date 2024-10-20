@@ -1412,6 +1412,10 @@ em {
     position: relative;
 }
 
+.confirm input.error, .confirm textarea.error {
+    border: 2px solid red;
+}
+
 .confirm .choice{
     display: flex;
     margin: 2rem auto;
@@ -2764,4 +2768,5 @@ em {
     margin-top: 20px;
     font-weight: bold;
 }
+
 
