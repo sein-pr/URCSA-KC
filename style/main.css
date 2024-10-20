@@ -1019,6 +1019,178 @@ main{
     display: flex;
 }
 
+/* prayer requst starts here */
+.prayer-request{
+    margin: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid #201658;
+    border-radius: 3px;
+    gap: 1rem;
+}
+
+.prayer-request .calm{
+    background-color: #201658;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden; /* Ensure ::before stays within the element */
+    z-index: 1;
+}
+
+.prayer-request .calm::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff; /* The hover color */
+    z-index: -1;
+    transition: width 0.5s ease; /* Control the speed of transition */
+}
+
+.prayer-request .calm:hover::before {
+    width: 100%; /* Expand the white color to full width on hover */
+}
+
+.calm:hover{
+    color: #201658;
+    border-right: 2px solid #201658;
+}
+
+
+.calm i:nth-child(1){
+    font-size:4rem ;
+    color: #1abc9c;
+    margin: 1rem;
+}
+
+
+.calm i{
+    font-size: 4rem;
+}
+
+.calm p{
+    margin: 1rem;
+    text-align: justify;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.request {
+    padding: 1rem;
+}
+
+.reason .top-req{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.reason .top-req span{
+    color: #fff;
+    background-color: #201658;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.6rem;
+}
+
+.reason .top-req h1{
+    color: #201658;
+}
+
+.reason form{
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.reason form label{
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+.reason form input{
+    padding: 0.4rem;
+    border: 1px solid #201658;
+    border-radius: 3px;
+    outline: none;
+    font-weight: 500;
+}
+
+.reason form .prayer-type{
+    margin: 1rem 0;
+}
+
+.reason form .prayer-type h2{
+    font-size: 1.3rem;
+    color: #201658;
+    margin-bottom: 0.5rem;
+}
+
+.reason form .prayer-type .type-item{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.prayer-type .type-item span{
+    padding: 0.5rem;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #201658;
+    color: #201658;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.type-item span.selected {
+    background-color: #201658;
+    color: white;
+}
+
+.prayer-type .type-item span:hover{
+    color: #fff;
+    background-color: #201658;
+}
+
+.reason form .own-request{
+    display: flex;
+    flex-direction: column;
+}
+
+.reason form .own-request textarea{
+    resize: none;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.1rem;
+}
+
+.request button{
+    padding: 8px 20px;
+    background-color: #201658;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.request button:hover{
+    background-color: #eee;
+    color: #201658;
+    border: 1px solid #201658;
+}
+
+
 /* footer css starts */
 footer {
     box-shadow: -1px -4px 5px 0px rgba(122, 122, 122, 0.75);

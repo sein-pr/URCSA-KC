@@ -16,7 +16,7 @@
             <span><span class="highlight">Katutura</span> Congregation</span>
         </a>
         <nav class="navbar">
-            <a href="index.html" class="active-tab">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <div class="dropdown">
                 <a href="#">Services</a>
@@ -48,34 +48,72 @@
             <button onclick="location.href='donation.html'"><i class="uil uil-gift"></i> Donate</button>
         </div>
     </header>
-    <h1>Prayer Requests</h1>
-    <form action="submit_prayer.php" method="post">
-      <label for="prayer-category">Select Prayer Category:</label>
-      <select id="prayer-category" name="prayer-category" onchange="showFields()">
-        <option value="">Select a category</option>
-        <option value="health">Health</option>
-        <option value="relationships">Relationships</option>
-        <option value="career">Career</option>
-      </select>
-  
-      <div id="health-fields" style="display: none;">
-        <label for="health-condition">Health Condition:</label>
-        <input type="text" id="health-condition" name="health-condition">
-      </div>
-  
-      <div id="relationships-fields" style="display: none;">
-        <label for="relationship-type">Relationship Type:</label>
-        <input type="text" id="relationship-type" name="relationship-type">
-      </div>
-  
-      <div id="career-fields" style="display: none;">
-        <label for="career-goal">Career Goal:</label>
-        <input type="text" id="career-goal" name="career-goal">
-      </div>
-  
-      <button type="submit">Submit</button>
-    </form>
+    <main>
+        <div class="subpage-hero">
+            <div class="top">
+                <h1>Prayer Request</h1>
+            </div>
+            <div class="pagination">
+                <a href="index.html">Home</a>
+                <span>&gt;</span>
+                <a href="prayer.html">Prayer request</a>
+            </div>
+            <img src="/assets/img/logo2.png" alt="">
+        </div>
 
+        <section class="prayer-request">
+            <div class="calm">
+                <i class="fa-solid fa-hands-praying"></i>
+                <h2>Welcome to Our Prayer Request Page</h2>
+
+                <p>
+                    We understand that life can be challenging, 
+                    and at times, we all face struggles that can 
+                    feel overwhelming. Here, you are not alone. 
+                    We invite you to share your prayer requests, no matter how big or small.
+                </p>
+                <i class="uil uil-corner-down-right"></i>
+            </div>
+            <div class="request">
+                <div class="reason">
+                    <div class="top-req">
+                    <span><i class="fa-solid fa-hands-praying"></i></span>
+                    <h1>Prayer Request Form</h1>
+                    </div>
+                    <form id="prayer-form" action="https://formspree.io/f/mkgnndop" method="POST">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                        <label for="phone">Your Phone (optional):</label>
+                        <input type="phone" id="phone" name="phone" placeholder="Enter your phone">
+
+                        <div class="prayer-type">
+                            <h2>What is your prayer point?</h2>
+                            <div class="type-item" id="prayerTypes">
+                                <span data-value="Financial">Financial</span>
+                                <span data-value="Relationship">Relationship</span>
+                                <span data-value="Health">Health</span>
+                                <span data-value="Guidance">Guidance</span>
+                                <span data-value="Luck">Luck</span>
+                                <span data-value="Others" class="selected">Others</span> <!-- Default selected -->
+                            </div>
+                        </div>
+                        <div class="own-request">
+                            <label for="prayerRequest">Prayer Request:</label>
+                            <textarea id="prayerRequest" name="prayerRequest" rows="5" placeholder="Share your prayer request" required></textarea>
+                        </div>
+                        
+                    </form>
+                    <button type="submit" id="submit">Submit request</button>
+                    <p id="error" style="display: none; color: #201658;"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
     <footer>
         <div class="footer-top">
             <div class="left-side">
@@ -128,6 +166,8 @@
         <div class="color"></div>
     </footer>
 
-    <script src="./scripts/prayer.js"></script>
+    <script src="/scripts/request-prayer.js"></script>
+    <script src="https://kit.fontawesome.com/b9eb99af91.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
 </html>
