@@ -7,7 +7,7 @@
     margin: 0;
 }
 
-body{
+body {
     position: relative;
 }
 
@@ -21,7 +21,7 @@ header {
     background-color: rgba(255, 255, 255, 0.2);
     width: 100%;
     position: relative;
-    
+
     z-index: 100;
 }
 
@@ -74,7 +74,17 @@ header .logo img {
 /* Dropdown styling */
 .dropdown {
     position: relative;
-    padding: 10px 15px;
+    padding: 10px 0;
+}
+
+.dropdown::after {
+    content: '>';
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1px;
+    top: 55%;
+    color: #2980b9;
+    transform: translateY(-50%) rotate(90deg);
 }
 
 .dropdown-menu {
@@ -127,7 +137,7 @@ header .btn button:hover {
     background-color: #fff;
     color: #201658;
     border: 1px solid #201658;
-   
+
 }
 
 
@@ -138,7 +148,7 @@ header .btn button:hover {
     display: flex;
     flex-direction: column;
     background-image: url(/assets/img/Church.png);
-    
+
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -228,45 +238,51 @@ header .btn button:hover {
     border: 2px solid;
     background-color: #fff;
 }
-#stone{
+
+#stone {
     display: block;
     margin: auto;
 }
 
-#prayerList{
+#prayerList {
     display: none;
-    text-align: left; /* Align the list text to the left */
+    text-align: left;
+    /* Align the list text to the left */
     margin: 0 auto;
 }
-#prayerList h2, #prayerList h3{
- text-align: center;
- margin: 10px;
+
+#prayerList h2,
+#prayerList h3 {
+    text-align: center;
+    margin: 10px;
 }
+
 .schedule-table {
     /* margin-top: 5%; */
     margin-bottom: 5%;
     margin: 25px 30px;
     width: 95%;
     border-collapse: collapse;
-  }
-  
-  .schedule-table th, .schedule-table td {
+}
+
+.schedule-table th,
+.schedule-table td {
     border: 1px solid #201658;
     padding: 10px;
     text-align: center;
-  
+
 }
 
-  
-  .schedule-table th {
+
+.schedule-table th {
     background-color: #201658;
     color: white;
-  }
-  
-  .schedule-table td {
+}
+
+.schedule-table td {
     background-color: #d7d6f0;
     /* color: white; */
-  }
+}
 
 .hero .socials {
     display: flex;
@@ -510,9 +526,10 @@ header .btn button:hover {
     color: #fff;
 }
 
-main{
+main {
     position: relative;
 }
+
 /* upcominf event css done */
 
 /* verses in the word styling start */
@@ -526,9 +543,10 @@ main{
     padding: 1em 0;
 }
 
-.bible-verse h2{
+.bible-verse h2 {
     color: #201658;
 }
+
 .bible-verse blockquote {
     font-size: 1.3rem;
     font-style: italic;
@@ -536,6 +554,7 @@ main{
     color: #201658;
     font-weight: 500;
 }
+
 .bible-verse #verse-info {
     font-size: 14px;
     text-align: right;
@@ -543,19 +562,23 @@ main{
     color: #433bff;
     font-size: 1.1em;
 }
+
 .bible-verse .slides {
     display: flex;
     transition: transform 0.5s ease;
     width: 100%;
 }
+
 .bible-verse .slides .slide {
     min-width: 100%;
     padding: 20px;
 }
+
 .indicators {
     text-align: center;
     margin-top: 10px;
 }
+
 .indicator {
     display: inline-block;
     width: 10px;
@@ -565,12 +588,13 @@ main{
     margin: 0 5px;
     cursor: pointer;
 }
+
 .active {
     background: #2980b9;
 }
 
 /* call-to-action styling */
-.call-to-action{
+.call-to-action {
     width: 100%;
     background-image: url(/assets/img/verse-church-bg.png);
     background-size: cover;
@@ -579,12 +603,12 @@ main{
     margin: 1em 0;
 }
 
-.call-to-action h2{
+.call-to-action h2 {
     color: #201658;
     margin: 1em 0;
 }
 
-.call-to-action i{
+.call-to-action i {
     padding: 5px;
     border: 1px solid #201658;
     border-radius: 50%;
@@ -593,20 +617,21 @@ main{
     color: #fff;
 }
 
-.call-to-action p{
+.call-to-action p {
     font-size: 1.2em;
     font-weight: 500;
     margin: 1em 0;
 }
 
-.call-to-action button{
+.call-to-action button {
     padding: 8px 20px;
     border: 2px solid #201658;
     border-radius: 5px;
     font-size: 1.1em;
     font-weight: 500;
 }
-.call-to-action button:hover{
+
+.call-to-action button:hover {
     background-color: #201658;
     color: #fff;
 }
@@ -633,7 +658,7 @@ main{
 .schedule-modal.hidden {
     display: none;
 }
-  
+
 
 .schedule-container {
     position: relative;
@@ -701,9 +726,9 @@ main{
     cursor: pointer;
 }
 
-.calendar .month .date ,
+.calendar .month .date,
 .calendar .month .prev,
-.calendar .month .next{
+.calendar .month .next {
     margin-top: 1.5em;
 }
 
@@ -892,7 +917,7 @@ main{
     padding: 20px 0;
 }
 
-.schedule-right button{
+.schedule-right button {
     position: absolute;
     right: 0;
     padding: 5px 20px;
@@ -901,7 +926,8 @@ main{
     color: #004080;
     font-weight: 600;
 }
-.schedule-right button:hover{
+
+.schedule-right button:hover {
     color: #fff;
     background-color: #1abc9c;
 }
@@ -995,6 +1021,7 @@ main{
     margin-left: 15px;
     pointer-events: none;
 }
+
 .schedule-right .events .event:hover .event-time {
     color: #fff;
 }
@@ -1020,7 +1047,7 @@ main{
 }
 
 /* prayer requst starts here */
-.prayer-request{
+.prayer-request {
     margin: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1029,7 +1056,7 @@ main{
     gap: 1rem;
 }
 
-.prayer-request .calm{
+.prayer-request .calm {
     background-color: #201658;
     color: #fff;
     text-align: center;
@@ -1039,7 +1066,8 @@ main{
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden; /* Ensure ::before stays within the element */
+    overflow: hidden;
+    /* Ensure ::before stays within the element */
     z-index: 1;
 }
 
@@ -1050,33 +1078,36 @@ main{
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #fff; /* The hover color */
+    background-color: #fff;
+    /* The hover color */
     z-index: -1;
-    transition: width 0.5s ease; /* Control the speed of transition */
+    transition: width 0.5s ease;
+    /* Control the speed of transition */
 }
 
 .prayer-request .calm:hover::before {
-    width: 100%; /* Expand the white color to full width on hover */
+    width: 100%;
+    /* Expand the white color to full width on hover */
 }
 
-.calm:hover{
+.calm:hover {
     color: #201658;
     border-right: 2px solid #201658;
 }
 
 
-.calm i:nth-child(1){
-    font-size:4rem ;
+.calm i:nth-child(1) {
+    font-size: 4rem;
     color: #1abc9c;
     margin: 1rem;
 }
 
 
-.calm i{
+.calm i {
     font-size: 4rem;
 }
 
-.calm p{
+.calm p {
     margin: 1rem;
     text-align: justify;
     line-height: 1.5rem;
@@ -1087,14 +1118,14 @@ main{
     padding: 1rem;
 }
 
-.reason .top-req{
+.reason .top-req {
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 1rem;
 }
 
-.reason .top-req span{
+.reason .top-req span {
     color: #fff;
     background-color: #201658;
     border-radius: 50%;
@@ -1103,22 +1134,22 @@ main{
     padding: 0.5rem 0.6rem;
 }
 
-.reason .top-req h1{
+.reason .top-req h1 {
     color: #201658;
 }
 
-.reason form{
+.reason form {
     margin: 1.5rem 0;
     display: grid;
     grid-template-columns: 1fr;
 }
 
-.reason form label{
+.reason form label {
     font-weight: 500;
     padding: 0.5rem 0;
 }
 
-.reason form input{
+.reason form input {
     padding: 0.4rem;
     border: 1px solid #201658;
     border-radius: 3px;
@@ -1126,23 +1157,23 @@ main{
     font-weight: 500;
 }
 
-.reason form .prayer-type{
+.reason form .prayer-type {
     margin: 1rem 0;
 }
 
-.reason form .prayer-type h2{
+.reason form .prayer-type h2 {
     font-size: 1.3rem;
     color: #201658;
     margin-bottom: 0.5rem;
 }
 
-.reason form .prayer-type .type-item{
+.reason form .prayer-type .type-item {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
-.prayer-type .type-item span{
+.prayer-type .type-item span {
     padding: 0.5rem;
     text-align: center;
     color: #fff;
@@ -1158,23 +1189,23 @@ main{
     color: white;
 }
 
-.prayer-type .type-item span:hover{
+.prayer-type .type-item span:hover {
     color: #fff;
     background-color: #201658;
 }
 
-.reason form .own-request{
+.reason form .own-request {
     display: flex;
     flex-direction: column;
 }
 
-.reason form .own-request textarea{
+.reason form .own-request textarea {
     resize: none;
     padding: 0.5rem 0.5rem;
     font-size: 1.1rem;
 }
 
-.request button{
+.request button {
     padding: 8px 20px;
     background-color: #201658;
     color: #fff;
@@ -1184,7 +1215,7 @@ main{
     cursor: pointer;
 }
 
-.request button:hover{
+.request button:hover {
     background-color: #eee;
     color: #201658;
     border: 1px solid #201658;
@@ -1366,7 +1397,7 @@ footer .color {
     font-size: 1.2em;
 }
 
-.subpage-hero a:hover{
+.subpage-hero a:hover {
     color: #201658;
 }
 
@@ -1456,7 +1487,7 @@ footer .color {
 
 .sermons .img {
     position: relative;
-    
+
 }
 
 .img img {
@@ -1567,7 +1598,7 @@ em {
     border-radius: 5px;
 }
 
-.pagination-number button:hover{
+.pagination-number button:hover {
     border: 2px solid #201658;
     color: #201658;
     background-color: #fff;
@@ -1579,23 +1610,24 @@ em {
 }
 
 /* confirmation styling starts here */
-.confirm{
+.confirm {
     margin: 4rem 4rem;
     position: relative;
 }
 
-.confirm input.error, .confirm textarea.error {
+.confirm input.error,
+.confirm textarea.error {
     border: 2px solid red;
 }
 
-.confirm .choice{
+.confirm .choice {
     display: flex;
     margin: 2rem auto;
     padding: 1rem;
     align-items: center;
     gap: 1rem;
     position: sticky;
-    top:0 ;
+    top: 0;
     background-color: #fff;
     border-radius: 0 0 5px 5px;
     border-left: solid #201658;
@@ -1605,33 +1637,33 @@ em {
     width: fit-content;
 }
 
-.choice .choice-item{
+.choice .choice-item {
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.choice-item .item-top span{
+.choice-item .item-top span {
     font-size: 1rem;
 }
 
-.choice-item .item-top span:nth-child(1){
+.choice-item .item-top span:nth-child(1) {
     font-weight: 600;
     font-size: 1.1rem;
 }
 
-.choice-item .item-top span:nth-child(2){
+.choice-item .item-top span:nth-child(2) {
     color: #201658;
     font-weight: 500;
 }
 
-.choice-item .item-content{
+.choice-item .item-content {
     display: flex;
     gap: 1rem;
     align-items: center;
 }
 
-.choice-item .item-content span{
+.choice-item .item-content span {
     padding: 7px;
     border: 2px solid #201658;
     border-radius: 50%;
@@ -1639,7 +1671,7 @@ em {
 }
 
 
-.choice-item .progress{
+.choice-item .progress {
     height: 0.1rem;
     border: 2px dotted #201658;
     width: 100%;
@@ -1647,26 +1679,29 @@ em {
 }
 
 .progress.solid {
-    border: 2px solid #201658; 
+    border: 2px solid #201658;
 }
 
-.choice-work{
+.choice-work {
     padding: 0 2rem;
 }
 
-.choice-work fieldset{
+.choice-work fieldset {
     color: #201658;
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
-.choice-work label{
+.choice-work label {
     display: block;
     margin: 10px 0 5px;
     font-weight: bold;
 }
 
-.choice-work input[type="text"],.choice-work input[type="number"],.choice-work input[type="date"],.choice-work textarea {
+.choice-work input[type="text"],
+.choice-work input[type="number"],
+.choice-work input[type="date"],
+.choice-work textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0 20px;
@@ -1691,7 +1726,7 @@ em {
 }
 
 .contact .item-top {
-    background-color: #ddd;
+    background-color: #fff;
     border-radius: 10px;
     padding: 2.5em;
     display: flex;
@@ -1883,13 +1918,13 @@ em {
 }
 
 /* //Book styling */
-.book .book-item{
+.book .book-item {
     display: flex;
     gap: 1rem;
     margin: 1rem 0;
 }
 
-.book-item img{
+.book-item img {
     height: 19.5rem;
     width: 100%;
     border-radius: 5px;
@@ -1920,7 +1955,9 @@ em {
     margin: 2em;
     border-radius: 3px;
     /* background-color:#e2e1e1; */
-    background-color: #d1d1d1;
+    background-image: url(/assets/img/back\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 2em 16px;
     text-align: center;
 }
@@ -1938,7 +1975,6 @@ em {
     padding: 10px 5px;
     border-radius: 10px 0 0 10px;
     border: none;
-    outline: 1px solid #201658;
     color: #333;
     border-radius: 3px 0 0 3px;
     font-size: 1rem;
@@ -1967,14 +2003,14 @@ em {
 }
 
 .new-top span {
-    color: #433bff;
+    color: #fff;
     font-size: 1.5em;
 }
 
 
 
 .new-top h3 {
-    color: #3a3737;
+    color: black;
 
 }
 
@@ -2050,7 +2086,7 @@ em {
     align-items: center;
 }
 
-.cate button{
+.cate button {
     padding: 0.2rem 2rem;
     background-color: #201658;
     color: #fff;
@@ -2059,7 +2095,7 @@ em {
     font-size: 1rem;
 }
 
-.cate button:hover{
+.cate button:hover {
     color: #201658;
     background-color: #eee;
     border: 1px solid #201658;
@@ -2422,7 +2458,7 @@ em {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    
+
 }
 
 .ministry-item {
@@ -2499,28 +2535,19 @@ em {
     justify-content: space-between;
 }
 
-.cwm:first-child {
-    flex: 1;
-}
-
-.cwm.box:nth-child(2) {
-    flex: 2;
-}
-
-.cwm:last-child {
-    flex: 1;
-}
 
 .cwm .members {
     padding: 10px;
     border: 2px solid #201658;
     border-radius: 10px;
     height: fit-content;
+    width: 35%;
 }
 
 .cwm .members .btn {
     display: flex;
     gap: 1em;
+    justify-content: space-between;
 }
 
 .members .btn button {
@@ -2583,7 +2610,7 @@ em {
 
 .members tbody tr:nth-child(even) {
     background-color: rgba(26, 188, 156, 0.2);
-    color: black;
+    color: #fff;
 }
 
 .members tbody tr:nth-child(odd) {
@@ -2626,14 +2653,17 @@ em {
 }
 
 .centered-image {
-    display: inline-block;        
-    margin: 0 190px;              
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
 }
 
+
 .centered-image img {
-    width: 200px;                
-    height: 200px;              
-    object-fit: cover;           
+    width: 50%;
+    height: 25rem;
+    object-fit: cover;
     border-bottom: 10px solid #201658;
     border-radius: 10px;
 }
@@ -2704,7 +2734,7 @@ em {
     padding: 5px 10px;
 }
 
-.donate-container{
+.donate-container {
     display: flex;
     justify-content: space-between;
     background-image: url(/assets/img/give3.png);
@@ -2713,7 +2743,7 @@ em {
     width: 100%;
 }
 
-.donate-container .why-donate{
+.donate-container .why-donate {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -2733,18 +2763,23 @@ em {
 }
 
 @keyframes myAnim {
-    0%, 50%, 100% {
+
+    0%,
+    50%,
+    100% {
         border-color: #201658;
         box-shadow: 0px 0px 18px 7px rgba(41, 128, 185, 1);
         opacity: 1;
     }
 
-    25%, 75% {
+    25%,
+    75% {
         border-color: transparent;
         box-shadow: none;
         opacity: 0;
     }
 }
+
 /* Modal Hidden Class */
 .donate-page .hidden {
     display: none;
@@ -2759,7 +2794,8 @@ em {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Transparent background */
     justify-content: center;
     align-items: center;
 }
@@ -2783,16 +2819,16 @@ em {
     cursor: pointer;
 }
 
-.donate-container .donate-now{
+.donate-container .donate-now {
     width: 50%;
     background-color: #fff;
     height: fit-content;
     padding: 1.5em;
     margin-right: 5%;
-    
+
 }
 
-.donate-container .donate-now p i{
+.donate-container .donate-now p i {
     padding: 5px;
     border: 1px solid #201658;
     border-radius: 50%;
@@ -2801,26 +2837,26 @@ em {
     margin-right: 0.5em;
 }
 
-.donate-container .donate-now p:nth-child(1){
+.donate-container .donate-now p:nth-child(1) {
     font-size: 1.3rem;
     font-weight: 500;
 }
 
-.donate-container .donate-now h2{
+.donate-container .donate-now h2 {
     margin: 0.5em 0;
     color: #201658;
 }
 
-.donate-container .donate-now p:nth-child(1){
+.donate-container .donate-now p:nth-child(1) {
     color: #2e2e2e;
     font-weight: 400;
 }
 
-.donate-container .donate-now form{
+.donate-container .donate-now form {
     margin: 1em 0;
 }
 
-.donate-now form .subscribe{
+.donate-now form .subscribe {
     display: flex;
     border: 2px solid #201658;
     width: fit-content;
@@ -2829,19 +2865,19 @@ em {
     overflow: hidden;
 }
 
-.donate-now form .subscribe input{
+.donate-now form .subscribe input {
     padding: 7px 4rem;
     /* border-radius: 6px; */
     border: none;
     width: 1000%;
 }
 
-.donate-now form .subscribe input:hover{
+.donate-now form .subscribe input:hover {
     background-color: #201658;
     color: #fff;
 }
 
-.donate-now form .subscribe input:nth-child(1){
+.donate-now form .subscribe input:nth-child(1) {
     background-color: #201658;
     color: #fff;
 }
@@ -2867,13 +2903,13 @@ em {
 }
 
 
-.donate-now form .input-amount{
+.donate-now form .input-amount {
     display: flex;
     border: 2px solid #201658;
     width: 100%;
 }
 
-.donate-now form .input-amount input{
+.donate-now form .input-amount input {
     width: 100%;
     border: none;
     outline: none;
@@ -2881,31 +2917,31 @@ em {
     font-size: 1.2em;
 }
 
-.donate-now form .input-amount button{
+.donate-now form .input-amount button {
     padding: 0.2rem 1rem;
     border: none;
     background-color: #201658;
     color: #fff;
 }
 
-.donate-now form .input-amount button:hover{
+.donate-now form .input-amount button:hover {
     background-color: #fff;
     color: #201658;
     border-right: 1px solid #201658;
 }
 
-.donate-now form .input-amount button i{
+.donate-now form .input-amount button i {
     font-size: 1.2rem;
 }
 
-.donate-now form .how-much{
+.donate-now form .how-much {
     margin: 1em 0;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 
-.donate-now form .how-much input{
+.donate-now form .how-much input {
     padding: 8px 0.5em;
     border: 1px solid #201658;
     border-radius: 2px;
@@ -2915,13 +2951,13 @@ em {
     cursor: pointer;
 }
 
-.donate-now form .how-much input:hover{
+.donate-now form .how-much input:hover {
     background-color: #201658;
     color: #fff;
 }
 
 
-.donate-now form input[type='btn']{
+.donate-now form input[type='btn'] {
     padding: 8px 15px;
     text-align: center;
     color: #201658;
@@ -2932,13 +2968,12 @@ em {
     cursor: pointer;
 }
 
-.donate-now form input[type='btn']:hover{
+.donate-now form input[type='btn']:hover {
     color: #fff;
     background-color: #201658;
 }
-#galleryModalText{
+
+#galleryModalText {
     margin-top: 20px;
     font-weight: bold;
 }
-
-
