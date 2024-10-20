@@ -21,29 +21,43 @@ function toggleTable() {
   isTableVisible = !isTableVisible;
 }
 
-function downloadTable() {
-  // Get the table
-  const table = document.querySelector('table');
-  let tableText = '';
+function downloadTableAsPDF() {
+  // Load jsPDF
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
 
-  // Loop through the table rows
-  for (let row of table.rows) {
-      // Get each cell in the row
-      let rowText = '';
-      for (let cell of row.cells) {
-          rowText += cell.innerText + '\t'; // Tab separate each cell value
-      }
-      tableText += rowText.trim() + '\n'; // New line for each row
-  }
+  // Add title to the PDF
+  doc.text("Members List", 14, 10);
 
-  // Create a blob for the txt file
-  const blob = new Blob([tableText], { type: 'text/plain' });
-  const downloadLink = document.createElement('a');
-  
-  // Set the file name and download link
-  downloadLink.href = URL.createObjectURL(blob);
-  downloadLink.download = 'members_list.txt';
+  // Get the table headers and data
+  const table = document.querySelector("table");
+  const headers = [];
+  const data = [];
 
-  // Programmatically click the download link
-  downloadLink.click();
+  // Get the headers from the table
+  const headerCells = table.querySelectorAll("thead th");
+  headerCells.forEach((headerCell) => {
+    headers.push(headerCell.innerText);
+  });
+
+  // Get the data from the table rows
+  const rows = table.querySelectorAll("tbody tr");
+  rows.forEach((row) => {
+    const rowData = [];
+    row.querySelectorAll("td").forEach((cell) => {
+      rowData.push(cell.innerText);
+    });
+    data.push(rowData);
+  });
+
+  // Use autoTable plugin to generate the table
+  doc.autoTable({
+    head: [headers], // Table headers
+    body: data, // Table data
+    startY: 20, // Y position from where the table starts
+    theme: "grid", // Optional theme
+  });
+
+  // Save the PDF
+  doc.save("members_list.pdf");
 }
