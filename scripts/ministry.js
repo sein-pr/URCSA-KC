@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Search functionality
-    // Search functionality
     const searchInput = document.querySelector(".top form input"); // Update to your search bar selector
     searchInput.addEventListener("input", function() {
         const searchTerm = this.value.toLowerCase();

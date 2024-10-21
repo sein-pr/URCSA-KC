@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       Email.send({
         Host: "smtp.elasticemail.com",
         Username: "seinprince2@gmail.com",
-        Password: "Sein@2001@Sein",
+        Password: "------",
         To: "seinprince2@gmail.com",
         From: formData.email,
         Subject: `${formData.name} submitted prayer request`,

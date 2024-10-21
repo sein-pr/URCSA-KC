@@ -214,7 +214,7 @@ function sendEmailWithPDF(formData) {
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "seinprince2@gmail.com",
-    Password: "Sein@2001@Sein",
+    Password: "--------------",
     To: "seinprince2@gmail.com",
     From: "your-email@domain.com",
     Subject: "New Form Submission with PDF",
