@@ -9,6 +9,23 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/style/main.css">
     <link rel="icon" href="/assets/img/logo.png">
+    <style>
+        #suggestion_heading,#par1{
+            text-align: center;
+            margin-top: 20px;
+            font-size: larger;
+          
+        }
+        #suggestion_heading{
+            font-size: 30px;
+        }
+        #suggestion_box{
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+    </style>
 </head>
 
 <body>
@@ -102,6 +119,13 @@
                 <img src="/assets/img/Church.png" alt="">
                 <!-- <button>Schedule <i class="uil uil-schedule"></i></button> -->
             </div>
+        </section>
+        <section class="suggestion_link">
+            <h2 id="suggestion_heading">Suggestion Box</h2>
+            <p id="par1">Click on the suggestion box to make a suggestion</p>
+            <a href="suggestion_box.html"><img id="suggestion_box" src="assets/img/suggestion_box.png" width="25%" alt=""></a>
+            
+
         </section>
         <div class="map" id="myMap">
             <iframe
