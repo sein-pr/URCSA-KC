@@ -35,7 +35,7 @@ document.getElementById("send-button").addEventListener("click", function(event)
             Email.send({
                 Host: "smtp.elasticemail.com",
                 Username: "seinprince2@gmail.com",
-                Password: "----------",
+                Password: "Sein@2001@Sein",
                 To: 'seinprince2@gmail.com',
                 From: document.getElementById("email").value,
                 Subject: "Katutura Congression Contact Form",
