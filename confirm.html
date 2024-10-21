@@ -27,11 +27,11 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <div class="dropdown">
-                <a href="#">Services</a>
+                <a href="#" class="active-tab">Services</a>
                 <ul class="dropdown-menu">
                     <li><a href="service.html">Sermons</a></li>
-                    <li><a href="#">Apply</a></li>
-                    <li><a href="confirm.html">Confirmation</a></li>
+                    <!-- <li><a href="#">Apply</a></li> -->
+                    <li><a href="confirm.html" class="active-tab">Confirmation</a></li>
                     <li><a href="baptism.html">Baptism</a></li>
                     <li><a href="marriage.html">Marriage</a></li>
                     <li><a href="repentance.html">Repentance</a></li>
@@ -123,7 +123,8 @@
             </div>
 
             <div class="choice-work">
-                <!-- Personal Details -->
+                <form id="confirmation-form" action="https://formspree.io/f/mkgnndop" method="POST">
+                    <!-- Personal Details -->
                 <fieldset>
                     <legend>A. Personal Details</legend>
 
@@ -244,7 +245,7 @@
         
                 <label for="resolution">State in your own words why you want to confess your faith:</label>
                 <textarea id="resolution" name="resolution" placeholder="Describe your personal resolution"></textarea>
-                <button style="width: 15%; padding: 5px 15px; background-color: #201658;color: #fff;font-weight: 600; border: none;">Submit</button>
+                <button style="width: 15%; padding: 5px 15px; background-color: #201658;color: #fff;font-weight: 600; border: none;">Almost done</button>
                 
             </fieldset>
         
@@ -268,7 +269,7 @@
                 </div>
                 <div>
                     <label>
-                        <input type="checkbox" id="confirmation" name="confirmation" required>
+                        <input type="checkbox" id="confirm-checkbox" name="confirmation" required>
                         I confirm that the information provided in this application is correct.
                     </label>
                 </div>
@@ -276,10 +277,14 @@
 
             </fieldset>
 
-            </div>
+            
+                </form>
+                
         </section>
     </main>
     <script src="/scripts/confirm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 </body>
 
 </html>
